@@ -1,9 +1,12 @@
 from __future__ import annotations
 
+import csv
+import io
 import json
 import math
 import urllib.parse
 import urllib.request
+import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta
 from typing import Any, Protocol
 
@@ -157,14 +160,137 @@ class OpenWeatherProvider:
 
 
 class IMDProvider:
-    """Placeholder for official IMD feed/API integration.
-
-    Production wiring can map IMD station or grid feeds into the same weather
-    observation schema used by OpenWeatherProvider.
-    """
+    """IMD-compatible provider for configurable JSON, CSV, or RSS/XML feeds."""
 
     def fetch(self) -> list[dict[str, Any]]:
-        return []
+        settings = get_settings()
+        if not settings.imd_feed_url:
+            return []
+        headers = {"User-Agent": "CivicIQ/1.0"}
+        if settings.imd_api_key:
+            headers["Authorization"] = f"Bearer {settings.imd_api_key}"
+        try:
+            request = urllib.request.Request(settings.imd_feed_url, headers=headers)
+            with urllib.request.urlopen(request, timeout=8) as response:
+                content = response.read().decode("utf-8")
+                content_type = response.headers.get("content-type", "")
+        except Exception:
+            return []
+        if "json" in content_type or content.strip().startswith(("{", "[")):
+            return _parse_imd_json(content)
+        if "csv" in content_type or "," in content.splitlines()[0]:
+            return _parse_imd_csv(content)
+        return _parse_imd_xml(content)
+
+
+class TomTomTrafficProvider:
+    def fetch(self) -> list[dict[str, Any]]:
+        api_key = get_settings().tomtom_api_key
+        if not api_key:
+            return []
+        observations = []
+        for district in district_records():
+            url = (
+                "https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json"
+                f"?point={district['latitude']},{district['longitude']}&key={api_key}"
+            )
+            try:
+                with urllib.request.urlopen(url, timeout=8) as response:
+                    payload = json.loads(response.read().decode("utf-8"))
+            except Exception:
+                continue
+            flow = payload.get("flowSegmentData", {})
+            observations.append(
+                normalize_traffic_record(
+                    provider_name="TomTom",
+                    district=district,
+                    current_speed=flow.get("currentSpeed", 0),
+                    free_flow_speed=flow.get("freeFlowSpeed", 1),
+                    route_name=route_for_district(district["ward_name"]),
+                    incidents=0,
+                    closures=0,
+                )
+            )
+        return observations
+
+
+class MapboxTrafficProvider:
+    def fetch(self) -> list[dict[str, Any]]:
+        token = get_settings().mapbox_access_token
+        if not token:
+            return []
+        observations = []
+        for district in district_records():
+            # Mapbox does not expose a simple free traffic metric endpoint for all plans.
+            # This adapter validates token-reachable map matching/directions style access
+            # and normalizes a conservative estimate from representative route distance.
+            lon = district["longitude"]
+            lat = district["latitude"]
+            url = (
+                "https://api.mapbox.com/directions/v5/mapbox/driving-traffic/"
+                f"{lon},{lat};{lon + 0.08},{lat + 0.04}?access_token={token}&overview=false"
+            )
+            try:
+                with urllib.request.urlopen(url, timeout=8) as response:
+                    payload = json.loads(response.read().decode("utf-8"))
+                route = payload.get("routes", [{}])[0]
+            except Exception:
+                continue
+            duration = float(route.get("duration", 0)) / 60
+            distance_km = float(route.get("distance", 1)) / 1000
+            speed = distance_km / max(duration / 60, 0.01)
+            observations.append(
+                normalize_traffic_record(
+                    provider_name="Mapbox",
+                    district=district,
+                    current_speed=speed,
+                    free_flow_speed=max(speed * 1.35, 1),
+                    route_name=route_for_district(district["ward_name"]),
+                    incidents=0,
+                    closures=0,
+                )
+            )
+        return observations
+
+
+class GoogleMapsTrafficProvider:
+    def fetch(self) -> list[dict[str, Any]]:
+        api_key = get_settings().google_maps_api_key
+        if not api_key:
+            return []
+        observations = []
+        for district in district_records():
+            origin = f"{district['latitude']},{district['longitude']}"
+            destination = f"{district['latitude'] + 0.05},{district['longitude'] + 0.08}"
+            url = (
+                "https://maps.googleapis.com/maps/api/distancematrix/json"
+                f"?origins={origin}&destinations={destination}&departure_time=now&key={api_key}"
+            )
+            try:
+                with urllib.request.urlopen(url, timeout=8) as response:
+                    payload = json.loads(response.read().decode("utf-8"))
+                element = payload.get("rows", [{}])[0].get("elements", [{}])[0]
+            except Exception:
+                continue
+            duration = element.get("duration", {}).get("value", 1)
+            traffic_duration = element.get("duration_in_traffic", {}).get("value", duration)
+            congestion = min(100, max(0, (traffic_duration - duration) / max(duration, 1) * 100))
+            observations.append(
+                {
+                    "provider_name": "GoogleMaps",
+                    "district_id": district["ward_id"],
+                    "district_name": district["ward_name"],
+                    "congestion_level": round(congestion, 1),
+                    "average_speed": round(35 * (1 - congestion / 140), 1),
+                    "incident_count": 0,
+                    "road_closure_count": 0,
+                    "travel_time_delay": round((traffic_duration - duration) / 60, 1),
+                    "affected_route_name": route_for_district(district["ward_name"]),
+                    "latitude": district["latitude"],
+                    "longitude": district["longitude"],
+                }
+            )
+        return observations
 
 
 class FallbackTrafficProvider:
@@ -211,10 +337,17 @@ def fetch_news_items() -> list[dict[str, Any]]:
 
 
 def fetch_weather_observations() -> list[dict[str, Any]]:
+    imd_records = IMDProvider().fetch()
+    if imd_records:
+        return imd_records
     return OpenWeatherProvider().fetch()
 
 
 def fetch_traffic_observations() -> list[dict[str, Any]]:
+    for provider in [TomTomTrafficProvider(), MapboxTrafficProvider(), GoogleMapsTrafficProvider()]:
+        records = provider.fetch()
+        if records:
+            return records
     return FallbackTrafficProvider().fetch()
 
 
@@ -261,6 +394,82 @@ def fallback_weather() -> list[dict[str, Any]]:
             }
         )
     return observations
+
+
+def normalize_traffic_record(
+    provider_name: str,
+    district: dict[str, Any],
+    current_speed: float,
+    free_flow_speed: float,
+    route_name: str,
+    incidents: int,
+    closures: int,
+) -> dict[str, Any]:
+    congestion = max(0, min(100, (1 - (float(current_speed) / max(float(free_flow_speed), 1))) * 100))
+    delay = max(0, congestion * 0.35)
+    return {
+        "provider_name": provider_name,
+        "district_id": district["ward_id"],
+        "district_name": district["ward_name"],
+        "congestion_level": round(congestion, 1),
+        "average_speed": round(float(current_speed), 1),
+        "incident_count": int(incidents),
+        "road_closure_count": int(closures),
+        "travel_time_delay": round(delay, 1),
+        "affected_route_name": route_name,
+        "latitude": district["latitude"],
+        "longitude": district["longitude"],
+    }
+
+
+def _parse_imd_json(content: str) -> list[dict[str, Any]]:
+    payload = json.loads(content)
+    records = payload if isinstance(payload, list) else payload.get("alerts") or payload.get("records") or []
+    return [_normalize_imd_record(record) for record in records if _normalize_imd_record(record)]
+
+
+def _parse_imd_csv(content: str) -> list[dict[str, Any]]:
+    reader = csv.DictReader(io.StringIO(content))
+    return [_normalize_imd_record(row) for row in reader if _normalize_imd_record(row)]
+
+
+def _parse_imd_xml(content: str) -> list[dict[str, Any]]:
+    root = ET.fromstring(content)
+    records = []
+    for item in root.findall(".//item"):
+        title = item.findtext("title", default="")
+        description = item.findtext("description", default="")
+        records.append(_normalize_imd_record({"title": title, "description": description, "district": title}))
+    return [record for record in records if record]
+
+
+def _normalize_imd_record(record: dict[str, Any]) -> dict[str, Any] | None:
+    text = " ".join(str(record.get(key, "")) for key in ["district", "title", "description", "alert_type"])
+    if not text.strip():
+        return None
+    district = infer_district(text)
+    alert_type = infer_category(text)
+    temperature = float(record.get("temperature") or record.get("temp") or 38)
+    humidity = float(record.get("humidity") or 50)
+    rainfall = float(record.get("rainfall") or record.get("rainfall_mm") or 0)
+    return {
+        "provider_name": "IMD",
+        "district_id": district["ward_id"],
+        "district_name": district["ward_name"],
+        "temperature": temperature,
+        "feels_like": float(record.get("feels_like") or calculate_heat_index(temperature, humidity)),
+        "humidity": humidity,
+        "rainfall": rainfall,
+        "wind_speed": float(record.get("wind_speed") or 0),
+        "weather_condition": str(record.get("condition") or alert_type),
+        "heat_index": calculate_heat_index(temperature, humidity),
+        "forecast": fallback_forecast(temperature, rainfall),
+        "alert_type": alert_type,
+        "severity": infer_severity(alert_type),
+        "description": str(record.get("description") or record.get("title") or alert_type),
+        "latitude": district["latitude"],
+        "longitude": district["longitude"],
+    }
 
 
 def fallback_news() -> list[dict[str, Any]]:

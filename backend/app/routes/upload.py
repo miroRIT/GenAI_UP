@@ -1,6 +1,7 @@
-from fastapi import APIRouter, File, Form, HTTPException, UploadFile
+from fastapi import APIRouter, Depends, File, Form, HTTPException, UploadFile
 
 from app.models.schemas import UploadResponse
+from app.security.permissions import require_permissions
 from app.services.data_loader import DATASET_FILENAMES, reset_sample_data, save_uploaded_dataset
 
 
@@ -11,6 +12,7 @@ router = APIRouter(tags=["upload"])
 async def upload_dataset(
     category: str = Form(...),
     file: UploadFile = File(...),
+    _user=Depends(require_permissions("*")),
 ) -> dict[str, object]:
     if category not in DATASET_FILENAMES:
         raise HTTPException(
@@ -27,6 +29,6 @@ async def upload_dataset(
 
 
 @router.post("/upload/reset")
-def reset_data() -> dict[str, str]:
+def reset_data(_user=Depends(require_permissions("*"))) -> dict[str, str]:
     reset_sample_data()
     return {"message": "Sample data regenerated."}

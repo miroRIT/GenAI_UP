@@ -1,6 +1,10 @@
-from app.services.geospatial_service import ensure_geojson
+from app.database import SessionLocal
+from app.services.geospatial_provider import reload_boundaries
 
 
 def run() -> int:
-    ensure_geojson()
-    return 1
+    db = SessionLocal()
+    try:
+        return len(reload_boundaries(db)["sources"])
+    finally:
+        db.close()

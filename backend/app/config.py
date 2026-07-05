@@ -22,6 +22,9 @@ class Settings(BaseModel):
     google_maps_api_key: str | None = os.getenv("GOOGLE_MAPS_API_KEY")
     tomtom_api_key: str | None = os.getenv("TOMTOM_API_KEY")
     mapbox_access_token: str | None = os.getenv("MAPBOX_ACCESS_TOKEN")
+    imd_feed_url: str | None = os.getenv("IMD_FEED_URL")
+    imd_alert_feed_url: str | None = os.getenv("IMD_ALERT_FEED_URL")
+    imd_api_key: str | None = os.getenv("IMD_API_KEY")
     jwt_secret_key: str = os.getenv("JWT_SECRET_KEY", "dev-only-change-me")
     jwt_algorithm: str = os.getenv("JWT_ALGORITHM", "HS256")
     access_token_expire_minutes: int = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", "1440"))
@@ -31,6 +34,11 @@ class Settings(BaseModel):
     traffic_refresh_minutes: int = int(os.getenv("TRAFFIC_REFRESH_MINUTES", "15"))
     risk_refresh_minutes: int = int(os.getenv("RISK_REFRESH_MINUTES", "30"))
     alert_refresh_minutes: int = int(os.getenv("ALERT_REFRESH_MINUTES", "30"))
+    job_max_retries: int = int(os.getenv("JOB_MAX_RETRIES", "3"))
+    job_retry_backoff_seconds: int = int(os.getenv("JOB_RETRY_BACKOFF_SECONDS", "10"))
+    job_timeout_seconds: int = int(os.getenv("JOB_TIMEOUT_SECONDS", "60"))
+    failure_alerts_enabled: bool = os.getenv("FAILURE_ALERTS_ENABLED", "true").lower() == "true"
+    provider_observation_retention_days: int = int(os.getenv("PROVIDER_OBSERVATION_RETENTION_DAYS", "30"))
 
 
 @lru_cache

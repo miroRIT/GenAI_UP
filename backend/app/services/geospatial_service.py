@@ -58,7 +58,13 @@ def build_district_geojson() -> dict[str, Any]:
 def get_district_geojson() -> dict[str, Any]:
     ensure_geojson()
     path = get_settings().geojson_dir / "ncr_districts.geojson"
-    return json.loads(path.read_text(encoding="utf-8"))
+    geojson = json.loads(path.read_text(encoding="utf-8"))
+    geojson["metadata"] = {
+        "source_name": "CivicIQ simplified NCR demo boundaries",
+        "license": "Demo only",
+        "is_official": False,
+    }
+    return geojson
 
 
 def get_available_layers() -> list[dict[str, Any]]:

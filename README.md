@@ -11,8 +11,9 @@ CivicIQ is a full-stack NCR-focused decision intelligence prototype for disaster
 - Displays OpenStreetMap tiles with simplified NCR GeoJSON district boundaries and incident markers.
 - Scores flood, heatwave, AQI/public health, seismic, drought/water-stress, and industrial/fire risks.
 - Persists users, alerts, timelines, incidents, and ingestion job logs in SQLite.
-- Supports alert assignment, acknowledgement, resolution, CSV export, and Markdown incident briefs.
-- Provides demo JWT login roles for Admin, District Officer, Analyst, and Viewer.
+- Supports alert assignment, acknowledgement, resolution, notes, SLA tracking, CSV export, Markdown briefs, and PDF incident briefs.
+- Persists normalized provider observations for news, weather, traffic, AQI, and geospatial source checks.
+- Provides demo JWT login roles for Admin, District Officer, Department User, Analyst, and Viewer.
 - Includes Cloud Run deployment files for backend and frontend.
 
 ## Tech Stack
@@ -60,6 +61,7 @@ NEXT_PUBLIC_API_BASE_URL=http://127.0.0.1:8001 npm start
 
 - Admin: `admin@civiciq.demo` / `Admin@12345`
 - District Officer: `officer@civiciq.demo` / `Officer@12345`
+- Department User: `department@civiciq.demo` / `Department@12345`
 - Analyst: `analyst@civiciq.demo` / `Analyst@12345`
 - Viewer: `viewer@civiciq.demo` / `Viewer@12345`
 
@@ -76,6 +78,9 @@ Backend:
 - `GOOGLE_API_KEY=`
 - `NEWS_API_KEY=`
 - `OPENWEATHER_API_KEY=`
+- `IMD_FEED_URL=`
+- `IMD_ALERT_FEED_URL=`
+- `IMD_API_KEY=`
 - `GOOGLE_MAPS_API_KEY=`
 - `TOMTOM_API_KEY=`
 - `MAPBOX_ACCESS_TOKEN=`
@@ -85,6 +90,11 @@ Backend:
 - `TRAFFIC_REFRESH_MINUTES=15`
 - `RISK_REFRESH_MINUTES=30`
 - `ALERT_REFRESH_MINUTES=30`
+- `JOB_MAX_RETRIES=3`
+- `JOB_RETRY_BACKOFF_SECONDS=10`
+- `JOB_TIMEOUT_SECONDS=60`
+- `FAILURE_ALERTS_ENABLED=true`
+- `PROVIDER_OBSERVATION_RETENTION_DAYS=30`
 - `MOCK_MODE=true`
 - `CORS_ORIGINS=http://localhost:3000,http://127.0.0.1:3000`
 
@@ -100,7 +110,9 @@ Frontend:
 - `/districts`: district ranking and drilldown entry
 - `/districts/[districtId]`: district profile, disaster risk scores, alerts, incidents, weather, traffic, map
 - `/alerts`: operational alert workflow table
+- `/alerts/assigned`: logged-in user’s assigned alert work queue
 - `/admin/data-refresh`: manual ingestion job runner
+- `/admin/providers`: provider health and smoke tests
 - `/assistant`: AI decision-support chat
 - `/login`: demo authority login
 
@@ -119,25 +131,36 @@ Frontend:
 - `GET /api/geospatial/districts`
 - `GET /api/geospatial/incidents`
 - `GET /api/geospatial/layers`
+- `GET /api/geospatial/boundary-sources`
+- `POST /api/geospatial/reload-boundaries`
 - `GET /api/monitoring/live`
+- `GET /api/providers/status`
+- `POST /api/providers/test/news|weather|traffic|aqi|geospatial|all`
+- `GET /api/observations?type=weather|traffic|news|aqi`
 - `GET /api/alerts`
+- `GET /api/alerts/assigned-to-me`
+- `GET /api/alerts/sla-summary`
 - `POST /api/alerts`
 - `POST /api/alerts/{alert_id}/assign`
 - `POST /api/alerts/{alert_id}/acknowledge`
 - `POST /api/alerts/{alert_id}/resolve`
+- `POST /api/alerts/{alert_id}/notes`
+- `GET /api/alerts/{alert_id}/timeline`
+- `POST /api/alerts/{alert_id}/escalate`
 - `GET /api/alerts/export.csv`
 - `GET /api/alerts/{alert_id}/export.md`
+- `GET /api/alerts/{alert_id}/export.pdf`
 - `POST /api/jobs/run/news|weather|traffic|risk|alerts|geospatial`
 - `GET /api/jobs/status`
+- `GET /api/jobs/health`
 - `POST /api/chat`
 
 ## Provider Integrations
 
 - News: GDELT free API by default; NewsAPI when `NEWS_API_KEY` is set.
-- Weather: OpenWeather when `OPENWEATHER_API_KEY` is set; fallback weather otherwise.
-- IMD: `IMDProvider` abstraction is included for official future feed wiring.
-- Traffic: abstraction is ready for Google Maps, TomTom, or Mapbox; fallback mock traffic runs locally.
-- Geospatial: OpenStreetMap tiles in frontend; local simplified NCR GeoJSON in backend and frontend public assets.
+- Weather: IMD feed when `IMD_FEED_URL` is set, OpenWeather when `OPENWEATHER_API_KEY` is set, fallback weather otherwise.
+- Traffic: TomTom, Mapbox, then Google Maps adapters when keys are configured; fallback mock traffic runs locally.
+- Geospatial: OpenStreetMap tiles in frontend; official GeoJSON can be placed in `backend/app/geojson/official`, otherwise CivicIQ uses simplified NCR demo boundaries and exposes source metadata.
 - Bhuvan: abstraction is included for future official geospatial integration.
 
 ## Running Jobs
@@ -145,7 +168,11 @@ Frontend:
 Manual:
 
 ```bash
-curl -X POST http://127.0.0.1:8000/api/jobs/run/news
+TOKEN=$(curl -s -X POST http://127.0.0.1:8000/api/auth/login \
+  -H 'Content-Type: application/json' \
+  -d '{"email":"admin@civiciq.demo","password":"Admin@12345"}' | python -c "import sys,json; print(json.load(sys.stdin)['access_token'])")
+
+curl -X POST http://127.0.0.1:8000/api/jobs/run/news -H "Authorization: Bearer $TOKEN"
 curl -X POST http://127.0.0.1:8000/api/jobs/run/weather
 curl -X POST http://127.0.0.1:8000/api/jobs/run/traffic
 curl -X POST http://127.0.0.1:8000/api/jobs/run/risk
@@ -185,6 +212,14 @@ export REGION=asia-south1
 ./deploy-cloud-run.sh
 ```
 
+You can also deploy services separately:
+
+```bash
+./scripts/deploy-backend-cloud-run.sh
+./scripts/deploy-frontend-cloud-run.sh
+./scripts/deploy-all-cloud-run.sh
+```
+
 This deploys:
 
 - Backend Cloud Run service: `civiciq-api`
@@ -221,11 +256,7 @@ Build files:
 
 ## Next Production Steps
 
-- Replace simplified GeoJSON with official district boundaries.
-- Persist provider observations in normalized SQLite/PostgreSQL tables.
-- Add real Google/TomTom/Mapbox traffic adapters.
-- Add official IMD feed ingestion.
-- Add RBAC enforcement middleware on protected APIs.
-- Add audit logs, refresh retries, and provider health monitoring.
+- Replace demo fallback GeoJSON with official NCR/Bhuvan/state GIS boundary files.
+- Move local normalized observation tables to Cloud SQL/AlloyDB plus BigQuery history.
 - Move local SQLite to Cloud SQL or AlloyDB.
-- Add PDF incident brief exports and signed URLs.
+- Add signed URLs for PDF exports and long-running incident archive packages.

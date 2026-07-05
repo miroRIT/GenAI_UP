@@ -1,8 +1,14 @@
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "http://127.0.0.1:8000";
 
 async function request<T>(path: string, options?: RequestInit): Promise<T> {
+  const token =
+    typeof window !== "undefined" ? window.localStorage.getItem("civiciq_token") : null;
   const response = await fetch(`${API_BASE_URL}${path}`, {
     ...options,
+    headers: {
+      ...(options?.headers || {}),
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+    },
     cache: "no-store",
   });
 
@@ -127,9 +133,25 @@ export type Alert = {
   source: string;
   created_at: string;
   updated_at: string;
+  sla_due_at?: string | null;
+  sla_status?: string;
+  first_response_due_at?: string | null;
+  resolution_due_at?: string | null;
+  escalation_status?: string;
   recommended_actions: string[];
   notes: string;
   incident_brief: string;
+};
+
+export type ProviderStatus = {
+  provider_name: string;
+  provider_type: string;
+  configured: boolean;
+  health_status: string;
+  last_success_at: string | null;
+  last_failure_at: string | null;
+  last_error: string;
+  rate_limit_status: string;
 };
 
 export type DisasterRisk = {
@@ -199,6 +221,14 @@ export async function getAlerts() {
   return request<Alert[]>("/api/alerts");
 }
 
+export async function getAssignedAlerts() {
+  return request<Alert[]>("/api/alerts/assigned-to-me");
+}
+
+export async function getSlaSummary() {
+  return request<{ summary: Record<string, number>; total: number }>("/api/alerts/sla-summary");
+}
+
 export async function assignAlert(alertId: string, department: string, priority?: string) {
   return request<Alert>(`/api/alerts/${alertId}/assign`, {
     method: "POST",
@@ -239,11 +269,28 @@ export async function runJob(jobName: string) {
   });
 }
 
+export async function getProviderStatus() {
+  return request<ProviderStatus[]>("/api/providers/status");
+}
+
+export async function testProvider(providerType: string) {
+  return request<Record<string, unknown>>(`/api/providers/test/${providerType}`, {
+    method: "POST",
+  });
+}
+
 export async function login(email: string, password: string) {
   return request<{
     access_token: string;
     token_type: string;
-    user: { email: string; full_name: string; role: string; district_id: string | null };
+    user: {
+      email: string;
+      full_name: string;
+      role: string;
+      department: string | null;
+      district_id: string | null;
+      assigned_districts?: string;
+    };
   }>("/api/auth/login", {
     method: "POST",
     headers: { "Content-Type": "application/json" },

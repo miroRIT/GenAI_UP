@@ -4,7 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.config import get_settings
 from app.database import SessionLocal, init_db
 from app.jobs.scheduler import start_scheduler
-from app.routes import alerts, analytics, auth, chat, disaster_risk, districts, health, jobs, monitoring, overview, recommendations, upload, wards
+from app.routes import alerts, analytics, auth, chat, disaster_risk, districts, health, jobs, monitoring, observations, overview, providers, recommendations, upload, wards
 from app.services.data_loader import ensure_sample_data
 from app.services.alert_service import seed_alerts
 from app.services.auth_service import seed_demo_users
@@ -41,6 +41,8 @@ app.include_router(disaster_risk.router, prefix="/api")
 app.include_router(alerts.router, prefix="/api")
 app.include_router(auth.router, prefix="/api")
 app.include_router(jobs.router, prefix="/api")
+app.include_router(providers.router, prefix="/api")
+app.include_router(observations.router, prefix="/api")
 
 
 @app.on_event("startup")

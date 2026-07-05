@@ -6,6 +6,7 @@ import { login } from "@/lib/api";
 const demoUsers = [
   ["admin@civiciq.demo", "Admin@12345", "Admin"],
   ["officer@civiciq.demo", "Officer@12345", "District Officer"],
+  ["department@civiciq.demo", "Department@12345", "Department User"],
   ["analyst@civiciq.demo", "Analyst@12345", "Analyst"],
   ["viewer@civiciq.demo", "Viewer@12345", "Viewer"],
 ];

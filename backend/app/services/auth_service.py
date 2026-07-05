@@ -14,10 +14,11 @@ from app.models.db_models import User
 pwd_context = CryptContext(schemes=["pbkdf2_sha256"], deprecated="auto")
 
 DEMO_USERS = [
-    ("admin@civiciq.demo", "Admin@12345", "Admin User", "Admin", None),
-    ("officer@civiciq.demo", "Officer@12345", "District Officer", "District Officer", "NCR01"),
-    ("analyst@civiciq.demo", "Analyst@12345", "Data Analyst", "Analyst", None),
-    ("viewer@civiciq.demo", "Viewer@12345", "Read Only Viewer", "Viewer", None),
+    ("admin@civiciq.demo", "Admin@12345", "Admin User", "Admin", None, "Platform Operations"),
+    ("officer@civiciq.demo", "Officer@12345", "District Officer", "District Officer", "NCR01", "District Administration"),
+    ("department@civiciq.demo", "Department@12345", "Fire Department User", "Department User", "NCR01", "Fire Department"),
+    ("analyst@civiciq.demo", "Analyst@12345", "Data Analyst", "Analyst", None, "Analytics Cell"),
+    ("viewer@civiciq.demo", "Viewer@12345", "Read Only Viewer", "Viewer", None, "Public Viewer"),
 ]
 
 
@@ -31,9 +32,15 @@ ROLE_PERMISSIONS = {
 
 
 def seed_demo_users(db: Session) -> None:
-    for email, password, full_name, role, district_id in DEMO_USERS:
+    for email, password, full_name, role, district_id, department in DEMO_USERS:
         existing = db.query(User).filter(User.email == email).first()
         if existing:
+            existing.full_name = full_name
+            existing.role = role
+            existing.district_id = district_id
+            existing.department = department
+            existing.assigned_districts = f'["{district_id}"]' if district_id else "[]"
+            existing.is_active = 1
             continue
         db.add(
             User(
@@ -42,6 +49,8 @@ def seed_demo_users(db: Session) -> None:
                 full_name=full_name,
                 role=role,
                 district_id=district_id,
+                department=department,
+                assigned_districts=f'["{district_id}"]' if district_id else "[]",
             )
         )
     db.commit()

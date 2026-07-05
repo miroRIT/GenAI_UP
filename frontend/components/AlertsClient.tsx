@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { Alert, assignAlert, transitionAlert } from "@/lib/api";
 import { RiskBadge } from "./RiskBadge";
 
@@ -20,11 +20,37 @@ const departments = [
 export function AlertsClient({ initialAlerts }: { initialAlerts: Alert[] }) {
   const [alerts, setAlerts] = useState(initialAlerts);
   const [filter, setFilter] = useState("All");
+  const user = useMemo(() => {
+    if (typeof window === "undefined") {
+      return null;
+    }
+    const stored = window.localStorage.getItem("civiciq_user");
+    return stored ? JSON.parse(stored) : null;
+  }, []);
+  const canAssign = user?.role === "Admin" || user?.role === "District Officer";
+  const canResolve = ["Admin", "District Officer", "Department User"].includes(user?.role);
 
   const visibleAlerts = alerts.filter((alert) => filter === "All" || alert.status === filter || alert.severity === filter);
 
   async function refreshAlert(updatedAlert: Alert) {
     setAlerts((current) => current.map((alert) => (alert.alert_id === updatedAlert.alert_id ? updatedAlert : alert)));
+  }
+
+  async function downloadPdf(alertId: string) {
+    const token = window.localStorage.getItem("civiciq_token");
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || "http://127.0.0.1:8000"}/api/alerts/${alertId}/export.pdf`, {
+      headers: token ? { Authorization: `Bearer ${token}` } : {},
+    });
+    if (!response.ok) {
+      throw new Error("PDF export failed");
+    }
+    const blob = await response.blob();
+    const url = window.URL.createObjectURL(blob);
+    const anchor = document.createElement("a");
+    anchor.href = url;
+    anchor.download = `${alertId}-incident-brief.pdf`;
+    anchor.click();
+    window.URL.revokeObjectURL(url);
   }
 
   return (
@@ -54,9 +80,9 @@ export function AlertsClient({ initialAlerts }: { initialAlerts: Alert[] }) {
               <tr className="border-t border-slate-100 align-top" key={alert.alert_id}>
                 <td className="py-3">
                   <p className="font-medium">{alert.title}</p>
-                  <a className="text-xs text-civic-blue" href={`${process.env.NEXT_PUBLIC_API_BASE_URL || "http://127.0.0.1:8000"}/api/alerts/${alert.alert_id}/export.md`}>
-                    Export brief
-                  </a>
+                  <button className="text-xs text-civic-blue" onClick={() => downloadPdf(alert.alert_id)} type="button">
+                    PDF brief
+                  </button>
                 </td>
                 <td>{alert.district_name}</td>
                 <td>{alert.category}</td>
@@ -66,6 +92,7 @@ export function AlertsClient({ initialAlerts }: { initialAlerts: Alert[] }) {
                 <td>
                   <select
                     className="max-w-44 rounded-md border border-slate-200 px-2 py-1"
+                    disabled={!canAssign}
                     value={alert.assigned_department}
                     onChange={async (event) => refreshAlert(await assignAlert(alert.alert_id, event.target.value, alert.priority))}
                   >
@@ -74,8 +101,8 @@ export function AlertsClient({ initialAlerts }: { initialAlerts: Alert[] }) {
                 </td>
                 <td>
                   <div className="flex flex-wrap gap-2">
-                    <button className="rounded-md bg-slate-100 px-2 py-1" onClick={async () => refreshAlert(await transitionAlert(alert.alert_id, "acknowledge", "Acknowledged from UI"))}>Ack</button>
-                    <button className="rounded-md bg-emerald-100 px-2 py-1 text-emerald-700" onClick={async () => refreshAlert(await transitionAlert(alert.alert_id, "resolve", "Resolved from UI"))}>Resolve</button>
+                    <button className="rounded-md bg-slate-100 px-2 py-1 disabled:opacity-50" disabled={!canResolve} onClick={async () => refreshAlert(await transitionAlert(alert.alert_id, "acknowledge", "Acknowledged from UI"))}>Ack</button>
+                    <button className="rounded-md bg-emerald-100 px-2 py-1 text-emerald-700 disabled:opacity-50" disabled={!canResolve} onClick={async () => refreshAlert(await transitionAlert(alert.alert_id, "resolve", "Resolved from UI"))}>Resolve</button>
                   </div>
                 </td>
               </tr>

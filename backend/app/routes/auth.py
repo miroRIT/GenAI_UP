@@ -23,6 +23,7 @@ class RegisterRequest(BaseModel):
     full_name: str
     role: str = "Viewer"
     district_id: str | None = None
+    department: str | None = None
 
 
 @router.post("/auth/login")
@@ -43,6 +44,8 @@ def register(request: RegisterRequest, db: Session = Depends(get_db)) -> dict[st
         full_name=request.full_name,
         role=request.role,
         district_id=request.district_id,
+        department=request.department,
+        assigned_districts=f'["{request.district_id}"]' if request.district_id else "[]",
     )
     db.add(user)
     db.commit()
@@ -74,5 +77,7 @@ def serialize_user(user: User) -> dict[str, object]:
         "email": user.email,
         "full_name": user.full_name,
         "role": user.role,
+        "department": user.department,
         "district_id": user.district_id,
+        "assigned_districts": user.assigned_districts,
     }
