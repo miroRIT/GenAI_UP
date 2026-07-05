@@ -14,11 +14,11 @@ from app.models.db_models import User
 pwd_context = CryptContext(schemes=["pbkdf2_sha256"], deprecated="auto")
 
 DEMO_USERS = [
-    ("admin@civiciq.demo", "Admin@12345", "Admin User", "Admin", None, "Platform Operations"),
-    ("officer@civiciq.demo", "Officer@12345", "District Officer", "District Officer", "NCR01", "District Administration"),
-    ("department@civiciq.demo", "Department@12345", "Fire Department User", "Department User", "NCR01", "Fire Department"),
-    ("analyst@civiciq.demo", "Analyst@12345", "Data Analyst", "Analyst", None, "Analytics Cell"),
-    ("viewer@civiciq.demo", "Viewer@12345", "Read Only Viewer", "Viewer", None, "Public Viewer"),
+    ("admin@civiciq.demo", "Admin@123", "Admin User", "Admin", None, "Platform Operations"),
+    ("officer@civiciq.demo", "Officer@123", "District Officer", "District Officer", "NCR01", "District Administration"),
+    ("department@civiciq.demo", "Department@123", "Fire Department User", "Department User", "NCR01", "Fire Department"),
+    ("analyst@civiciq.demo", "Analyst@123", "Data Analyst", "Analyst", None, "Analytics Cell"),
+    ("viewer@civiciq.demo", "Viewer@123", "Read Only Viewer", "Viewer", None, "Public Viewer"),
 ]
 
 
@@ -41,6 +41,7 @@ def seed_demo_users(db: Session) -> None:
             existing.department = department
             existing.assigned_districts = f'["{district_id}"]' if district_id else "[]"
             existing.is_active = 1
+            existing.hashed_password = get_password_hash(password)
             continue
         db.add(
             User(

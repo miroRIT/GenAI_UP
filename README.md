@@ -1,6 +1,19 @@
-# CivicIQ — NCR Disaster and Civic Decision Intelligence Platform
+# CivicIQ — AI Decision Intelligence for NCR Disaster & Community Resilience
 
-CivicIQ is a full-stack NCR-focused decision intelligence prototype for disaster response, civic operations, and community well-being. It combines FastAPI, Next.js, provider-based monitoring, geospatial maps, risk scoring, alert workflows, scheduled ingestion jobs, and an AI decision-support assistant.
+CivicIQ is a hackathon-ready decision intelligence prototype for disaster response, civic operations, and community resilience across India’s National Capital Region. It helps authorities detect, understand, prioritize, and respond to risks across Delhi, Gurugram, Noida, Ghaziabad, Faridabad, and Meerut using AI, geospatial dashboards, realistic telemetry, and explainable recommendations.
+
+## Problem Statement
+
+NCR authorities face fragmented signals during crises: weather alerts, civic complaints, traffic disruption, utility outages, emergency response load, AQI, and public safety events often arrive in separate systems. CivicIQ demonstrates how GenAI and decision intelligence can turn those signals into a single command-center view with evidence-backed action recommendations.
+
+## Solution Overview
+
+- Unified NCR command dashboard with risk KPIs, maps, charts, alerts, and live-feed simulation.
+- One-click crisis demo that activates five realistic NCR disaster/civic scenarios.
+- AI explainability panel showing why each recommendation was generated.
+- Provider health and operations center for simulated/live feed status.
+- Local exports that simulate signed incident brief URLs.
+- Simple demo RBAC with role badges and protected operational actions.
 
 ## What It Does
 
@@ -15,6 +28,14 @@ CivicIQ is a full-stack NCR-focused decision intelligence prototype for disaster
 - Persists normalized provider observations for news, weather, traffic, AQI, and geospatial source checks.
 - Provides demo JWT login roles for Admin, District Officer, Department User, Analyst, and Viewer.
 - Includes Cloud Run deployment files for backend and frontend.
+
+## Demo Scenarios
+
+1. **Gurugram Urban Flooding**: 82 mm rainfall forecast, +240% waterlogging complaints, NH-48 delay, pump disruption. Flood risk: Critical.
+2. **Delhi Heatwave and AQI Health Risk**: 47 C feels-like index, AQI 318, vulnerable population exposure. Public health risk: Critical.
+3. **Noida Industrial Fire Risk**: industrial zone density, heat stress, recent smoke report, delayed response. Fire risk: High.
+4. **Ghaziabad Utility and Water Stress**: water shortage complaints, power outage reports, rising temperature. Water stress risk: High.
+5. **Meerut Storm and Public Safety Alert**: thunderstorm warning, road blockage, emergency call load. Public safety risk: High.
 
 ## Tech Stack
 
@@ -59,11 +80,11 @@ NEXT_PUBLIC_API_BASE_URL=http://127.0.0.1:8001 npm start
 
 ## Demo Credentials
 
-- Admin: `admin@civiciq.demo` / `Admin@12345`
-- District Officer: `officer@civiciq.demo` / `Officer@12345`
-- Department User: `department@civiciq.demo` / `Department@12345`
-- Analyst: `analyst@civiciq.demo` / `Analyst@12345`
-- Viewer: `viewer@civiciq.demo` / `Viewer@12345`
+- Admin: `admin@civiciq.demo` / `Admin@123`
+- District Officer: `officer@civiciq.demo` / `Officer@123`
+- Department User: `department@civiciq.demo` / `Department@123`
+- Analyst: `analyst@civiciq.demo` / `Analyst@123`
+- Viewer: `viewer@civiciq.demo` / `Viewer@123`
 
 ## Environment Variables
 
@@ -107,10 +128,14 @@ Frontend:
 ## Key Pages
 
 - `/dashboard`: NCR overview, live monitoring, interactive map, recommendations
+- `/demo`: one-click competition crisis demo and explainability panel
+- `/map`: NCR risk map with demo GIS source metadata and incident markers
 - `/districts`: district ranking and drilldown entry
 - `/districts/[districtId]`: district profile, disaster risk scores, alerts, incidents, weather, traffic, map
 - `/alerts`: operational alert workflow table
 - `/alerts/assigned`: logged-in user’s assigned alert work queue
+- `/operations`: provider health, job health, queue/dead-letter simulation, audit timeline
+- `/exports`: simulated signed local export links
 - `/admin/data-refresh`: manual ingestion job runner
 - `/admin/providers`: provider health and smoke tests
 - `/assistant`: AI decision-support chat
@@ -119,6 +144,17 @@ Frontend:
 ## API Highlights
 
 - `GET /api/health`
+- `GET /api/dashboard/overview`
+- `POST /api/demo/seed`
+- `POST /api/demo/run-crisis`
+- `GET /api/demo/recommendations`
+- `GET /api/recommendations/{recommendation_id}/explain`
+- `GET /api/map/layers`
+- `GET /api/map/incidents`
+- `GET /api/operations`
+- `GET /api/audit-logs`
+- `GET /api/exports`
+- `GET /api/exports/{export_id}`
 - `POST /api/auth/login`
 - `GET /api/districts`
 - `GET /api/districts/{district_id}`
@@ -151,6 +187,7 @@ Frontend:
 - `GET /api/alerts/{alert_id}/export.md`
 - `GET /api/alerts/{alert_id}/export.pdf`
 - `POST /api/jobs/run/news|weather|traffic|risk|alerts|geospatial`
+- `POST /api/jobs/refresh-demo-feeds`
 - `GET /api/jobs/status`
 - `GET /api/jobs/health`
 - `POST /api/chat`
@@ -170,7 +207,7 @@ Manual:
 ```bash
 TOKEN=$(curl -s -X POST http://127.0.0.1:8000/api/auth/login \
   -H 'Content-Type: application/json' \
-  -d '{"email":"admin@civiciq.demo","password":"Admin@12345"}' | python -c "import sys,json; print(json.load(sys.stdin)['access_token'])")
+  -d '{"email":"admin@civiciq.demo","password":"Admin@123"}' | python -c "import sys,json; print(json.load(sys.stdin)['access_token'])")
 
 curl -X POST http://127.0.0.1:8000/api/jobs/run/news -H "Authorization: Bearer $TOKEN"
 curl -X POST http://127.0.0.1:8000/api/jobs/run/weather
@@ -178,6 +215,70 @@ curl -X POST http://127.0.0.1:8000/api/jobs/run/traffic
 curl -X POST http://127.0.0.1:8000/api/jobs/run/risk
 curl -X POST http://127.0.0.1:8000/api/jobs/run/alerts
 ```
+
+## How To Run Demo Mode
+
+1. Start backend and frontend.
+2. Open `/demo`.
+3. Click **Run NCR Crisis Demo**.
+4. Show the KPI jump, scenario risk chart, five NCR scenarios, and AI explainability panel.
+5. Open `/map` to show incident geography.
+6. Open `/operations` to show provider/job health and audit events.
+7. Open `/exports` to download a local-demo incident brief.
+
+## 3-5 Minute Judge Demo Script
+
+**Opening pitch:** CivicIQ is an AI decision intelligence layer for NCR authorities. It unifies civic telemetry, disaster risk, maps, alerts, and explainable GenAI recommendations into one command center.
+
+**Problem:** During floods, heatwaves, AQI events, industrial fires, and storms, officials must combine fragmented signals fast. CivicIQ demonstrates how AI can prioritize what matters and explain why.
+
+**Walkthrough:**
+1. Open `/dashboard` for the NCR overview.
+2. Open `/demo` and click **Run NCR Crisis Demo**.
+3. Highlight Gurugram flood risk: rainfall, waterlogging complaints, traffic delay, utility disruption.
+4. Open the AI explainability panel and show evidence, confidence, department, impact, and limitation note.
+5. Open `/map` for disaster-prone areas and incident markers.
+6. Open `/alerts` to show command-center workflow and PDF brief export.
+7. Open `/operations` to show provider health, job health, queue depth, dead-letter simulation, and audit logs.
+
+**AI/ML value:** The assistant produces structured, explainable recommendations from weather, traffic, civic, incident, utility, and scenario evidence. It is not random text; each recommendation cites seeded evidence and confidence.
+
+**Social impact:** Faster prioritization can reduce exposure during floods, heatwaves, AQI events, industrial incidents, water stress, and storms for over 7.5 crore NCR residents.
+
+**Closing:** CivicIQ is a local, stable prototype today, with a clear path to Google Cloud production services tomorrow.
+
+## Explainability and Responsible AI
+
+Each demo recommendation includes:
+
+- Why the recommendation was generated
+- Evidence records and source types
+- Data freshness
+- Confidence score
+- Risk contribution
+- Suggested department
+- Expected impact
+- Limitation note
+
+CivicIQ is decision support only. It does not issue official emergency orders; critical decisions should be verified by authorized control rooms.
+
+## Production Data Architecture Path
+
+- SQLite demo store -> Cloud SQL or AlloyDB for operational data
+- Local JSON/CSV seed data -> BigQuery for historical risk observations
+- Local exports -> Cloud Storage signed URLs
+- Simulated refresh jobs -> Pub/Sub topics, Cloud Functions workers, Cloud Scheduler
+- Local audit logs -> Cloud Logging, Cloud Monitoring, Error Reporting, uptime checks
+
+## Screenshots
+
+Add screenshots for:
+
+- `/dashboard` NCR command center
+- `/demo` crisis activation and explainability
+- `/map` incident layer
+- `/alerts` workflow center
+- `/operations` provider/job health
 
 Scheduled local jobs:
 
@@ -235,6 +336,7 @@ Build files:
 ## Google Cloud Architecture Mapping
 
 - Cloud Run: FastAPI and Next.js services
+- Vertex AI Gemini: decision assistant, incident summaries, and future RAG orchestration
 - BigQuery: analytical civic and disaster data warehouse
 - Cloud Storage: uploaded datasets, GeoJSON, incident exports
 - Pub/Sub: real-time weather/news/traffic/incident ingestion

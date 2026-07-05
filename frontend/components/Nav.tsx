@@ -3,10 +3,14 @@ import { UserHeader } from "./UserHeader";
 
 const links = [
   ["Dashboard", "/dashboard"],
+  ["Demo", "/demo"],
+  ["Map", "/map"],
   ["Districts", "/districts"],
   ["Alerts", "/alerts"],
   ["Assigned", "/alerts/assigned"],
   ["AI Assistant", "/assistant"],
+  ["Operations", "/operations"],
+  ["Exports", "/exports"],
   ["Anomalies", "/anomalies"],
   ["Forecasting", "/forecasting"],
   ["Upload", "/upload"],

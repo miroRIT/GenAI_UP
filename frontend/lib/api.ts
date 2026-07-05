@@ -154,6 +154,97 @@ export type ProviderStatus = {
   rate_limit_status: string;
 };
 
+export type DemoScenario = {
+  scenario_id: string;
+  title: string;
+  district_id: string;
+  district_name: string;
+  primary_risk: string;
+  risk_score: number;
+  risk_level: string;
+  summary: string;
+  recommended_department: string;
+  expected_impact: string;
+  actions: string[];
+  updated_at: string;
+};
+
+export type DemoOverview = {
+  region_name: string;
+  tagline: string;
+  demo_active: boolean;
+  overall_risk_score: number;
+  active_critical_alerts: number;
+  districts_at_high_or_critical_risk: number;
+  provider_health: string;
+  average_aqi: number;
+  weather_alerts: number;
+  traffic_disruption_index: number;
+  emergency_response_load: string;
+  open_department_actions: number;
+  last_updated: string;
+  why_this_matters: string;
+  scenarios: DemoScenario[];
+};
+
+export type DemoRecommendation = {
+  recommendation_id: string;
+  title: string;
+  district_name: string;
+  risk_level: string;
+  confidence_score: number;
+  suggested_department: string;
+  expected_impact: string;
+  actions: string[];
+};
+
+export type RecommendationExplanation = {
+  recommendation_id: string;
+  title: string;
+  why_generated: string;
+  evidence_records: Array<{ source_type: string; title: string; value: string; freshness: string; risk_contribution: number }>;
+  related_data_points: Array<{ metric: string; value: string }>;
+  source_mix: string[];
+  confidence_score: number;
+  risk_contribution: number;
+  suggested_department: string;
+  expected_impact: string;
+  limitation_note: string;
+};
+
+export type OperationsSnapshot = {
+  api_status: string;
+  average_response_time_ms: number;
+  queue_depth: number;
+  dead_letter_count: number;
+  last_ingestion_run: string;
+  provider_health: Array<{ provider: string; status: string; freshness: string; sample_payload: string; mode: string }>;
+  job_health: Array<{ job: string; status: string; records: number; retry_count: number; dead_letter_count: number }>;
+  events: Array<{ event_id: string; actor: string; action: string; target: string; created_at: string; status: string }>;
+};
+
+export type DemoExport = {
+  export_id: string;
+  title: string;
+  format: string;
+  storage_mode: string;
+  download_url: string;
+  expires_in_minutes: number;
+  created_at: string;
+};
+
+export type DemoMapIncident = {
+  incident_id: string;
+  title: string;
+  district_name: string;
+  risk_level: string;
+  risk_score: number;
+  category: string;
+  latitude: number;
+  longitude: number;
+  updated_at: string;
+};
+
 export type DisasterRisk = {
   district_id: string;
   district_name: string;
@@ -277,6 +368,55 @@ export async function testProvider(providerType: string) {
   return request<Record<string, unknown>>(`/api/providers/test/${providerType}`, {
     method: "POST",
   });
+}
+
+export async function getDemoOverview() {
+  return request<DemoOverview>("/api/dashboard/overview");
+}
+
+export async function runCrisisDemo() {
+  return request<{ message: string; scenario_count: number; alert_ids: string[]; next_steps: Array<{ step: number; label: string; status: string }> }>("/api/demo/run-crisis", {
+    method: "POST",
+  });
+}
+
+export async function seedDemo() {
+  return request<Record<string, unknown>>("/api/demo/seed", { method: "POST" });
+}
+
+export async function refreshDemoFeeds() {
+  return request<Record<string, unknown>>("/api/jobs/refresh-demo-feeds", { method: "POST" });
+}
+
+export async function getDemoRecommendations() {
+  return request<DemoRecommendation[]>("/api/demo/recommendations");
+}
+
+export async function explainRecommendation(recommendationId: string) {
+  return request<RecommendationExplanation>(`/api/recommendations/${recommendationId}/explain`);
+}
+
+export async function getOperations() {
+  return request<OperationsSnapshot>("/api/operations");
+}
+
+export async function getDemoMapLayers() {
+  return request<{
+    boundary_source: {
+      source_type: string;
+      source_name: string;
+      production_source_options: string[];
+    };
+    incidents: DemoMapIncident[];
+  }>("/api/map/layers");
+}
+
+export async function getAuditLogs() {
+  return request<OperationsSnapshot["events"]>("/api/audit-logs");
+}
+
+export async function getExports() {
+  return request<DemoExport[]>("/api/exports");
 }
 
 export async function login(email: string, password: string) {

@@ -13,7 +13,7 @@ from app.models.db_models import Alert
 client = TestClient(app)
 
 
-def auth_headers(email: str = "admin@civiciq.demo", password: str = "Admin@12345") -> dict[str, str]:
+def auth_headers(email: str = "admin@civiciq.demo", password: str = "Admin@123") -> dict[str, str]:
     init_db()
     db = SessionLocal()
     try:
@@ -52,7 +52,7 @@ def test_auth_login():
         db.close()
     response = client.post(
         "/api/auth/login",
-        json={"email": "admin@civiciq.demo", "password": "Admin@12345"},
+        json={"email": "admin@civiciq.demo", "password": "Admin@123"},
     )
     assert response.status_code == 200
     assert response.json()["user"]["role"] == "Admin"
@@ -93,7 +93,7 @@ def test_job_run_requires_auth_and_allows_admin():
 def test_viewer_cannot_run_jobs():
     response = client.post(
         "/api/jobs/run/risk",
-        headers=auth_headers("viewer@civiciq.demo", "Viewer@12345"),
+        headers=auth_headers("viewer@civiciq.demo", "Viewer@123"),
     )
     assert response.status_code == 403
 
@@ -135,7 +135,7 @@ def test_alert_pdf_export_and_assigned_alerts():
     finally:
         db.close()
 
-    department_headers = auth_headers("department@civiciq.demo", "Department@12345")
+    department_headers = auth_headers("department@civiciq.demo", "Department@123")
     assigned = client.get("/api/alerts/assigned-to-me", headers=department_headers)
     assert assigned.status_code == 200
     assert any(alert["alert_id"] == created["alert_id"] for alert in assigned.json())
@@ -172,3 +172,52 @@ def test_observation_persistence_and_listing():
     response = client.get("/api/observations?type=weather&district_id=NCR01")
     assert response.status_code == 200
     assert any(item["provider_name"] == "UnitTestWeather" for item in response.json())
+
+
+def test_demo_overview_returns_kpis():
+    response = client.get("/api/dashboard/overview")
+    assert response.status_code == 200
+    payload = response.json()
+    assert payload["overall_risk_score"] >= 80
+    assert len(payload["scenarios"]) == 5
+
+
+def test_demo_seed_and_crisis_activation():
+    seeded = client.post("/api/demo/seed")
+    assert seeded.status_code == 200
+    assert seeded.json()["demo_active"] is False
+
+    activated = client.post("/api/demo/run-crisis")
+    assert activated.status_code == 200
+    assert activated.json()["scenario_count"] == 5
+    assert activated.json()["alert_ids"]
+
+
+def test_recommendation_explainability_returns_evidence():
+    response = client.get("/api/recommendations/gurugram-flood/explain")
+    assert response.status_code == 200
+    payload = response.json()
+    assert payload["confidence_score"] > 0.8
+    assert payload["evidence_records"]
+    assert "weather" in payload["source_mix"]
+
+
+def test_map_incidents_contain_lat_lon():
+    response = client.get("/api/map/incidents")
+    assert response.status_code == 200
+    incident = response.json()[0]
+    assert incident["latitude"]
+    assert incident["longitude"]
+
+
+def test_operations_and_export_endpoints():
+    operations = client.get("/api/operations")
+    assert operations.status_code == 200
+    assert operations.json()["provider_health"]
+
+    exports = client.get("/api/exports")
+    assert exports.status_code == 200
+    export_id = exports.json()[0]["export_id"]
+    brief = client.get(f"/api/exports/{export_id}")
+    assert brief.status_code == 200
+    assert "CivicIQ Incident Brief" in brief.text
