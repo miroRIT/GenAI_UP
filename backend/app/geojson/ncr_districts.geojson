@@ -1,0 +1,629 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "district_id": "NCR01",
+        "district_name": "Delhi NCT",
+        "state": "Delhi",
+        "population": 19500000,
+        "area_sq_km": 1483,
+        "disaster_profile": "Yamuna floodplain, seismic zone IV, extreme heat, severe AQI",
+        "note": "Simplified demo polygon. Production should use official NCR/Bhuvan/Survey of India/state GIS boundaries."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.089,
+              28.4939
+            ],
+            [
+              77.32900000000001,
+              28.5275
+            ],
+            [
+              77.3026,
+              28.733900000000002
+            ],
+            [
+              77.113,
+              28.712300000000003
+            ],
+            [
+              77.089,
+              28.4939
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "district_id": "NCR02",
+        "district_name": "Gurugram",
+        "state": "Haryana",
+        "population": 3100000,
+        "area_sq_km": 1258,
+        "disaster_profile": "Urban flooding, heat stress, Aravalli degradation, traffic gridlock",
+        "note": "Simplified demo polygon. Production should use official NCR/Bhuvan/Survey of India/state GIS boundaries."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.9066,
+              28.339499999999997
+            ],
+            [
+              77.1466,
+              28.373099999999997
+            ],
+            [
+              77.1202,
+              28.5795
+            ],
+            [
+              76.9306,
+              28.5579
+            ],
+            [
+              76.9066,
+              28.339499999999997
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "district_id": "NCR03",
+        "district_name": "Faridabad",
+        "state": "Haryana",
+        "population": 2800000,
+        "area_sq_km": 742,
+        "disaster_profile": "Industrial air pollution, Yamuna floodplain, heat stress",
+        "note": "Simplified demo polygon. Production should use official NCR/Bhuvan/Survey of India/state GIS boundaries."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.1978,
+              28.288899999999998
+            ],
+            [
+              77.43780000000001,
+              28.322499999999998
+            ],
+            [
+              77.4114,
+              28.5289
+            ],
+            [
+              77.2218,
+              28.5073
+            ],
+            [
+              77.1978,
+              28.288899999999998
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "district_id": "NCR04",
+        "district_name": "Ghaziabad",
+        "state": "Uttar Pradesh",
+        "population": 4900000,
+        "area_sq_km": 1179,
+        "disaster_profile": "Hindon-Yamuna flood risk, severe AQI, high emergency load",
+        "note": "Simplified demo polygon. Production should use official NCR/Bhuvan/Survey of India/state GIS boundaries."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.3338,
+              28.5492
+            ],
+            [
+              77.5738,
+              28.5828
+            ],
+            [
+              77.5474,
+              28.7892
+            ],
+            [
+              77.3578,
+              28.7676
+            ],
+            [
+              77.3338,
+              28.5492
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "district_id": "NCR05",
+        "district_name": "Gautam Buddh Nagar / Noida",
+        "state": "Uttar Pradesh",
+        "population": 3600000,
+        "area_sq_km": 1282,
+        "disaster_profile": "Yamuna floodplain, expressway incidents, severe AQI",
+        "note": "Simplified demo polygon. Production should use official NCR/Bhuvan/Survey of India/state GIS boundaries."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.271,
+              28.415499999999998
+            ],
+            [
+              77.51100000000001,
+              28.449099999999998
+            ],
+            [
+              77.4846,
+              28.6555
+            ],
+            [
+              77.295,
+              28.6339
+            ],
+            [
+              77.271,
+              28.415499999999998
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "district_id": "NCR06",
+        "district_name": "Meerut",
+        "state": "Uttar Pradesh",
+        "population": 4000000,
+        "area_sq_km": 2522,
+        "disaster_profile": "Ganga-Yamuna basin flooding, dense urban fire risk, seismic shaking",
+        "note": "Simplified demo polygon. Production should use official NCR/Bhuvan/Survey of India/state GIS boundaries."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.5864,
+              28.8645
+            ],
+            [
+              77.8264,
+              28.8981
+            ],
+            [
+              77.8,
+              29.1045
+            ],
+            [
+              77.6104,
+              29.082900000000002
+            ],
+            [
+              77.5864,
+              28.8645
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "district_id": "NCR07",
+        "district_name": "Sonipat",
+        "state": "Haryana",
+        "population": 2200000,
+        "area_sq_km": 2260,
+        "disaster_profile": "Yamuna floodplain, industrial emissions, highway incidents",
+        "note": "Simplified demo polygon. Production should use official NCR/Bhuvan/Survey of India/state GIS boundaries."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.8951,
+              28.873099999999997
+            ],
+            [
+              77.13510000000001,
+              28.906699999999997
+            ],
+            [
+              77.1087,
+              29.1131
+            ],
+            [
+              76.9191,
+              29.0915
+            ],
+            [
+              76.8951,
+              28.873099999999997
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "district_id": "NCR08",
+        "district_name": "Panipat",
+        "state": "Haryana",
+        "population": 1900000,
+        "area_sq_km": 1268,
+        "disaster_profile": "Industrial fire risk, poor AQI, heat stress",
+        "note": "Simplified demo polygon. Production should use official NCR/Bhuvan/Survey of India/state GIS boundaries."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.84349999999999,
+              29.270899999999997
+            ],
+            [
+              77.0835,
+              29.304499999999997
+            ],
+            [
+              77.05709999999999,
+              29.5109
+            ],
+            [
+              76.86749999999999,
+              29.4893
+            ],
+            [
+              76.84349999999999,
+              29.270899999999997
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "district_id": "NCR09",
+        "district_name": "Rohtak-Jhajjar Belt",
+        "state": "Haryana",
+        "population": 3300000,
+        "area_sq_km": 3742,
+        "disaster_profile": "Heatwave exposure, water stress, transport disruption",
+        "note": "Simplified demo polygon. Production should use official NCR/Bhuvan/Survey of India/state GIS boundaries."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.48186666666666,
+              28.770766666666667
+            ],
+            [
+              76.73133333333334,
+              28.805691999999997
+            ],
+            [
+              76.703892,
+              29.02023333333333
+            ],
+            [
+              76.50681333333334,
+              28.997781333333332
+            ],
+            [
+              76.48186666666666,
+              28.770766666666667
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "district_id": "NCR10",
+        "district_name": "Rewari-Mahendragarh Belt",
+        "state": "Haryana",
+        "population": 2700000,
+        "area_sq_km": 3485,
+        "disaster_profile": "Aravalli slope erosion, drought, heatwave exposure",
+        "note": "Simplified demo polygon. Production should use official NCR/Bhuvan/Survey of India/state GIS boundaries."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.5039,
+              28.072799999999997
+            ],
+            [
+              76.74390000000001,
+              28.106399999999997
+            ],
+            [
+              76.7175,
+              28.3128
+            ],
+            [
+              76.5279,
+              28.2912
+            ],
+            [
+              76.5039,
+              28.072799999999997
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "district_id": "NCR11",
+        "district_name": "Nuh-Palwal Belt",
+        "state": "Haryana",
+        "population": 3000000,
+        "area_sq_km": 2868,
+        "disaster_profile": "Flash flooding, low healthcare access, heat stress",
+        "note": "Simplified demo polygon. Production should use official NCR/Bhuvan/Survey of India/state GIS boundaries."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.881,
+              27.982
+            ],
+            [
+              77.12100000000001,
+              28.0156
+            ],
+            [
+              77.0946,
+              28.222
+            ],
+            [
+              76.905,
+              28.200400000000002
+            ],
+            [
+              76.881,
+              27.982
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "district_id": "NCR12",
+        "district_name": "Karnal-Jind-Bhiwani-Dadri Belt",
+        "state": "Haryana",
+        "population": 6200000,
+        "area_sq_km": 10384,
+        "disaster_profile": "Agricultural fire smoke, heatwave, water stress",
+        "note": "Simplified demo polygon. Production should use official NCR/Bhuvan/Survey of India/state GIS boundaries."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.64436666666667,
+              29.339566666666666
+            ],
+            [
+              77.33663333333332,
+              29.436484
+            ],
+            [
+              77.26048399999999,
+              30.031833333333335
+            ],
+            [
+              76.71359333333334,
+              29.969529333333334
+            ],
+            [
+              76.64436666666667,
+              29.339566666666666
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "district_id": "NCR13",
+        "district_name": "Baghpat-Shamli-Muzaffarnagar Belt",
+        "state": "Uttar Pradesh",
+        "population": 5800000,
+        "area_sq_km": 5037,
+        "disaster_profile": "Yamuna floodplain, sugar-belt fire risk, fog and highway incidents",
+        "note": "Simplified demo polygon. Production should use official NCR/Bhuvan/Survey of India/state GIS boundaries."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.5406,
+              29.3048
+            ],
+            [
+              77.8764,
+              29.351812
+            ],
+            [
+              77.839462,
+              29.6406
+            ],
+            [
+              77.57418,
+              29.610378
+            ],
+            [
+              77.5406,
+              29.3048
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "district_id": "NCR14",
+        "district_name": "Hapur-Bulandshahr Belt",
+        "state": "Uttar Pradesh",
+        "population": 4800000,
+        "area_sq_km": 5532,
+        "disaster_profile": "Ganga basin flooding, AQI episodes, utility stress",
+        "note": "Simplified demo polygon. Production should use official NCR/Bhuvan/Survey of India/state GIS boundaries."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.6654,
+              28.2225
+            ],
+            [
+              78.0342,
+              28.274132
+            ],
+            [
+              77.993632,
+              28.5913
+            ],
+            [
+              77.70228,
+              28.558108
+            ],
+            [
+              77.6654,
+              28.2225
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "district_id": "NCR15",
+        "district_name": "Alwar",
+        "state": "Rajasthan",
+        "population": 4000000,
+        "area_sq_km": 8380,
+        "disaster_profile": "Aravalli degradation, drought, heatwave, flash flooding",
+        "note": "Simplified demo polygon. Production should use official NCR/Bhuvan/Survey of India/state GIS boundaries."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.35526666666668,
+              27.273666666666667
+            ],
+            [
+              76.91393333333333,
+              27.35188
+            ],
+            [
+              76.85248,
+              27.832333333333334
+            ],
+            [
+              76.41113333333334,
+              27.782053333333334
+            ],
+            [
+              76.35526666666668,
+              27.273666666666667
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "district_id": "NCR16",
+        "district_name": "Bharatpur",
+        "state": "Rajasthan",
+        "population": 3600000,
+        "area_sq_km": 3661,
+        "disaster_profile": "Flooding, heatwave, wetland stress, vector disease risk",
+        "note": "Simplified demo polygon. Production should use official NCR/Bhuvan/Survey of India/state GIS boundaries."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.38096666666667,
+              27.093166666666665
+            ],
+            [
+              77.62503333333333,
+              27.127336
+            ],
+            [
+              77.598186,
+              27.337233333333334
+            ],
+            [
+              77.40537333333333,
+              27.31526733333333
+            ],
+            [
+              77.38096666666667,
+              27.093166666666665
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

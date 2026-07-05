@@ -5,6 +5,7 @@ from app.services.monitoring_service import (
     get_live_monitoring_feed,
     get_region_profile,
 )
+from app.services.geospatial_service import get_available_layers, get_district_geojson, get_mapped_incidents
 
 
 router = APIRouter(tags=["monitoring"])
@@ -23,3 +24,18 @@ def disaster_map() -> dict[str, object]:
 @router.get("/monitoring/live")
 def live_monitoring() -> dict[str, object]:
     return get_live_monitoring_feed()
+
+
+@router.get("/geospatial/districts")
+def geospatial_districts() -> dict[str, object]:
+    return get_district_geojson()
+
+
+@router.get("/geospatial/incidents")
+def geospatial_incidents() -> list[dict[str, object]]:
+    return get_mapped_incidents()
+
+
+@router.get("/geospatial/layers")
+def geospatial_layers() -> list[dict[str, object]]:
+    return get_available_layers()

@@ -97,6 +97,160 @@ export type MonitoringSignal = {
   action: string;
 };
 
+export type GeoIncident = {
+  incident_id: string;
+  title: string;
+  district_id: string;
+  district_name: string;
+  category: string;
+  severity: string;
+  timestamp: string;
+  source: string;
+  url: string;
+  summary: string;
+  latitude: number;
+  longitude: number;
+  recommended_action: string;
+};
+
+export type Alert = {
+  alert_id: string;
+  title: string;
+  description: string;
+  district_id: string;
+  district_name: string;
+  category: string;
+  severity: string;
+  priority: string;
+  status: string;
+  assigned_department: string;
+  source: string;
+  created_at: string;
+  updated_at: string;
+  recommended_actions: string[];
+  notes: string;
+  incident_brief: string;
+};
+
+export type DisasterRisk = {
+  district_id: string;
+  district_name: string;
+  state: string;
+  population: number;
+  area_sq_km: number;
+  latitude: number;
+  longitude: number;
+  overall: {
+    score: number;
+    level: string;
+    explanation: string;
+    confidence: string;
+    data_sources_used: string[];
+  };
+  risks: Record<
+    string,
+    {
+      score: number;
+      level: string;
+      top_contributing_factors: string[];
+      explanation: string;
+      recommended_actions: string[];
+      confidence: string;
+      data_sources_used: string[];
+    }
+  >;
+};
+
+export async function getDistrictGeoJson() {
+  return request<Record<string, unknown>>("/api/geospatial/districts");
+}
+
+export async function getGeoIncidents() {
+  return request<GeoIncident[]>("/api/geospatial/incidents");
+}
+
+export async function getGeoLayers() {
+  return request<Array<{ id: string; name: string; source: string }>>("/api/geospatial/layers");
+}
+
+export async function getDistricts() {
+  return request<Ward[]>("/api/districts");
+}
+
+export async function getDistrictDetail(districtId: string) {
+  return request<
+    Ward & {
+      disaster_risk: DisasterRisk;
+      alerts: Alert[];
+      incidents: GeoIncident[];
+      recommendations: string[];
+      weather: Record<string, string | number | object>;
+      traffic: Record<string, string | number>;
+      environment: Record<string, string | number>;
+    }
+  >(`/api/districts/${districtId}`);
+}
+
+export async function getDisasterRisk() {
+  return request<DisasterRisk[]>("/api/disaster-risk");
+}
+
+export async function getAlerts() {
+  return request<Alert[]>("/api/alerts");
+}
+
+export async function assignAlert(alertId: string, department: string, priority?: string) {
+  return request<Alert>(`/api/alerts/${alertId}/assign`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ department, priority }),
+  });
+}
+
+export async function transitionAlert(
+  alertId: string,
+  transition: "acknowledge" | "resolve" | "close",
+  notes = "",
+) {
+  return request<Alert>(`/api/alerts/${alertId}/${transition}`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ notes }),
+  });
+}
+
+export async function getJobStatus() {
+  return request<
+    Array<{
+      id: number;
+      job_name: string;
+      status: string;
+      started_at: string;
+      completed_at: string | null;
+      records_processed: number;
+      error_message: string;
+    }>
+  >("/api/jobs/status");
+}
+
+export async function runJob(jobName: string) {
+  return request<Record<string, string | number | null>>(`/api/jobs/run/${jobName}`, {
+    method: "POST",
+  });
+}
+
+export async function login(email: string, password: string) {
+  return request<{
+    access_token: string;
+    token_type: string;
+    user: { email: string; full_name: string; role: string; district_id: string | null };
+  }>("/api/auth/login", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email, password }),
+  });
+}
+
 export async function getWards() {
   return request<Ward[]>("/api/wards");
 }

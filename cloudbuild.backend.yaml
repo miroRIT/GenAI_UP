@@ -1,0 +1,20 @@
+substitutions:
+  _REGION: asia-south1
+  _SERVICE: civiciq-api
+
+steps:
+  - name: gcr.io/cloud-builders/docker
+    args: ["build", "-t", "gcr.io/$PROJECT_ID/${_SERVICE}:$COMMIT_SHA", "./backend"]
+  - name: gcr.io/cloud-builders/docker
+    args: ["push", "gcr.io/$PROJECT_ID/${_SERVICE}:$COMMIT_SHA"]
+  - name: gcr.io/google.com/cloudsdktool/cloud-sdk
+    entrypoint: gcloud
+    args:
+      - run
+      - deploy
+      - ${_SERVICE}
+      - --image=gcr.io/$PROJECT_ID/${_SERVICE}:$COMMIT_SHA
+      - --region=${_REGION}
+      - --platform=managed
+      - --allow-unauthenticated
+      - --set-env-vars=MOCK_MODE=false,ENABLE_SCHEDULER=true

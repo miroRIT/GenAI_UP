@@ -2,11 +2,14 @@ import Link from "next/link";
 
 const links = [
   ["Dashboard", "/dashboard"],
-  ["Wards", "/wards"],
+  ["Districts", "/districts"],
+  ["Alerts", "/alerts"],
   ["AI Assistant", "/assistant"],
   ["Anomalies", "/anomalies"],
   ["Forecasting", "/forecasting"],
   ["Upload", "/upload"],
+  ["Admin", "/admin/data-refresh"],
+  ["Login", "/login"],
 ];
 
 export function Nav() {

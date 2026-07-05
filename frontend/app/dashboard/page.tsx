@@ -2,18 +2,19 @@ import { AlertTriangle, Map, Siren, Users } from "lucide-react";
 import { ChartCard } from "@/components/ChartCard";
 import { KpiCard } from "@/components/KpiCard";
 import { LiveMonitoringPanel } from "@/components/LiveMonitoringPanel";
+import { MapShell } from "@/components/MapShell";
 import { Nav } from "@/components/Nav";
-import { NcrDisasterMap } from "@/components/NcrDisasterMap";
 import { RecommendationCard } from "@/components/RecommendationCard";
 import { RiskRankingChart } from "@/components/RiskRankingChart";
-import { getDisasterMap, getLiveMonitoring, getOverview, getRecommendations, getRiskRanking } from "@/lib/api";
+import { getDistrictGeoJson, getGeoIncidents, getLiveMonitoring, getOverview, getRecommendations, getRiskRanking } from "@/lib/api";
 
 export default async function DashboardPage() {
-  const [overview, ranking, recommendations, disasterMap, monitoring] = await Promise.all([
+  const [overview, ranking, recommendations, geojson, incidents, monitoring] = await Promise.all([
     getOverview(),
     getRiskRanking(),
     getRecommendations(),
-    getDisasterMap(),
+    getDistrictGeoJson(),
+    getGeoIncidents(),
     getLiveMonitoring(),
   ]);
 
@@ -42,7 +43,7 @@ export default async function DashboardPage() {
             geospatial: monitoring.geospatial,
           }}
         />
-        <NcrDisasterMap layers={disasterMap.layers} />
+        <MapShell geojson={geojson} incidents={incidents} />
         <div className="grid gap-6 lg:grid-cols-[1.3fr_0.9fr]">
           <ChartCard title="Top High-Risk Wards">
             <RiskRankingChart wards={ranking.slice(0, 8)} />
