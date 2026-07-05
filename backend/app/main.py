@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.config import get_settings
-from app.routes import analytics, chat, health, overview, recommendations, upload, wards
+from app.routes import analytics, chat, health, monitoring, overview, recommendations, upload, wards
 from app.services.data_loader import ensure_sample_data
 from app.services.rag_engine import ensure_knowledge_base
 
@@ -30,6 +30,7 @@ app.include_router(analytics.router, prefix="/api")
 app.include_router(recommendations.router, prefix="/api")
 app.include_router(chat.router, prefix="/api")
 app.include_router(upload.router, prefix="/api")
+app.include_router(monitoring.router, prefix="/api")
 
 
 @app.on_event("startup")

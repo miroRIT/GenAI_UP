@@ -1,19 +1,22 @@
 # CivicIQ — AI Decision Intelligence Platform for Community Well-being
 
-CivicIQ is a full-stack hackathon prototype showing how AI, analytics, anomaly detection, forecasting, lightweight RAG, and workflow recommendations can help city stakeholders prioritize community well-being.
+CivicIQ is a full-stack hackathon prototype showing how AI, analytics, anomaly detection, forecasting, lightweight RAG, geospatial monitoring, and workflow recommendations can help city stakeholders prioritize community well-being across the National Capital Region (NCR), India.
 
 ## Problem Statement
 
-City administrators and community leaders often need to decide which wards need urgent attention across complaints, public services, mobility, healthcare access, environmental conditions, utilities, waste collection, and emergency incidents. CivicIQ turns fragmented civic signals into explainable risk scores, recommendations, and AI-assisted answers.
+City administrators and community leaders often need to decide which NCR districts need urgent attention across complaints, public services, mobility, healthcare access, environmental conditions, utilities, waste collection, emergency incidents, and natural-disaster exposure. CivicIQ turns fragmented civic signals into explainable risk scores, recommendations, maps, monitoring feeds, and AI-assisted answers.
 
 ## Features
 
 - Next.js + TypeScript civic dashboard with KPI cards, charts, tables, filters, and chat.
 - FastAPI backend with modular REST APIs for overview, wards, analytics, anomalies, forecasts, recommendations, chat, and CSV upload.
 - Automatic sample civic data generation in `backend/data`.
+- NCR-focused default data covering approx. 7.5 crore people across 55,083 sq km.
 - Community Risk Score engine with weighted factors and Low/Medium/High/Critical classification.
 - Rule-based anomaly detection for AQI spikes, complaint spikes, utility outages, and emergency load.
 - Moving-average forecast estimates for complaints, AQI, and outages.
+- Area disaster-prone map for Yamuna/Hindon flood exposure, severe AQI, seismic risk, heat stress, drought, fire, and utility stress.
+- Active monitoring API for mock-live news, weather, traffic, and geospatial feeds with provider-ready integration points.
 - Lightweight RAG over local markdown files in `backend/knowledge_base`.
 - Mock AI mode by default, with optional Gemini-compatible mode via environment variable.
 
@@ -48,6 +51,10 @@ cp .env.example .env
 - `NEXT_PUBLIC_API_BASE_URL`: frontend API target, default `http://127.0.0.1:8000`
 - `GEMINI_API_KEY`: optional Gemini API key
 - `GOOGLE_API_KEY`: optional Gemini-compatible fallback key
+- `NEWS_API_KEY`: optional future news provider key
+- `WEATHER_API_KEY`: optional future weather provider key
+- `TRAFFIC_API_KEY`: optional future traffic provider key
+- `GEOSPATIAL_TILE_URL`: optional future map tile or GeoJSON service URL
 
 No paid service is required. Without an API key, CivicIQ runs in mock AI mode.
 
@@ -83,6 +90,9 @@ The frontend runs at `http://127.0.0.1:3000`.
 - `GET /api/analytics/anomalies`
 - `GET /api/analytics/forecast?metric=complaints|aqi|outages`
 - `GET /api/recommendations`
+- `GET /api/region/profile`
+- `GET /api/geospatial/disaster-map`
+- `GET /api/monitoring/live`
 - `POST /api/chat`
 - `POST /api/upload`
 - `POST /api/upload/reset`
@@ -90,7 +100,9 @@ The frontend runs at `http://127.0.0.1:3000`.
 ## Sample Questions
 
 - Which wards need urgent action this week?
-- Why is Ward 4 classified as high risk?
+- Why is Ghaziabad classified as high risk?
+- Which NCR areas are most prone to flooding or heat stress?
+- What are today’s highest priority live monitoring signals?
 - What are the top 3 recommendations for improving community well-being?
 - Are there any anomalies in air quality?
 - Which areas have both high complaints and poor healthcare access?
@@ -104,6 +116,7 @@ The frontend runs at `http://127.0.0.1:3000`.
 - Local CSV data maps to BigQuery for analytical warehousing.
 - FastAPI backend maps to Cloud Run.
 - Uploaded datasets map to Cloud Storage.
+- Live monitoring adapters can connect to weather, traffic, news, and geospatial feeds through Pub/Sub ingestion.
 - Optional Gemini mode maps to Vertex AI or Gemini APIs.
 - Local knowledge base maps to Cloud Storage plus Vertex AI Search or a vector store.
 - Local dashboards can be complemented by Looker.

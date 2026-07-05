@@ -30,8 +30,10 @@ export function WardTable({ wards }: { wards: Ward[] }) {
           <thead className="text-xs uppercase text-slate-500">
             <tr>
               <th className="py-2">Ward</th>
+              <th>State</th>
               <th>Risk</th>
               <th>Score</th>
+              <th>Population</th>
               <th>Complaints</th>
               <th>AQI</th>
               <th>Outages</th>
@@ -42,8 +44,10 @@ export function WardTable({ wards }: { wards: Ward[] }) {
             {filteredWards.map((ward) => (
               <tr className="border-t border-slate-100" key={ward.ward_id}>
                 <td className="py-3 font-medium">{ward.ward_name}</td>
+                <td>{ward.state}</td>
                 <td><RiskBadge level={ward.risk_level} /></td>
                 <td>{ward.community_risk_score}</td>
+                <td>{(ward.population / 1000000).toFixed(1)}M</td>
                 <td>{ward.complaint_volume}</td>
                 <td>{Math.round(ward.aqi)}</td>
                 <td>{ward.outage_count}</td>

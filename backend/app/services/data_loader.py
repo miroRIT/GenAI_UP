@@ -94,88 +94,52 @@ def _write_sample_data(data_dir: Path) -> None:
 def _build_wards() -> pd.DataFrame:
     return pd.DataFrame(
         [
-            {
-                "ward_id": "W01",
-                "ward_name": "Riverside Central",
-                "population": 82000,
-                "vulnerable_population_percentage": 18,
-                "average_income_band": "Middle",
-                "service_coverage_score": 76,
-                "latitude": 1.3001,
-                "longitude": 103.8519,
-            },
-            {
-                "ward_id": "W02",
-                "ward_name": "Northgate Estates",
-                "population": 64000,
-                "vulnerable_population_percentage": 22,
-                "average_income_band": "Lower-Middle",
-                "service_coverage_score": 69,
-                "latitude": 1.3584,
-                "longitude": 103.8292,
-            },
-            {
-                "ward_id": "W03",
-                "ward_name": "Harborview Industrial",
-                "population": 51000,
-                "vulnerable_population_percentage": 14,
-                "average_income_band": "Mixed",
-                "service_coverage_score": 61,
-                "latitude": 1.2738,
-                "longitude": 103.8097,
-            },
-            {
-                "ward_id": "W04",
-                "ward_name": "Eastwood Health Belt",
-                "population": 73000,
-                "vulnerable_population_percentage": 29,
-                "average_income_band": "Lower-Middle",
-                "service_coverage_score": 58,
-                "latitude": 1.3297,
-                "longitude": 103.9245,
-            },
-            {
-                "ward_id": "W05",
-                "ward_name": "Westlink Transit Hub",
-                "population": 91000,
-                "vulnerable_population_percentage": 16,
-                "average_income_band": "Middle",
-                "service_coverage_score": 72,
-                "latitude": 1.3402,
-                "longitude": 103.7068,
-            },
-            {
-                "ward_id": "W06",
-                "ward_name": "Lakeside Community",
-                "population": 56000,
-                "vulnerable_population_percentage": 25,
-                "average_income_band": "Lower",
-                "service_coverage_score": 54,
-                "latitude": 1.3465,
-                "longitude": 103.7221,
-            },
-            {
-                "ward_id": "W07",
-                "ward_name": "Innovation Quarter",
-                "population": 47000,
-                "vulnerable_population_percentage": 10,
-                "average_income_band": "Upper-Middle",
-                "service_coverage_score": 84,
-                "latitude": 1.2934,
-                "longitude": 103.7849,
-            },
-            {
-                "ward_id": "W08",
-                "ward_name": "South Market District",
-                "population": 68000,
-                "vulnerable_population_percentage": 21,
-                "average_income_band": "Mixed",
-                "service_coverage_score": 66,
-                "latitude": 1.2823,
-                "longitude": 103.8426,
-            },
+            _ncr_zone("NCR01", "Delhi NCT", "Delhi", 19500000, 1483, 24, "Mixed", 68, 28.6139, 77.2090, "Yamuna floodplain, seismic zone IV, extreme heat, severe AQI"),
+            _ncr_zone("NCR02", "Gurugram", "Haryana", 3100000, 1258, 16, "Upper-Middle", 74, 28.4595, 77.0266, "Urban flooding, heat stress, Aravalli degradation, traffic gridlock"),
+            _ncr_zone("NCR03", "Faridabad", "Haryana", 2800000, 742, 18, "Middle", 64, 28.4089, 77.3178, "Industrial air pollution, Yamuna floodplain, heat stress"),
+            _ncr_zone("NCR04", "Ghaziabad", "Uttar Pradesh", 4900000, 1179, 23, "Middle", 57, 28.6692, 77.4538, "Hindon-Yamuna flood risk, severe AQI, high emergency load"),
+            _ncr_zone("NCR05", "Gautam Buddh Nagar / Noida", "Uttar Pradesh", 3600000, 1282, 17, "Upper-Middle", 71, 28.5355, 77.3910, "Yamuna floodplain, expressway incidents, severe AQI"),
+            _ncr_zone("NCR06", "Meerut", "Uttar Pradesh", 4000000, 2522, 26, "Lower-Middle", 55, 28.9845, 77.7064, "Ganga-Yamuna basin flooding, dense urban fire risk, seismic shaking"),
+            _ncr_zone("NCR07", "Sonipat", "Haryana", 2200000, 2260, 21, "Middle", 61, 28.9931, 77.0151, "Yamuna floodplain, industrial emissions, highway incidents"),
+            _ncr_zone("NCR08", "Panipat", "Haryana", 1900000, 1268, 20, "Middle", 58, 29.3909, 76.9635, "Industrial fire risk, poor AQI, heat stress"),
+            _ncr_zone("NCR09", "Rohtak-Jhajjar Belt", "Haryana", 3300000, 3742, 19, "Middle", 62, 28.8955, 76.6066, "Heatwave exposure, water stress, transport disruption"),
+            _ncr_zone("NCR10", "Rewari-Mahendragarh Belt", "Haryana", 2700000, 3485, 24, "Lower-Middle", 52, 28.1928, 76.6239, "Aravalli slope erosion, drought, heatwave exposure"),
+            _ncr_zone("NCR11", "Nuh-Palwal Belt", "Haryana", 3000000, 2868, 34, "Lower", 46, 28.1020, 77.0010, "Flash flooding, low healthcare access, heat stress"),
+            _ncr_zone("NCR12", "Karnal-Jind-Bhiwani-Dadri Belt", "Haryana", 6200000, 10384, 25, "Lower-Middle", 54, 29.6857, 76.9905, "Agricultural fire smoke, heatwave, water stress"),
+            _ncr_zone("NCR13", "Baghpat-Shamli-Muzaffarnagar Belt", "Uttar Pradesh", 5800000, 5037, 28, "Lower-Middle", 49, 29.4727, 77.7085, "Yamuna floodplain, sugar-belt fire risk, fog and highway incidents"),
+            _ncr_zone("NCR14", "Hapur-Bulandshahr Belt", "Uttar Pradesh", 4800000, 5532, 26, "Lower-Middle", 51, 28.4069, 77.8498, "Ganga basin flooding, AQI episodes, utility stress"),
+            _ncr_zone("NCR15", "Alwar", "Rajasthan", 4000000, 8380, 27, "Lower-Middle", 50, 27.5530, 76.6346, "Aravalli degradation, drought, heatwave, flash flooding"),
+            _ncr_zone("NCR16", "Bharatpur", "Rajasthan", 3600000, 3661, 29, "Lower-Middle", 48, 27.2152, 77.5030, "Flooding, heatwave, wetland stress, vector disease risk"),
         ]
     )
+
+
+def _ncr_zone(
+    ward_id: str,
+    ward_name: str,
+    state: str,
+    population: int,
+    area_sq_km: int,
+    vulnerable_population_percentage: int,
+    average_income_band: str,
+    service_coverage_score: int,
+    latitude: float,
+    longitude: float,
+    disaster_profile: str,
+) -> dict[str, Any]:
+    return {
+        "ward_id": ward_id,
+        "ward_name": ward_name,
+        "state": state,
+        "population": population,
+        "area_sq_km": area_sq_km,
+        "vulnerable_population_percentage": vulnerable_population_percentage,
+        "average_income_band": average_income_band,
+        "service_coverage_score": service_coverage_score,
+        "latitude": latitude,
+        "longitude": longitude,
+        "disaster_profile": disaster_profile,
+    }
 
 
 def _build_complaints(wards: pd.DataFrame, dates: list[date], randomizer: Random) -> pd.DataFrame:
@@ -187,7 +151,7 @@ def _build_complaints(wards: pd.DataFrame, dates: list[date], randomizer: Random
         baseline = max(6, int((100 - ward["service_coverage_score"]) / 2.8))
         for day_index, day in enumerate(dates):
             trend = 1 + (day_index / 95)
-            if ward["ward_id"] in {"W04", "W06"}:
+            if ward["ward_id"] in {"NCR04", "NCR06", "NCR11", "NCR13"}:
                 trend += day_index / 58
             count = max(1, int(randomizer.gauss(baseline * trend, 2.2)))
             for _ in range(count):
@@ -210,7 +174,7 @@ def _build_traffic(wards: pd.DataFrame, dates: list[date], randomizer: Random) -
     rows = []
     for _, ward in wards.iterrows():
         base = 48 + (72 - ward["service_coverage_score"]) * 0.45
-        if ward["ward_id"] == "W05":
+        if ward["ward_id"] in {"NCR01", "NCR02", "NCR04", "NCR05"}:
             base += 18
         for day in dates:
             rows.append(
@@ -229,12 +193,12 @@ def _build_air_quality(wards: pd.DataFrame, dates: list[date], randomizer: Rando
     rows = []
     for _, ward in wards.iterrows():
         base = 68
-        if ward["ward_id"] == "W03":
+        if ward["ward_id"] in {"NCR01", "NCR03", "NCR04", "NCR08"}:
             base = 118
-        if ward["ward_id"] == "W05":
+        if ward["ward_id"] in {"NCR05", "NCR12"}:
             base = 88
         for day_index, day in enumerate(dates):
-            anomaly = 44 if ward["ward_id"] == "W03" and day_index in {22, 23} else 0
+            anomaly = 44 if ward["ward_id"] in {"NCR01", "NCR04"} and day_index in {22, 23} else 0
             rows.append(
                 {
                     "ward_id": ward["ward_id"],
@@ -252,7 +216,7 @@ def _build_utility_outages(wards: pd.DataFrame, dates: list[date], randomizer: R
     outage_id = 1
     for _, ward in wards.iterrows():
         weekly_frequency = 1
-        if ward["ward_id"] in {"W04", "W06"}:
+        if ward["ward_id"] in {"NCR04", "NCR11", "NCR13", "NCR16"}:
             weekly_frequency = 3
         for day in dates:
             if randomizer.random() < weekly_frequency / 7:
@@ -273,7 +237,7 @@ def _build_utility_outages(wards: pd.DataFrame, dates: list[date], randomizer: R
 def _build_healthcare_access(wards: pd.DataFrame, randomizer: Random) -> pd.DataFrame:
     rows = []
     for _, ward in wards.iterrows():
-        shortage = 1 if ward["ward_id"] in {"W04", "W06"} else 0
+        shortage = 1 if ward["ward_id"] in {"NCR06", "NCR10", "NCR11", "NCR13", "NCR16"} else 0
         rows.append(
             {
                 "ward_id": ward["ward_id"],
@@ -290,7 +254,7 @@ def _build_emergency_incidents(wards: pd.DataFrame, dates: list[date], randomize
     rows = []
     incident_id = 1
     for _, ward in wards.iterrows():
-        baseline = 2 if ward["ward_id"] not in {"W04", "W05"} else 4
+        baseline = 2 if ward["ward_id"] not in {"NCR01", "NCR04", "NCR05", "NCR06"} else 4
         for day in dates:
             count = max(0, int(randomizer.gauss(baseline, 1.4)))
             for _ in range(count):
@@ -310,7 +274,7 @@ def _build_emergency_incidents(wards: pd.DataFrame, dates: list[date], randomize
 def _build_waste_collection(wards: pd.DataFrame, dates: list[date], randomizer: Random) -> pd.DataFrame:
     rows = []
     for _, ward in wards.iterrows():
-        delay_bias = 0.22 if ward["ward_id"] in {"W02", "W06", "W08"} else 0.08
+        delay_bias = 0.22 if ward["ward_id"] in {"NCR01", "NCR04", "NCR06", "NCR11"} else 0.08
         for day in dates:
             delayed = randomizer.random() < delay_bias
             rows.append(

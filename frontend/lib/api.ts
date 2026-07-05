@@ -16,7 +16,12 @@ async function request<T>(path: string, options?: RequestInit): Promise<T> {
 export type Ward = {
   ward_id: string;
   ward_name: string;
+  state: string;
   population: number;
+  area_sq_km: number;
+  latitude: number;
+  longitude: number;
+  disaster_profile: string;
   community_risk_score: number;
   risk_level: "Low" | "Medium" | "High" | "Critical";
   complaint_volume: number;
@@ -51,6 +56,46 @@ export type Anomaly = {
 export async function getOverview() {
   return request<Record<string, number | string>>("/api/overview");
 }
+
+export async function getRegionProfile() {
+  return request<{
+    region_name: string;
+    population: number;
+    population_label: string;
+    area_sq_km: number;
+    planning_note: string;
+    states: string[];
+    zone_count: number;
+  }>("/api/region/profile");
+}
+
+export async function getDisasterMap() {
+  return request<{
+    region: Record<string, string | number | string[]>;
+    bbox: { north: number; south: number; east: number; west: number };
+    layers: Array<Ward & { disaster_score: number; primary_hazards: string[] }>;
+  }>("/api/geospatial/disaster-map");
+}
+
+export async function getLiveMonitoring() {
+  return request<{
+    updated_at: string;
+    mode: string;
+    providers_ready: string[];
+    weather: MonitoringSignal[];
+    traffic: MonitoringSignal[];
+    news: MonitoringSignal[];
+    geospatial: MonitoringSignal[];
+  }>("/api/monitoring/live");
+}
+
+export type MonitoringSignal = {
+  zone: string;
+  signal: string;
+  value: string;
+  severity: string;
+  action: string;
+};
 
 export async function getWards() {
   return request<Ward[]>("/api/wards");

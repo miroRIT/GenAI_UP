@@ -1,2 +1,2 @@
 # Civic Service Response Guidelines
-Prioritize wards with high complaint growth, repeated utility outages, emergency incident load, and delayed waste collection. Escalate cross-agency coordination when two or more service domains show high risk in the same ward.
+Prioritize NCR districts with high complaint growth, repeated utility outages, emergency incident load, delayed waste collection, and natural-disaster exposure. Escalate cross-agency coordination when two or more service domains show high risk in the same district. Yamuna and Hindon floodplain zones, severe AQI clusters, high-heat corridors, and low-healthcare-access belts should receive proactive monitoring.

@@ -13,7 +13,10 @@ def overview() -> dict[str, object]:
     ward_scores = calculate_ward_risk_scores(data)
 
     return {
+        "region_name": "National Capital Region, India",
         "total_wards": int(len(data["wards"])),
+        "total_population": int(data["wards"]["population"].sum()),
+        "total_area_sq_km": int(data["wards"]["area_sq_km"].sum()),
         "total_complaints": int(len(data["citizen_complaints"])),
         "average_risk_score": round(float(ward_scores["community_risk_score"].mean()), 1),
         "high_risk_wards_count": int((ward_scores["risk_level"] == "High").sum()),

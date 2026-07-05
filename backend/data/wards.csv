@@ -1,9 +1,17 @@
-ward_id,ward_name,population,vulnerable_population_percentage,average_income_band,service_coverage_score,latitude,longitude
-W01,Riverside Central,82000,18,Middle,76,1.3001,103.8519
-W02,Northgate Estates,64000,22,Lower-Middle,69,1.3584,103.8292
-W03,Harborview Industrial,51000,14,Mixed,61,1.2738,103.8097
-W04,Eastwood Health Belt,73000,29,Lower-Middle,58,1.3297,103.9245
-W05,Westlink Transit Hub,91000,16,Middle,72,1.3402,103.7068
-W06,Lakeside Community,56000,25,Lower,54,1.3465,103.7221
-W07,Innovation Quarter,47000,10,Upper-Middle,84,1.2934,103.7849
-W08,South Market District,68000,21,Mixed,66,1.2823,103.8426
+ward_id,ward_name,state,population,area_sq_km,vulnerable_population_percentage,average_income_band,service_coverage_score,latitude,longitude,disaster_profile
+NCR01,Delhi NCT,Delhi,19500000,1483,24,Mixed,68,28.6139,77.209,"Yamuna floodplain, seismic zone IV, extreme heat, severe AQI"
+NCR02,Gurugram,Haryana,3100000,1258,16,Upper-Middle,74,28.4595,77.0266,"Urban flooding, heat stress, Aravalli degradation, traffic gridlock"
+NCR03,Faridabad,Haryana,2800000,742,18,Middle,64,28.4089,77.3178,"Industrial air pollution, Yamuna floodplain, heat stress"
+NCR04,Ghaziabad,Uttar Pradesh,4900000,1179,23,Middle,57,28.6692,77.4538,"Hindon-Yamuna flood risk, severe AQI, high emergency load"
+NCR05,Gautam Buddh Nagar / Noida,Uttar Pradesh,3600000,1282,17,Upper-Middle,71,28.5355,77.391,"Yamuna floodplain, expressway incidents, severe AQI"
+NCR06,Meerut,Uttar Pradesh,4000000,2522,26,Lower-Middle,55,28.9845,77.7064,"Ganga-Yamuna basin flooding, dense urban fire risk, seismic shaking"
+NCR07,Sonipat,Haryana,2200000,2260,21,Middle,61,28.9931,77.0151,"Yamuna floodplain, industrial emissions, highway incidents"
+NCR08,Panipat,Haryana,1900000,1268,20,Middle,58,29.3909,76.9635,"Industrial fire risk, poor AQI, heat stress"
+NCR09,Rohtak-Jhajjar Belt,Haryana,3300000,3742,19,Middle,62,28.8955,76.6066,"Heatwave exposure, water stress, transport disruption"
+NCR10,Rewari-Mahendragarh Belt,Haryana,2700000,3485,24,Lower-Middle,52,28.1928,76.6239,"Aravalli slope erosion, drought, heatwave exposure"
+NCR11,Nuh-Palwal Belt,Haryana,3000000,2868,34,Lower,46,28.102,77.001,"Flash flooding, low healthcare access, heat stress"
+NCR12,Karnal-Jind-Bhiwani-Dadri Belt,Haryana,6200000,10384,25,Lower-Middle,54,29.6857,76.9905,"Agricultural fire smoke, heatwave, water stress"
+NCR13,Baghpat-Shamli-Muzaffarnagar Belt,Uttar Pradesh,5800000,5037,28,Lower-Middle,49,29.4727,77.7085,"Yamuna floodplain, sugar-belt fire risk, fog and highway incidents"
+NCR14,Hapur-Bulandshahr Belt,Uttar Pradesh,4800000,5532,26,Lower-Middle,51,28.4069,77.8498,"Ganga basin flooding, AQI episodes, utility stress"
+NCR15,Alwar,Rajasthan,4000000,8380,27,Lower-Middle,50,27.553,76.6346,"Aravalli degradation, drought, heatwave, flash flooding"
+NCR16,Bharatpur,Rajasthan,3600000,3661,29,Lower-Middle,48,27.2152,77.503,"Flooding, heatwave, wetland stress, vector disease risk"
