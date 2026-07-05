@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import { Alert, assignAlert, transitionAlert } from "@/lib/api";
 import { RiskBadge } from "./RiskBadge";
+import { DemoBadge, EmptyState, SectionCard } from "./UIPrimitives";
 
 const departments = [
   "District Administration",
@@ -54,14 +55,13 @@ export function AlertsClient({ initialAlerts }: { initialAlerts: Alert[] }) {
   }
 
   return (
-    <section className="rounded-lg border border-civic-line bg-white p-4 shadow-sm">
+    <SectionCard title="Operational Alerts" badge={<DemoBadge label="Generated Briefs" />}>
       <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <h2 className="text-lg font-semibold">Operational Alerts</h2>
         <select className="rounded-md border border-civic-line px-3 py-2 text-sm" value={filter} onChange={(event) => setFilter(event.target.value)}>
           {["All", "New", "Acknowledged", "In Progress", "Resolved", "Closed", "Critical", "High", "Medium", "Low"].map((option) => <option key={option}>{option}</option>)}
         </select>
       </div>
-      <div className="overflow-x-auto">
+      {visibleAlerts.length === 0 ? <EmptyState label="No alerts found for this filter." /> : <div className="overflow-x-auto">
         <table className="w-full min-w-[980px] text-left text-sm">
           <thead className="text-xs uppercase text-slate-500">
             <tr>
@@ -109,7 +109,7 @@ export function AlertsClient({ initialAlerts }: { initialAlerts: Alert[] }) {
             ))}
           </tbody>
         </table>
-      </div>
-    </section>
+      </div>}
+    </SectionCard>
   );
 }

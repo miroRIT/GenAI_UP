@@ -325,6 +325,42 @@ def exports_list() -> list[dict[str, Any]]:
     ]
 
 
+def crisis_summary() -> dict[str, Any]:
+    overview = demo_dashboard_overview()
+    scenarios = sorted(overview["scenarios"], key=lambda item: item["risk_score"], reverse=True)
+    top_three = scenarios[:3]
+    departments = sorted({scenario["recommended_department"] for scenario in top_three})
+    highest = top_three[0]
+    summary_text = (
+        "CivicIQ detected a Critical NCR resilience situation driven by "
+        f"{top_three[0]['district_name']} {top_three[0]['primary_risk'].lower()}, "
+        f"{top_three[1]['district_name']} {top_three[1]['primary_risk'].lower()} risk, and "
+        f"{top_three[2]['district_name']} {top_three[2]['primary_risk'].lower()} exposure. "
+        "Immediate focus is recommended on drainage response, public health advisories, and emergency readiness."
+    )
+    return {
+        "title": "NCR Crisis Summary",
+        "timestamp": overview["last_updated"],
+        "overall_risk_level": "Critical",
+        "top_affected_districts": [scenario["district_name"] for scenario in top_three],
+        "active_critical_alerts": overview["active_critical_alerts"],
+        "highest_risk_scenario": highest["title"],
+        "top_recommended_action": highest["actions"][0],
+        "departments_involved": departments,
+        "ai_confidence": 0.91,
+        "data_freshness": "5-18 minutes",
+        "executive_summary": summary_text,
+        "markdown": (
+            f"# NCR Crisis Summary\n\n"
+            f"- Overall risk: Critical\n"
+            f"- Top districts: {', '.join(scenario['district_name'] for scenario in top_three)}\n"
+            f"- Critical alerts: {overview['active_critical_alerts']}\n"
+            f"- Top action: {highest['actions'][0]}\n\n"
+            f"{summary_text}\n"
+        ),
+    }
+
+
 def export_brief(export_id: str) -> str | None:
     scenario = next((item for item in _read_runtime()["scenarios"] if item["scenario_id"] == export_id), None)
     if not scenario:

@@ -233,6 +233,21 @@ export type DemoExport = {
   created_at: string;
 };
 
+export type CrisisSummary = {
+  title: string;
+  timestamp: string;
+  overall_risk_level: string;
+  top_affected_districts: string[];
+  active_critical_alerts: number;
+  highest_risk_scenario: string;
+  top_recommended_action: string;
+  departments_involved: string[];
+  ai_confidence: number;
+  data_freshness: string;
+  executive_summary: string;
+  markdown: string;
+};
+
 export type DemoMapIncident = {
   incident_id: string;
   title: string;
@@ -390,6 +405,10 @@ export async function refreshDemoFeeds() {
 
 export async function getDemoRecommendations() {
   return request<DemoRecommendation[]>("/api/demo/recommendations");
+}
+
+export async function getCrisisSummary() {
+  return request<CrisisSummary>("/api/demo/crisis-summary");
 }
 
 export async function explainRecommendation(recommendationId: string) {

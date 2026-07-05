@@ -221,3 +221,20 @@ def test_operations_and_export_endpoints():
     brief = client.get(f"/api/exports/{export_id}")
     assert brief.status_code == 200
     assert "CivicIQ Incident Brief" in brief.text
+
+
+def test_crisis_summary_endpoint():
+    response = client.get("/api/demo/crisis-summary")
+    assert response.status_code == 200
+    payload = response.json()
+    assert payload["overall_risk_level"] == "Critical"
+    assert "Gurugram" in payload["top_affected_districts"]
+    assert "markdown" in payload
+
+
+def test_assistant_uses_seeded_demo_evidence():
+    response = client.post("/api/chat", json={"question": "Why is Gurugram critical right now?"})
+    assert response.status_code == 200
+    payload = response.json()
+    assert "Gurugram" in payload["answer"]
+    assert any("gurugram-flood" in source["chunk_id"] for source in payload["sources"])

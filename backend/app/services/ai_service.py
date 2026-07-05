@@ -4,6 +4,7 @@ import json
 import urllib.request
 
 from app.config import get_settings
+from app.services.assistant_context_service import demo_assistant_response
 from app.services.anomaly_engine import detect_anomalies
 from app.services.data_loader import load_all_data
 from app.services.rag_engine import retrieve_context
@@ -24,6 +25,9 @@ as decision support. Use vulnerable population data only for service prioritizat
 
 
 def answer_question(question: str) -> dict[str, object]:
+    if _is_demo_question(question) or not get_settings().gemini_api_key:
+        return demo_assistant_response(question)
+
     data = load_all_data()
     scores = calculate_ward_risk_scores(data)
     sources = retrieve_context(question)
@@ -36,6 +40,25 @@ def answer_question(question: str) -> dict[str, object]:
             return gemini_answer
 
     return _mock_answer(question, scores, sources, recommendations, anomalies)
+
+
+def _is_demo_question(question: str) -> bool:
+    keywords = [
+        "gurugram",
+        "delhi",
+        "noida",
+        "ghaziabad",
+        "meerut",
+        "ncr crisis",
+        "leadership",
+        "next 24",
+        "industrial",
+        "heatwave",
+        "aqi",
+        "flood",
+    ]
+    lowered = question.lower()
+    return any(keyword in lowered for keyword in keywords)
 
 
 def _mock_answer(

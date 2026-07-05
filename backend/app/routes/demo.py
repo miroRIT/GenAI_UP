@@ -4,6 +4,7 @@ from sqlalchemy.orm import Session
 from app.database import get_db
 from app.services.demo_scenario_service import (
     audit_logs,
+    crisis_summary,
     demo_dashboard_overview,
     demo_recommendations,
     explain_recommendation,
@@ -53,6 +54,11 @@ def recommendation_explain(recommendation_id: str) -> dict[str, object]:
 @router.get("/demo/recommendations")
 def demo_recs() -> list[dict[str, object]]:
     return demo_recommendations()
+
+
+@router.get("/demo/crisis-summary")
+def demo_crisis_summary() -> dict[str, object]:
+    return crisis_summary()
 
 
 @router.get("/providers/health")

@@ -3,13 +3,16 @@
 import { useState } from "react";
 import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import { DemoOverview, DemoRecommendation, explainRecommendation, refreshDemoFeeds, runCrisisDemo, seedDemo, RecommendationExplanation } from "@/lib/api";
+import { DemoWalkthroughChecklist } from "./DemoWalkthroughChecklist";
 import { RiskBadge } from "./RiskBadge";
+import { DemoBadge, MetricCard, ProviderBadge, SectionCard, StatusBadge } from "./UIPrimitives";
 
 export function DemoModeClient({ overview, recommendations }: { overview: DemoOverview; recommendations: DemoRecommendation[] }) {
   const [message, setMessage] = useState(overview.demo_active ? "NCR crisis demo is active." : "Demo data is ready.");
   const [explanation, setExplanation] = useState<RecommendationExplanation | null>(null);
 
   async function activate() {
+    setMessage("Activating NCR crisis demo...");
     const result = await runCrisisDemo();
     setMessage(`${result.message} ${result.scenario_count} scenarios activated.`);
   }
@@ -38,19 +41,21 @@ export function DemoModeClient({ overview, recommendations }: { overview: DemoOv
           ["Average AQI", overview.average_aqi],
           ["Traffic Index", overview.traffic_disruption_index],
         ].map(([label, value]) => (
-          <div className="rounded-lg border border-civic-line bg-white p-4 shadow-sm" key={label}>
-            <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">{label}</p>
-            <p className="mt-2 text-3xl font-bold text-civic-ink">{value}</p>
-          </div>
+          <MetricCard key={label} label={String(label)} value={String(value)} />
         ))}
       </section>
 
-      <section className="rounded-lg border border-civic-line bg-white p-4 shadow-sm">
+      <DemoWalkthroughChecklist />
+
+      <SectionCard title="Run the NCR Crisis Demo" badge={<DemoBadge label="Demo Scenario" />}>
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wide text-civic-blue">Competition Demo Mode</p>
-            <h2 className="text-2xl font-bold">Run the NCR Crisis Demo</h2>
             <p className="mt-2 max-w-3xl text-sm text-slate-600">{overview.why_this_matters}</p>
+            <div className="mt-3 flex flex-wrap gap-2">
+              <ProviderBadge />
+              <StatusBadge label="Seeded Evidence" tone="blue" />
+              <StatusBadge label="Generated Brief" tone="green" />
+            </div>
           </div>
           <div className="flex flex-wrap gap-2">
             <button className="rounded-md bg-red-600 px-4 py-2 text-sm font-semibold text-white" onClick={activate}>Run NCR Crisis Demo</button>
@@ -59,11 +64,10 @@ export function DemoModeClient({ overview, recommendations }: { overview: DemoOv
           </div>
         </div>
         <p className="mt-4 rounded-md bg-slate-50 p-3 text-sm text-slate-700">{message}</p>
-      </section>
+      </SectionCard>
 
       <section className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-        <div className="rounded-lg border border-civic-line bg-white p-4 shadow-sm">
-          <h2 className="text-lg font-semibold">Scenario Risk Scores</h2>
+        <SectionCard title="Scenario Risk Scores" badge={<DemoBadge label="Judge Demo Flow" />}>
           <div className="mt-4 h-80">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={overview.scenarios}>
@@ -75,7 +79,7 @@ export function DemoModeClient({ overview, recommendations }: { overview: DemoOv
               </BarChart>
             </ResponsiveContainer>
           </div>
-        </div>
+        </SectionCard>
         <div className="grid gap-3">
           {overview.scenarios.map((scenario) => (
             <article className="rounded-lg border border-civic-line bg-white p-4 shadow-sm" key={scenario.scenario_id}>

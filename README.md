@@ -2,6 +2,10 @@
 
 CivicIQ is a hackathon-ready decision intelligence prototype for disaster response, civic operations, and community resilience across India’s National Capital Region. It helps authorities detect, understand, prioritize, and respond to risks across Delhi, Gurugram, Noida, Ghaziabad, Faridabad, and Meerut using AI, geospatial dashboards, realistic telemetry, and explainable recommendations.
 
+## 30-Second Pitch
+
+CivicIQ is an AI command center for NCR resilience. It combines weather, AQI, traffic, civic complaints, utility stress, emergency signals, maps, and alert workflows into one explainable decision layer so authorities can understand what is happening, why it matters, and which department should act first.
+
 ## Problem Statement
 
 NCR authorities face fragmented signals during crises: weather alerts, civic complaints, traffic disruption, utility outages, emergency response load, AQI, and public safety events often arrive in separate systems. CivicIQ demonstrates how GenAI and decision intelligence can turn those signals into a single command-center view with evidence-backed action recommendations.
@@ -36,6 +40,62 @@ NCR authorities face fragmented signals during crises: weather alerts, civic com
 3. **Noida Industrial Fire Risk**: industrial zone density, heat stress, recent smoke report, delayed response. Fire risk: High.
 4. **Ghaziabad Utility and Water Stress**: water shortage complaints, power outage reports, rising temperature. Water stress risk: High.
 5. **Meerut Storm and Public Safety Alert**: thunderstorm warning, road blockage, emergency call load. Public safety risk: High.
+
+## Product Screenshots
+
+If screenshots are not present yet, capture them before submission:
+
+```bash
+cd backend && . .venv/bin/activate && uvicorn main:app --reload
+cd frontend && npm start
+```
+
+Open each route in the browser, capture the visible page, and save images under `docs/screenshots/`.
+
+### Dashboard
+
+![Dashboard](docs/screenshots/dashboard.png)
+
+NCR-wide disaster and civic risk overview with live-style KPIs.
+
+### Demo Mode
+
+![Demo Mode](docs/screenshots/demo.png)
+
+Guided crisis simulation for a 3-5 minute judge walkthrough.
+
+### NCR Risk Map
+
+![NCR Risk Map](docs/screenshots/map.png)
+
+District-level NCR risk visualization with incident markers.
+
+### Alert Command Center
+
+![Alert Command Center](docs/screenshots/alerts.png)
+
+Operational workflow for assigning, acknowledging, and resolving alerts.
+
+### Operations Center
+
+![Operations Center](docs/screenshots/operations.png)
+
+Provider health, ingestion jobs, and system readiness indicators.
+
+## Demo Video / Walkthrough
+
+Recommended video path: `docs/demo/civiciq-ncr-demo.mp4`.
+
+If the video is not recorded yet:
+
+1. Start backend and frontend.
+2. Open `/dashboard`.
+3. Open `/demo` and click **Run NCR Crisis Demo**.
+4. Visit `/map`, `/alerts`, `/assistant`, `/exports`, and `/operations`.
+5. Record a 3-5 minute screen capture.
+6. Save it to `docs/demo/civiciq-ncr-demo.mp4`.
+
+Suggested recording flow: dashboard overview -> demo activation -> map incidents -> alert workflow -> AI assistant -> export brief -> operations center.
 
 ## Tech Stack
 
@@ -147,6 +207,7 @@ Frontend:
 - `GET /api/dashboard/overview`
 - `POST /api/demo/seed`
 - `POST /api/demo/run-crisis`
+- `GET /api/demo/crisis-summary`
 - `GET /api/demo/recommendations`
 - `GET /api/recommendations/{recommendation_id}/explain`
 - `GET /api/map/layers`
@@ -270,15 +331,11 @@ CivicIQ is decision support only. It does not issue official emergency orders; c
 - Simulated refresh jobs -> Pub/Sub topics, Cloud Functions workers, Cloud Scheduler
 - Local audit logs -> Cloud Logging, Cloud Monitoring, Error Reporting, uptime checks
 
-## Screenshots
+## Exporting Incident Briefs
 
-Add screenshots for:
-
-- `/dashboard` NCR command center
-- `/demo` crisis activation and explainability
-- `/map` incident layer
-- `/alerts` workflow center
-- `/operations` provider/job health
+- `/alerts`: exports protected PDF incident briefs for operational alerts.
+- `/exports`: exposes local-demo markdown briefs with simulated signed URL metadata.
+- Production path: store exports in Cloud Storage and return signed URLs with expiry and audit logging.
 
 Scheduled local jobs:
 
@@ -333,6 +390,15 @@ Build files:
 - `backend/Dockerfile`
 - `frontend/Dockerfile`
 
+## Live Demo URLs
+
+Local demo works without cloud deployment.
+
+- Frontend: Not deployed yet
+- Backend Health: Not deployed yet
+- Region: `asia-south1` recommended
+- Demo credentials: listed above
+
 ## Google Cloud Architecture Mapping
 
 - Cloud Run: FastAPI and Next.js services
@@ -356,9 +422,27 @@ Build files:
 - Vulnerable population data is used only for service prioritization.
 - Critical alerts should be verified by district control rooms and official authorities.
 
+## Known Limitations
+
+- Provider feeds are simulated unless API keys are configured.
+- GeoJSON boundaries are demo approximations unless official files are supplied.
+- AI responses are deterministic and evidence-grounded in demo mode for stable judging.
+- Local SQLite/JSON storage is optimized for hackathon reliability, not production scale.
+
 ## Next Production Steps
 
 - Replace demo fallback GeoJSON with official NCR/Bhuvan/state GIS boundary files.
 - Move local normalized observation tables to Cloud SQL/AlloyDB plus BigQuery history.
 - Move local SQLite to Cloud SQL or AlloyDB.
 - Add signed URLs for PDF exports and long-running incident archive packages.
+
+## Final Submission Checklist
+
+- Backend tests pass.
+- Frontend production build passes.
+- `/dashboard`, `/demo`, `/map`, `/alerts`, `/assistant`, `/exports`, and `/operations` reviewed.
+- Demo credentials verified.
+- Crisis summary card copy/download verified.
+- Incident brief export verified.
+- README screenshots/video placeholders documented.
+- Known limitations and production roadmap are explicit.

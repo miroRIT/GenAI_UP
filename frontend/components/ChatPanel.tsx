@@ -3,9 +3,18 @@
 import { Send } from "lucide-react";
 import { useState } from "react";
 import { askCivicIq } from "@/lib/api";
+import { ErrorState, LoadingState, SectionCard, StatusBadge } from "./UIPrimitives";
+
+const sampleQuestions = [
+  "Why is Gurugram critical right now?",
+  "What evidence supports the Delhi public health alert?",
+  "Which NCR districts need action in the next 24 hours?",
+  "Generate a leadership summary for the NCR crisis.",
+  "Which department should handle the Noida industrial risk?",
+];
 
 export function ChatPanel() {
-  const [question, setQuestion] = useState("Which wards need urgent action this week?");
+  const [question, setQuestion] = useState(sampleQuestions[0]);
   const [response, setResponse] = useState<Awaited<ReturnType<typeof askCivicIq>> | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
@@ -24,8 +33,14 @@ export function ChatPanel() {
   }
 
   return (
-    <section className="rounded-lg border border-civic-line bg-white p-4 shadow-sm">
-      <h2 className="text-lg font-semibold">AI Assistant</h2>
+    <SectionCard title="AI Assistant" badge={<StatusBadge label="Seeded Evidence" tone="blue" />}>
+      <div className="mb-4 flex flex-wrap gap-2">
+        {sampleQuestions.map((sample) => (
+          <button className="rounded-md bg-slate-100 px-3 py-2 text-xs font-medium text-slate-700 hover:bg-slate-200" key={sample} onClick={() => setQuestion(sample)} type="button">
+            {sample}
+          </button>
+        ))}
+      </div>
       <form className="mt-4 flex gap-2" onSubmit={submitQuestion}>
         <input
           className="min-w-0 flex-1 rounded-md border border-civic-line px-3 py-2 text-sm outline-none focus:border-civic-blue focus:ring-2 focus:ring-blue-100"
@@ -41,7 +56,8 @@ export function ChatPanel() {
           <Send className="h-4 w-4" />
         </button>
       </form>
-      {error ? <p className="mt-4 rounded-md bg-red-50 p-3 text-sm text-red-700">{error}</p> : null}
+      {isLoading ? <div className="mt-4"><LoadingState label="CivicIQ is grounding the response in seeded NCR evidence..." /></div> : null}
+      {error ? <div className="mt-4"><ErrorState label={error} /></div> : null}
       {response ? (
         <div className="mt-4 space-y-4">
           <div className="rounded-md border border-slate-200 bg-slate-50 p-4 text-sm leading-6 text-slate-800">
@@ -59,7 +75,7 @@ export function ChatPanel() {
           </div>
         </div>
       ) : null}
-    </section>
+    </SectionCard>
   );
 }
 
