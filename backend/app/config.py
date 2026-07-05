@@ -6,9 +6,11 @@ import os
 
 class Settings(BaseModel):
     app_name: str = "CivicIQ"
-    data_dir: Path = Path(__file__).resolve().parents[1] / "data"
-    knowledge_base_dir: Path = Path(__file__).resolve().parents[1] / "knowledge_base"
-    geojson_dir: Path = Path(__file__).resolve().parent / "geojson"
+    data_dir: Path = Path(os.getenv("DATA_DIR", Path(__file__).resolve().parents[1] / "data"))
+    knowledge_base_dir: Path = Path(
+        os.getenv("KNOWLEDGE_BASE_DIR", Path(__file__).resolve().parents[1] / "knowledge_base")
+    )
+    geojson_dir: Path = Path(os.getenv("GEOJSON_DIR", Path(__file__).resolve().parent / "geojson"))
     database_url: str = os.getenv("DATABASE_URL", "sqlite:///./civiciq.db")
     cors_origins: list[str] = os.getenv(
         "CORS_ORIGINS",

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Any
@@ -11,7 +12,7 @@ from app.models.db_models import Alert
 from app.services.alert_service import create_alert
 
 
-DEMO_STORE = Path(__file__).resolve().parents[1] / "data" / "demo_runtime.json"
+DEMO_STORE = Path(os.getenv("DEMO_STORE_PATH", Path(__file__).resolve().parents[1] / "data" / "demo_runtime.json"))
 
 
 def scenario_catalog() -> list[dict[str, Any]]:

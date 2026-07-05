@@ -182,6 +182,40 @@ Backend:
 Frontend:
 
 - `NEXT_PUBLIC_API_BASE_URL=http://127.0.0.1:8000`
+
+## Public Deployment
+
+### Vercel frontend
+
+The frontend can be deployed from the `frontend` directory. Set `NEXT_PUBLIC_API_BASE_URL` to the public backend URL before the production build.
+
+```bash
+cd frontend
+vercel --prod
+```
+
+### Vercel FastAPI backend
+
+The backend includes a Vercel Python serverless entrypoint at `backend/api/index.py`. For demo deployments on serverless storage, set writable runtime paths to `/tmp`.
+
+Recommended backend environment variables:
+
+- `DATABASE_URL=sqlite:////tmp/civiciq.db`
+- `DATA_DIR=/tmp/civiciq-data`
+- `KNOWLEDGE_BASE_DIR=/tmp/civiciq-knowledge-base`
+- `GEOJSON_DIR=/tmp/civiciq-geojson`
+- `DEMO_STORE_PATH=/tmp/civiciq-demo-runtime.json`
+- `CORS_ORIGINS=<your-vercel-frontend-url>,http://localhost:3000,http://127.0.0.1:3000`
+- `MOCK_MODE=true`
+- `ENABLE_SCHEDULER=false`
+- `JWT_SECRET_KEY=<strong-random-secret>`
+
+```bash
+cd backend
+vercel --prod
+```
+
+For a production authority-grade deployment, prefer a persistent backend host such as Cloud Run, Render, Railway, or Fly.io with Postgres/object storage. Vercel works for the hackathon demo, but `/tmp` data is ephemeral.
 - `NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN=`
 - `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=`
 
