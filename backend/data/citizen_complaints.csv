@@ -1,0 +1,3026 @@
+complaint_id,ward_id,date,category,status,resolution_time_hours
+C00001,W01,2026-06-08,noise,open,32.6
+C00002,W01,2026-06-08,roads,open,33.2
+C00003,W01,2026-06-08,electricity,open,14.0
+C00004,W01,2026-06-08,electricity,in_progress,41.1
+C00005,W01,2026-06-08,roads,closed,36.2
+C00006,W01,2026-06-08,electricity,open,14.4
+C00007,W01,2026-06-08,public safety,closed,26.7
+C00008,W01,2026-06-09,noise,open,42.4
+C00009,W01,2026-06-09,roads,closed,25.0
+C00010,W01,2026-06-09,roads,in_progress,40.3
+C00011,W01,2026-06-09,sanitation,open,25.4
+C00012,W01,2026-06-09,noise,closed,44.0
+C00013,W01,2026-06-10,water,closed,39.2
+C00014,W01,2026-06-10,sanitation,in_progress,45.3
+C00015,W01,2026-06-10,public safety,closed,40.5
+C00016,W01,2026-06-10,noise,closed,36.9
+C00017,W01,2026-06-10,public safety,open,40.0
+C00018,W01,2026-06-10,noise,open,52.3
+C00019,W01,2026-06-10,water,in_progress,12.8
+C00020,W01,2026-06-10,water,closed,39.2
+C00021,W01,2026-06-11,noise,open,24.5
+C00022,W01,2026-06-11,public safety,closed,15.9
+C00023,W01,2026-06-11,sanitation,closed,23.6
+C00024,W01,2026-06-11,roads,open,22.0
+C00025,W01,2026-06-11,water,in_progress,31.0
+C00026,W01,2026-06-11,public safety,closed,66.6
+C00027,W01,2026-06-11,roads,closed,24.2
+C00028,W01,2026-06-12,sanitation,open,46.0
+C00029,W01,2026-06-12,water,in_progress,12.2
+C00030,W01,2026-06-12,sanitation,open,50.5
+C00031,W01,2026-06-12,public safety,in_progress,25.6
+C00032,W01,2026-06-12,roads,closed,5.9
+C00033,W01,2026-06-12,public safety,in_progress,35.1
+C00034,W01,2026-06-12,roads,in_progress,49.8
+C00035,W01,2026-06-12,electricity,in_progress,52.8
+C00036,W01,2026-06-12,public safety,closed,18.3
+C00037,W01,2026-06-12,noise,open,43.1
+C00038,W01,2026-06-12,roads,closed,11.5
+C00039,W01,2026-06-13,sanitation,open,17.7
+C00040,W01,2026-06-13,water,closed,17.2
+C00041,W01,2026-06-13,sanitation,in_progress,4.0
+C00042,W01,2026-06-13,electricity,in_progress,66.6
+C00043,W01,2026-06-13,electricity,open,32.1
+C00044,W01,2026-06-13,electricity,in_progress,28.7
+C00045,W01,2026-06-13,public safety,in_progress,46.4
+C00046,W01,2026-06-13,water,open,44.6
+C00047,W01,2026-06-14,noise,closed,26.8
+C00048,W01,2026-06-14,roads,closed,59.1
+C00049,W01,2026-06-14,noise,closed,20.2
+C00050,W01,2026-06-14,electricity,closed,39.3
+C00051,W01,2026-06-14,roads,closed,47.9
+C00052,W01,2026-06-14,electricity,open,21.8
+C00053,W01,2026-06-14,sanitation,in_progress,25.6
+C00054,W01,2026-06-14,noise,open,61.8
+C00055,W01,2026-06-14,sanitation,open,45.2
+C00056,W01,2026-06-14,public safety,in_progress,50.6
+C00057,W01,2026-06-14,electricity,open,4.0
+C00058,W01,2026-06-14,roads,closed,17.5
+C00059,W01,2026-06-15,noise,closed,45.2
+C00060,W01,2026-06-15,roads,closed,24.4
+C00061,W01,2026-06-15,public safety,closed,38.7
+C00062,W01,2026-06-15,public safety,closed,46.5
+C00063,W01,2026-06-15,noise,in_progress,47.4
+C00064,W01,2026-06-15,roads,open,26.0
+C00065,W01,2026-06-15,sanitation,in_progress,52.6
+C00066,W01,2026-06-15,electricity,open,37.3
+C00067,W01,2026-06-15,sanitation,open,33.7
+C00068,W01,2026-06-16,sanitation,open,38.4
+C00069,W01,2026-06-16,roads,in_progress,30.9
+C00070,W01,2026-06-16,public safety,in_progress,36.7
+C00071,W01,2026-06-16,electricity,closed,42.3
+C00072,W01,2026-06-16,water,open,40.5
+C00073,W01,2026-06-16,roads,open,10.2
+C00074,W01,2026-06-16,sanitation,closed,21.7
+C00075,W01,2026-06-17,water,closed,54.2
+C00076,W01,2026-06-17,public safety,open,41.8
+C00077,W01,2026-06-17,sanitation,in_progress,31.6
+C00078,W01,2026-06-17,sanitation,open,10.1
+C00079,W01,2026-06-17,roads,open,27.5
+C00080,W01,2026-06-17,roads,in_progress,33.3
+C00081,W01,2026-06-17,water,open,38.9
+C00082,W01,2026-06-17,electricity,open,31.1
+C00083,W01,2026-06-17,sanitation,closed,61.6
+C00084,W01,2026-06-18,sanitation,open,43.1
+C00085,W01,2026-06-18,roads,in_progress,49.0
+C00086,W01,2026-06-18,sanitation,open,5.5
+C00087,W01,2026-06-18,noise,in_progress,63.0
+C00088,W01,2026-06-18,noise,in_progress,27.5
+C00089,W01,2026-06-18,electricity,closed,13.6
+C00090,W01,2026-06-18,public safety,in_progress,41.6
+C00091,W01,2026-06-18,sanitation,closed,44.7
+C00092,W01,2026-06-19,noise,open,30.1
+C00093,W01,2026-06-19,sanitation,closed,4.0
+C00094,W01,2026-06-19,electricity,open,39.6
+C00095,W01,2026-06-19,sanitation,closed,42.9
+C00096,W01,2026-06-19,electricity,open,39.3
+C00097,W01,2026-06-19,public safety,open,7.5
+C00098,W01,2026-06-19,electricity,open,54.0
+C00099,W01,2026-06-19,electricity,closed,40.6
+C00100,W01,2026-06-20,public safety,closed,23.8
+C00101,W01,2026-06-20,noise,open,30.1
+C00102,W01,2026-06-20,public safety,closed,30.7
+C00103,W01,2026-06-20,roads,closed,45.1
+C00104,W01,2026-06-20,public safety,in_progress,4.0
+C00105,W01,2026-06-20,sanitation,open,43.6
+C00106,W01,2026-06-20,water,closed,81.6
+C00107,W01,2026-06-20,sanitation,closed,34.5
+C00108,W01,2026-06-20,roads,closed,31.9
+C00109,W01,2026-06-21,sanitation,open,29.4
+C00110,W01,2026-06-21,electricity,closed,41.0
+C00111,W01,2026-06-21,noise,closed,60.3
+C00112,W01,2026-06-21,electricity,open,32.4
+C00113,W01,2026-06-21,public safety,closed,28.7
+C00114,W01,2026-06-21,roads,in_progress,54.7
+C00115,W01,2026-06-21,sanitation,open,34.6
+C00116,W01,2026-06-21,noise,closed,26.9
+C00117,W01,2026-06-21,roads,closed,23.2
+C00118,W01,2026-06-21,noise,closed,52.8
+C00119,W01,2026-06-21,water,in_progress,57.4
+C00120,W01,2026-06-21,sanitation,closed,19.8
+C00121,W01,2026-06-21,water,in_progress,47.1
+C00122,W01,2026-06-21,roads,closed,38.4
+C00123,W01,2026-06-22,water,closed,33.9
+C00124,W01,2026-06-22,public safety,in_progress,28.7
+C00125,W01,2026-06-22,public safety,open,32.5
+C00126,W01,2026-06-22,electricity,open,44.4
+C00127,W01,2026-06-22,roads,in_progress,19.0
+C00128,W01,2026-06-22,roads,open,24.3
+C00129,W01,2026-06-22,sanitation,in_progress,63.0
+C00130,W01,2026-06-22,roads,closed,35.0
+C00131,W01,2026-06-22,electricity,in_progress,41.5
+C00132,W01,2026-06-22,electricity,closed,53.2
+C00133,W01,2026-06-23,roads,open,37.3
+C00134,W01,2026-06-23,public safety,in_progress,32.9
+C00135,W01,2026-06-23,water,closed,51.8
+C00136,W01,2026-06-23,noise,open,15.7
+C00137,W01,2026-06-23,public safety,open,32.1
+C00138,W01,2026-06-23,water,open,37.6
+C00139,W01,2026-06-23,roads,in_progress,19.8
+C00140,W01,2026-06-23,roads,open,56.0
+C00141,W01,2026-06-23,sanitation,closed,39.4
+C00142,W01,2026-06-23,sanitation,in_progress,46.7
+C00143,W01,2026-06-23,noise,closed,13.9
+C00144,W01,2026-06-23,electricity,in_progress,33.8
+C00145,W01,2026-06-23,sanitation,open,42.8
+C00146,W01,2026-06-24,electricity,in_progress,53.3
+C00147,W01,2026-06-24,noise,closed,39.5
+C00148,W01,2026-06-24,noise,in_progress,21.8
+C00149,W01,2026-06-24,water,closed,24.6
+C00150,W01,2026-06-24,roads,in_progress,49.4
+C00151,W01,2026-06-24,electricity,closed,39.1
+C00152,W01,2026-06-24,public safety,closed,56.3
+C00153,W01,2026-06-24,roads,in_progress,26.6
+C00154,W01,2026-06-25,noise,closed,49.3
+C00155,W01,2026-06-25,noise,closed,47.9
+C00156,W01,2026-06-25,noise,closed,16.8
+C00157,W01,2026-06-25,noise,closed,23.1
+C00158,W01,2026-06-26,noise,closed,45.2
+C00159,W01,2026-06-26,water,closed,45.5
+C00160,W01,2026-06-26,public safety,open,26.1
+C00161,W01,2026-06-26,electricity,open,27.1
+C00162,W01,2026-06-26,noise,in_progress,41.1
+C00163,W01,2026-06-26,electricity,closed,58.8
+C00164,W01,2026-06-26,noise,in_progress,15.4
+C00165,W01,2026-06-26,electricity,in_progress,42.5
+C00166,W01,2026-06-26,public safety,open,28.8
+C00167,W01,2026-06-26,public safety,closed,25.4
+C00168,W01,2026-06-27,roads,closed,30.8
+C00169,W01,2026-06-27,noise,open,37.8
+C00170,W01,2026-06-27,sanitation,open,27.6
+C00171,W01,2026-06-27,water,closed,38.2
+C00172,W01,2026-06-27,water,closed,30.6
+C00173,W01,2026-06-27,electricity,open,32.3
+C00174,W01,2026-06-27,water,open,21.5
+C00175,W01,2026-06-27,roads,closed,23.7
+C00176,W01,2026-06-28,sanitation,in_progress,39.9
+C00177,W01,2026-06-28,public safety,closed,59.8
+C00178,W01,2026-06-28,water,open,5.7
+C00179,W01,2026-06-28,sanitation,in_progress,24.0
+C00180,W01,2026-06-28,roads,in_progress,14.4
+C00181,W01,2026-06-29,electricity,in_progress,63.1
+C00182,W01,2026-06-29,electricity,closed,25.9
+C00183,W01,2026-06-29,electricity,in_progress,43.6
+C00184,W01,2026-06-29,roads,closed,19.6
+C00185,W01,2026-06-30,roads,closed,23.3
+C00186,W01,2026-06-30,noise,closed,24.7
+C00187,W01,2026-06-30,water,open,36.0
+C00188,W01,2026-06-30,public safety,in_progress,36.2
+C00189,W01,2026-06-30,electricity,open,47.6
+C00190,W01,2026-06-30,roads,open,37.5
+C00191,W01,2026-06-30,public safety,open,56.4
+C00192,W01,2026-06-30,sanitation,in_progress,20.4
+C00193,W01,2026-06-30,water,open,44.6
+C00194,W01,2026-06-30,roads,in_progress,16.6
+C00195,W01,2026-06-30,public safety,open,50.4
+C00196,W01,2026-07-01,water,in_progress,16.3
+C00197,W01,2026-07-01,sanitation,in_progress,30.8
+C00198,W01,2026-07-01,water,closed,48.3
+C00199,W01,2026-07-01,public safety,closed,16.8
+C00200,W01,2026-07-01,roads,in_progress,29.6
+C00201,W01,2026-07-01,roads,in_progress,31.9
+C00202,W01,2026-07-01,noise,closed,36.3
+C00203,W01,2026-07-01,public safety,in_progress,30.7
+C00204,W01,2026-07-01,roads,closed,8.5
+C00205,W01,2026-07-01,electricity,open,50.6
+C00206,W01,2026-07-01,public safety,open,24.7
+C00207,W01,2026-07-01,sanitation,closed,9.7
+C00208,W01,2026-07-02,roads,open,34.2
+C00209,W01,2026-07-02,water,in_progress,47.4
+C00210,W01,2026-07-02,noise,in_progress,28.9
+C00211,W01,2026-07-02,water,in_progress,68.9
+C00212,W01,2026-07-02,sanitation,in_progress,52.3
+C00213,W01,2026-07-02,noise,open,37.1
+C00214,W01,2026-07-02,public safety,open,39.0
+C00215,W01,2026-07-02,sanitation,open,15.1
+C00216,W01,2026-07-02,roads,open,27.5
+C00217,W01,2026-07-02,water,closed,27.9
+C00218,W01,2026-07-02,sanitation,closed,49.8
+C00219,W01,2026-07-03,noise,in_progress,44.5
+C00220,W01,2026-07-03,public safety,closed,51.6
+C00221,W01,2026-07-03,sanitation,open,41.5
+C00222,W01,2026-07-03,sanitation,in_progress,33.5
+C00223,W01,2026-07-03,electricity,closed,46.4
+C00224,W01,2026-07-03,public safety,open,27.6
+C00225,W01,2026-07-03,sanitation,closed,27.8
+C00226,W01,2026-07-03,sanitation,closed,16.7
+C00227,W01,2026-07-03,noise,closed,29.3
+C00228,W01,2026-07-04,electricity,open,26.5
+C00229,W01,2026-07-04,noise,open,47.1
+C00230,W01,2026-07-04,electricity,closed,20.2
+C00231,W01,2026-07-04,water,open,57.9
+C00232,W01,2026-07-04,water,in_progress,17.7
+C00233,W01,2026-07-04,public safety,open,15.2
+C00234,W01,2026-07-04,water,open,31.3
+C00235,W01,2026-07-04,noise,closed,4.0
+C00236,W01,2026-07-04,electricity,in_progress,9.5
+C00237,W01,2026-07-05,electricity,in_progress,30.4
+C00238,W01,2026-07-05,sanitation,in_progress,44.4
+C00239,W01,2026-07-05,water,open,35.1
+C00240,W01,2026-07-05,public safety,in_progress,16.8
+C00241,W01,2026-07-05,noise,open,22.6
+C00242,W01,2026-07-05,water,open,35.4
+C00243,W01,2026-07-05,noise,in_progress,19.5
+C00244,W01,2026-07-05,public safety,in_progress,59.3
+C00245,W01,2026-07-05,electricity,open,25.9
+C00246,W01,2026-07-05,roads,closed,34.0
+C00247,W01,2026-07-05,water,in_progress,25.2
+C00248,W02,2026-06-08,water,closed,31.4
+C00249,W02,2026-06-08,sanitation,open,20.2
+C00250,W02,2026-06-08,noise,open,26.4
+C00251,W02,2026-06-08,public safety,closed,40.9
+C00252,W02,2026-06-08,noise,in_progress,22.9
+C00253,W02,2026-06-08,public safety,closed,30.8
+C00254,W02,2026-06-08,noise,in_progress,31.8
+C00255,W02,2026-06-08,noise,open,24.4
+C00256,W02,2026-06-08,sanitation,closed,37.5
+C00257,W02,2026-06-08,electricity,closed,41.6
+C00258,W02,2026-06-09,water,in_progress,44.0
+C00259,W02,2026-06-09,public safety,closed,51.9
+C00260,W02,2026-06-09,noise,open,32.5
+C00261,W02,2026-06-09,roads,in_progress,36.2
+C00262,W02,2026-06-09,sanitation,closed,43.7
+C00263,W02,2026-06-09,electricity,open,29.2
+C00264,W02,2026-06-09,electricity,in_progress,72.4
+C00265,W02,2026-06-09,public safety,open,19.8
+C00266,W02,2026-06-09,sanitation,open,17.2
+C00267,W02,2026-06-09,electricity,in_progress,20.2
+C00268,W02,2026-06-09,roads,open,37.9
+C00269,W02,2026-06-10,sanitation,open,62.8
+C00270,W02,2026-06-10,water,in_progress,52.6
+C00271,W02,2026-06-10,sanitation,open,43.9
+C00272,W02,2026-06-10,roads,closed,40.6
+C00273,W02,2026-06-10,roads,open,33.1
+C00274,W02,2026-06-10,electricity,in_progress,15.6
+C00275,W02,2026-06-10,roads,closed,19.7
+C00276,W02,2026-06-10,water,in_progress,44.9
+C00277,W02,2026-06-10,electricity,in_progress,28.6
+C00278,W02,2026-06-10,noise,closed,21.1
+C00279,W02,2026-06-10,public safety,open,21.8
+C00280,W02,2026-06-11,roads,in_progress,31.9
+C00281,W02,2026-06-11,public safety,open,39.8
+C00282,W02,2026-06-11,sanitation,open,42.2
+C00283,W02,2026-06-11,sanitation,in_progress,17.1
+C00284,W02,2026-06-11,noise,open,40.8
+C00285,W02,2026-06-11,roads,in_progress,29.2
+C00286,W02,2026-06-11,water,open,14.0
+C00287,W02,2026-06-11,public safety,open,56.9
+C00288,W02,2026-06-11,public safety,closed,23.7
+C00289,W02,2026-06-11,public safety,open,19.3
+C00290,W02,2026-06-11,public safety,open,43.0
+C00291,W02,2026-06-11,noise,open,42.6
+C00292,W02,2026-06-12,noise,closed,34.9
+C00293,W02,2026-06-12,noise,in_progress,16.8
+C00294,W02,2026-06-12,sanitation,in_progress,26.8
+C00295,W02,2026-06-12,noise,closed,14.9
+C00296,W02,2026-06-12,electricity,in_progress,17.5
+C00297,W02,2026-06-12,water,closed,42.2
+C00298,W02,2026-06-12,noise,closed,35.0
+C00299,W02,2026-06-12,public safety,closed,41.1
+C00300,W02,2026-06-12,electricity,open,55.9
+C00301,W02,2026-06-12,noise,closed,34.9
+C00302,W02,2026-06-12,sanitation,open,15.0
+C00303,W02,2026-06-12,noise,open,38.7
+C00304,W02,2026-06-13,water,open,34.7
+C00305,W02,2026-06-13,water,in_progress,24.7
+C00306,W02,2026-06-13,sanitation,open,41.7
+C00307,W02,2026-06-13,noise,in_progress,31.0
+C00308,W02,2026-06-13,water,closed,24.2
+C00309,W02,2026-06-13,sanitation,in_progress,44.1
+C00310,W02,2026-06-13,sanitation,in_progress,40.6
+C00311,W02,2026-06-13,electricity,open,25.4
+C00312,W02,2026-06-13,water,open,20.4
+C00313,W02,2026-06-13,roads,closed,19.8
+C00314,W02,2026-06-13,public safety,in_progress,53.0
+C00315,W02,2026-06-13,sanitation,open,34.2
+C00316,W02,2026-06-13,noise,in_progress,42.4
+C00317,W02,2026-06-14,sanitation,closed,24.0
+C00318,W02,2026-06-14,electricity,open,32.0
+C00319,W02,2026-06-14,sanitation,closed,23.3
+C00320,W02,2026-06-14,water,open,39.3
+C00321,W02,2026-06-14,sanitation,in_progress,61.5
+C00322,W02,2026-06-14,sanitation,closed,43.1
+C00323,W02,2026-06-14,public safety,in_progress,20.7
+C00324,W02,2026-06-14,electricity,closed,31.1
+C00325,W02,2026-06-14,water,open,61.3
+C00326,W02,2026-06-14,water,closed,40.6
+C00327,W02,2026-06-14,electricity,closed,42.2
+C00328,W02,2026-06-14,public safety,open,42.4
+C00329,W02,2026-06-14,water,in_progress,26.5
+C00330,W02,2026-06-15,sanitation,in_progress,28.3
+C00331,W02,2026-06-15,public safety,in_progress,44.6
+C00332,W02,2026-06-15,public safety,in_progress,19.3
+C00333,W02,2026-06-15,roads,in_progress,22.5
+C00334,W02,2026-06-15,electricity,closed,31.9
+C00335,W02,2026-06-15,water,in_progress,60.8
+C00336,W02,2026-06-15,public safety,open,23.4
+C00337,W02,2026-06-15,electricity,in_progress,37.5
+C00338,W02,2026-06-15,sanitation,in_progress,59.1
+C00339,W02,2026-06-15,public safety,in_progress,27.9
+C00340,W02,2026-06-15,water,closed,10.4
+C00341,W02,2026-06-15,public safety,open,31.2
+C00342,W02,2026-06-15,electricity,closed,35.1
+C00343,W02,2026-06-15,noise,open,45.6
+C00344,W02,2026-06-16,electricity,in_progress,42.8
+C00345,W02,2026-06-16,public safety,open,35.8
+C00346,W02,2026-06-16,sanitation,in_progress,37.2
+C00347,W02,2026-06-16,electricity,closed,24.2
+C00348,W02,2026-06-16,water,closed,45.9
+C00349,W02,2026-06-16,public safety,closed,41.0
+C00350,W02,2026-06-16,water,in_progress,14.5
+C00351,W02,2026-06-16,water,closed,14.1
+C00352,W02,2026-06-16,sanitation,closed,53.0
+C00353,W02,2026-06-16,noise,open,43.2
+C00354,W02,2026-06-17,sanitation,closed,20.1
+C00355,W02,2026-06-17,public safety,open,14.8
+C00356,W02,2026-06-17,sanitation,open,42.5
+C00357,W02,2026-06-17,noise,open,31.3
+C00358,W02,2026-06-17,roads,open,48.1
+C00359,W02,2026-06-17,electricity,in_progress,12.3
+C00360,W02,2026-06-17,roads,open,25.0
+C00361,W02,2026-06-17,sanitation,closed,48.4
+C00362,W02,2026-06-17,roads,in_progress,20.9
+C00363,W02,2026-06-17,electricity,open,37.2
+C00364,W02,2026-06-17,water,in_progress,54.8
+C00365,W02,2026-06-18,water,in_progress,9.0
+C00366,W02,2026-06-18,public safety,closed,43.3
+C00367,W02,2026-06-18,noise,closed,47.7
+C00368,W02,2026-06-18,noise,closed,55.8
+C00369,W02,2026-06-18,water,in_progress,29.9
+C00370,W02,2026-06-18,roads,in_progress,39.0
+C00371,W02,2026-06-18,water,closed,29.7
+C00372,W02,2026-06-18,noise,closed,28.8
+C00373,W02,2026-06-18,sanitation,closed,55.8
+C00374,W02,2026-06-19,public safety,closed,36.1
+C00375,W02,2026-06-19,sanitation,closed,34.2
+C00376,W02,2026-06-19,noise,open,8.5
+C00377,W02,2026-06-19,electricity,in_progress,36.8
+C00378,W02,2026-06-19,noise,closed,43.9
+C00379,W02,2026-06-19,public safety,closed,31.8
+C00380,W02,2026-06-19,sanitation,closed,28.1
+C00381,W02,2026-06-19,public safety,open,29.5
+C00382,W02,2026-06-19,electricity,in_progress,49.1
+C00383,W02,2026-06-19,public safety,open,44.9
+C00384,W02,2026-06-19,public safety,in_progress,41.3
+C00385,W02,2026-06-19,roads,open,46.8
+C00386,W02,2026-06-20,noise,closed,23.8
+C00387,W02,2026-06-20,roads,in_progress,34.9
+C00388,W02,2026-06-20,water,in_progress,34.7
+C00389,W02,2026-06-20,sanitation,in_progress,22.3
+C00390,W02,2026-06-20,sanitation,open,35.3
+C00391,W02,2026-06-20,public safety,closed,25.0
+C00392,W02,2026-06-20,public safety,in_progress,59.8
+C00393,W02,2026-06-20,noise,open,29.8
+C00394,W02,2026-06-20,water,open,34.3
+C00395,W02,2026-06-20,noise,closed,42.2
+C00396,W02,2026-06-20,public safety,closed,34.0
+C00397,W02,2026-06-20,public safety,in_progress,48.7
+C00398,W02,2026-06-20,sanitation,closed,35.3
+C00399,W02,2026-06-20,electricity,in_progress,38.1
+C00400,W02,2026-06-21,sanitation,closed,30.0
+C00401,W02,2026-06-21,water,closed,30.4
+C00402,W02,2026-06-21,roads,open,48.6
+C00403,W02,2026-06-21,sanitation,in_progress,42.0
+C00404,W02,2026-06-21,roads,closed,34.8
+C00405,W02,2026-06-21,roads,in_progress,15.0
+C00406,W02,2026-06-21,public safety,closed,41.0
+C00407,W02,2026-06-21,electricity,in_progress,15.8
+C00408,W02,2026-06-21,water,closed,23.2
+C00409,W02,2026-06-21,sanitation,in_progress,10.2
+C00410,W02,2026-06-21,noise,open,13.0
+C00411,W02,2026-06-21,public safety,in_progress,38.1
+C00412,W02,2026-06-21,roads,in_progress,49.9
+C00413,W02,2026-06-22,electricity,closed,47.4
+C00414,W02,2026-06-22,noise,open,27.7
+C00415,W02,2026-06-22,sanitation,in_progress,40.4
+C00416,W02,2026-06-22,sanitation,closed,39.7
+C00417,W02,2026-06-22,sanitation,open,54.4
+C00418,W02,2026-06-22,noise,open,59.6
+C00419,W02,2026-06-22,roads,open,33.3
+C00420,W02,2026-06-22,electricity,open,13.0
+C00421,W02,2026-06-22,roads,in_progress,21.8
+C00422,W02,2026-06-22,roads,closed,62.7
+C00423,W02,2026-06-22,roads,open,35.5
+C00424,W02,2026-06-22,electricity,in_progress,37.0
+C00425,W02,2026-06-22,sanitation,open,28.6
+C00426,W02,2026-06-22,sanitation,in_progress,37.6
+C00427,W02,2026-06-22,noise,open,25.0
+C00428,W02,2026-06-23,public safety,in_progress,39.1
+C00429,W02,2026-06-23,electricity,open,34.6
+C00430,W02,2026-06-23,noise,closed,19.1
+C00431,W02,2026-06-23,electricity,open,25.5
+C00432,W02,2026-06-23,electricity,open,37.9
+C00433,W02,2026-06-23,public safety,closed,19.6
+C00434,W02,2026-06-23,sanitation,open,32.9
+C00435,W02,2026-06-23,water,in_progress,29.0
+C00436,W02,2026-06-23,public safety,in_progress,38.0
+C00437,W02,2026-06-23,sanitation,open,31.5
+C00438,W02,2026-06-23,roads,in_progress,42.1
+C00439,W02,2026-06-23,electricity,closed,16.0
+C00440,W02,2026-06-23,water,closed,23.7
+C00441,W02,2026-06-24,electricity,in_progress,32.1
+C00442,W02,2026-06-24,sanitation,closed,50.4
+C00443,W02,2026-06-24,electricity,closed,48.4
+C00444,W02,2026-06-24,roads,in_progress,25.4
+C00445,W02,2026-06-24,noise,in_progress,38.0
+C00446,W02,2026-06-24,water,in_progress,33.5
+C00447,W02,2026-06-24,noise,closed,23.0
+C00448,W02,2026-06-24,noise,in_progress,55.4
+C00449,W02,2026-06-24,water,open,28.9
+C00450,W02,2026-06-24,sanitation,open,40.3
+C00451,W02,2026-06-25,public safety,in_progress,41.8
+C00452,W02,2026-06-25,electricity,closed,18.5
+C00453,W02,2026-06-25,electricity,in_progress,28.1
+C00454,W02,2026-06-25,public safety,in_progress,22.4
+C00455,W02,2026-06-25,public safety,open,53.6
+C00456,W02,2026-06-25,noise,open,31.3
+C00457,W02,2026-06-25,electricity,closed,39.7
+C00458,W02,2026-06-25,roads,open,54.9
+C00459,W02,2026-06-25,noise,closed,19.0
+C00460,W02,2026-06-25,electricity,open,52.6
+C00461,W02,2026-06-25,water,closed,60.5
+C00462,W02,2026-06-25,electricity,closed,30.9
+C00463,W02,2026-06-25,public safety,closed,66.8
+C00464,W02,2026-06-26,public safety,in_progress,46.0
+C00465,W02,2026-06-26,noise,in_progress,37.0
+C00466,W02,2026-06-26,noise,open,38.3
+C00467,W02,2026-06-26,public safety,in_progress,42.1
+C00468,W02,2026-06-26,sanitation,open,32.9
+C00469,W02,2026-06-26,sanitation,closed,4.0
+C00470,W02,2026-06-26,electricity,open,24.0
+C00471,W02,2026-06-26,roads,in_progress,45.8
+C00472,W02,2026-06-26,noise,closed,20.0
+C00473,W02,2026-06-26,electricity,open,64.8
+C00474,W02,2026-06-26,sanitation,open,45.7
+C00475,W02,2026-06-26,public safety,open,51.2
+C00476,W02,2026-06-26,noise,in_progress,26.5
+C00477,W02,2026-06-27,water,in_progress,31.6
+C00478,W02,2026-06-27,sanitation,in_progress,58.2
+C00479,W02,2026-06-27,water,open,30.6
+C00480,W02,2026-06-27,water,closed,55.6
+C00481,W02,2026-06-27,public safety,in_progress,48.5
+C00482,W02,2026-06-27,electricity,open,39.0
+C00483,W02,2026-06-27,sanitation,open,31.9
+C00484,W02,2026-06-27,roads,in_progress,44.1
+C00485,W02,2026-06-27,noise,in_progress,47.0
+C00486,W02,2026-06-27,water,open,46.2
+C00487,W02,2026-06-27,roads,in_progress,25.1
+C00488,W02,2026-06-28,electricity,closed,36.9
+C00489,W02,2026-06-28,public safety,open,29.9
+C00490,W02,2026-06-28,water,open,29.5
+C00491,W02,2026-06-28,noise,closed,36.4
+C00492,W02,2026-06-28,water,closed,18.5
+C00493,W02,2026-06-28,noise,open,46.3
+C00494,W02,2026-06-28,water,open,43.4
+C00495,W02,2026-06-28,electricity,in_progress,33.2
+C00496,W02,2026-06-28,public safety,in_progress,58.0
+C00497,W02,2026-06-28,roads,in_progress,49.2
+C00498,W02,2026-06-28,electricity,in_progress,21.1
+C00499,W02,2026-06-28,noise,closed,32.9
+C00500,W02,2026-06-29,roads,open,45.7
+C00501,W02,2026-06-29,electricity,closed,47.6
+C00502,W02,2026-06-29,noise,in_progress,46.0
+C00503,W02,2026-06-29,public safety,closed,39.1
+C00504,W02,2026-06-29,roads,in_progress,25.6
+C00505,W02,2026-06-29,roads,open,16.1
+C00506,W02,2026-06-29,public safety,open,20.8
+C00507,W02,2026-06-29,roads,closed,11.6
+C00508,W02,2026-06-29,electricity,in_progress,35.9
+C00509,W02,2026-06-29,public safety,closed,9.4
+C00510,W02,2026-06-29,noise,closed,4.0
+C00511,W02,2026-06-29,noise,open,20.4
+C00512,W02,2026-06-30,public safety,in_progress,40.4
+C00513,W02,2026-06-30,noise,closed,17.1
+C00514,W02,2026-06-30,sanitation,in_progress,31.2
+C00515,W02,2026-06-30,noise,in_progress,35.9
+C00516,W02,2026-06-30,sanitation,closed,53.1
+C00517,W02,2026-06-30,electricity,closed,14.3
+C00518,W02,2026-06-30,electricity,in_progress,17.7
+C00519,W02,2026-06-30,public safety,open,39.1
+C00520,W02,2026-06-30,water,closed,27.9
+C00521,W02,2026-06-30,water,closed,24.9
+C00522,W02,2026-06-30,roads,open,10.7
+C00523,W02,2026-06-30,noise,closed,42.8
+C00524,W02,2026-06-30,sanitation,closed,32.6
+C00525,W02,2026-06-30,public safety,in_progress,31.9
+C00526,W02,2026-07-01,electricity,open,34.0
+C00527,W02,2026-07-01,noise,in_progress,47.1
+C00528,W02,2026-07-01,noise,closed,28.2
+C00529,W02,2026-07-01,electricity,open,39.9
+C00530,W02,2026-07-01,sanitation,in_progress,15.4
+C00531,W02,2026-07-01,sanitation,closed,30.0
+C00532,W02,2026-07-01,public safety,closed,24.7
+C00533,W02,2026-07-01,electricity,open,25.7
+C00534,W02,2026-07-01,roads,in_progress,51.0
+C00535,W02,2026-07-01,noise,closed,30.6
+C00536,W02,2026-07-01,electricity,closed,21.8
+C00537,W02,2026-07-01,sanitation,in_progress,16.3
+C00538,W02,2026-07-01,noise,open,27.7
+C00539,W02,2026-07-01,public safety,closed,45.9
+C00540,W02,2026-07-01,public safety,closed,14.8
+C00541,W02,2026-07-01,sanitation,closed,27.0
+C00542,W02,2026-07-02,sanitation,in_progress,22.6
+C00543,W02,2026-07-02,noise,in_progress,67.1
+C00544,W02,2026-07-02,roads,open,43.1
+C00545,W02,2026-07-02,noise,open,35.0
+C00546,W02,2026-07-02,electricity,closed,49.8
+C00547,W02,2026-07-02,sanitation,closed,10.0
+C00548,W02,2026-07-02,noise,closed,44.3
+C00549,W02,2026-07-02,roads,open,45.0
+C00550,W02,2026-07-02,public safety,closed,38.1
+C00551,W02,2026-07-02,water,open,27.2
+C00552,W02,2026-07-02,water,in_progress,30.4
+C00553,W02,2026-07-03,water,closed,29.9
+C00554,W02,2026-07-03,water,open,57.7
+C00555,W02,2026-07-03,electricity,open,25.7
+C00556,W02,2026-07-03,water,open,58.7
+C00557,W02,2026-07-03,noise,closed,73.2
+C00558,W02,2026-07-03,water,in_progress,21.8
+C00559,W02,2026-07-03,water,closed,4.0
+C00560,W02,2026-07-03,roads,closed,28.7
+C00561,W02,2026-07-03,roads,in_progress,50.2
+C00562,W02,2026-07-03,noise,closed,40.2
+C00563,W02,2026-07-03,sanitation,closed,50.5
+C00564,W02,2026-07-03,noise,open,12.5
+C00565,W02,2026-07-04,electricity,open,23.9
+C00566,W02,2026-07-04,water,open,44.4
+C00567,W02,2026-07-04,water,in_progress,31.7
+C00568,W02,2026-07-04,sanitation,in_progress,50.6
+C00569,W02,2026-07-04,roads,in_progress,40.4
+C00570,W02,2026-07-04,sanitation,in_progress,37.0
+C00571,W02,2026-07-04,sanitation,closed,47.1
+C00572,W02,2026-07-04,public safety,in_progress,37.0
+C00573,W02,2026-07-04,noise,in_progress,27.6
+C00574,W02,2026-07-04,public safety,open,35.9
+C00575,W02,2026-07-04,electricity,open,19.3
+C00576,W02,2026-07-04,sanitation,open,34.0
+C00577,W02,2026-07-04,electricity,closed,61.6
+C00578,W02,2026-07-04,electricity,closed,13.5
+C00579,W02,2026-07-05,roads,in_progress,42.4
+C00580,W02,2026-07-05,public safety,closed,42.2
+C00581,W02,2026-07-05,water,open,58.3
+C00582,W02,2026-07-05,electricity,closed,54.5
+C00583,W02,2026-07-05,sanitation,closed,24.6
+C00584,W02,2026-07-05,roads,in_progress,34.0
+C00585,W02,2026-07-05,water,open,27.2
+C00586,W02,2026-07-05,water,open,28.1
+C00587,W02,2026-07-05,public safety,closed,67.6
+C00588,W02,2026-07-05,sanitation,closed,54.4
+C00589,W02,2026-07-05,electricity,closed,38.8
+C00590,W02,2026-07-05,sanitation,in_progress,18.8
+C00591,W02,2026-07-05,water,open,9.1
+C00592,W02,2026-07-05,noise,closed,5.3
+C00593,W02,2026-07-05,sanitation,in_progress,38.1
+C00594,W03,2026-06-08,public safety,closed,18.3
+C00595,W03,2026-06-08,public safety,in_progress,17.6
+C00596,W03,2026-06-08,roads,open,27.4
+C00597,W03,2026-06-08,public safety,open,45.2
+C00598,W03,2026-06-08,public safety,in_progress,50.9
+C00599,W03,2026-06-08,roads,open,33.1
+C00600,W03,2026-06-08,sanitation,closed,37.5
+C00601,W03,2026-06-08,noise,open,19.7
+C00602,W03,2026-06-08,sanitation,open,44.2
+C00603,W03,2026-06-08,noise,closed,27.0
+C00604,W03,2026-06-08,water,closed,31.2
+C00605,W03,2026-06-09,public safety,open,28.7
+C00606,W03,2026-06-09,sanitation,closed,62.2
+C00607,W03,2026-06-09,noise,in_progress,44.5
+C00608,W03,2026-06-09,water,closed,44.5
+C00609,W03,2026-06-09,water,in_progress,30.2
+C00610,W03,2026-06-09,public safety,in_progress,42.6
+C00611,W03,2026-06-09,noise,closed,34.4
+C00612,W03,2026-06-09,water,open,40.8
+C00613,W03,2026-06-09,water,closed,43.8
+C00614,W03,2026-06-09,noise,in_progress,34.7
+C00615,W03,2026-06-09,sanitation,open,29.5
+C00616,W03,2026-06-09,water,closed,45.3
+C00617,W03,2026-06-09,public safety,in_progress,42.6
+C00618,W03,2026-06-10,water,open,30.5
+C00619,W03,2026-06-10,electricity,in_progress,4.5
+C00620,W03,2026-06-10,noise,closed,68.8
+C00621,W03,2026-06-10,sanitation,closed,30.7
+C00622,W03,2026-06-10,public safety,in_progress,18.6
+C00623,W03,2026-06-10,public safety,open,54.0
+C00624,W03,2026-06-10,sanitation,open,47.2
+C00625,W03,2026-06-10,water,open,17.8
+C00626,W03,2026-06-10,roads,open,36.8
+C00627,W03,2026-06-10,noise,in_progress,55.1
+C00628,W03,2026-06-10,electricity,open,18.3
+C00629,W03,2026-06-10,noise,in_progress,22.1
+C00630,W03,2026-06-10,water,open,19.6
+C00631,W03,2026-06-10,water,in_progress,27.3
+C00632,W03,2026-06-10,public safety,in_progress,35.0
+C00633,W03,2026-06-11,public safety,open,21.1
+C00634,W03,2026-06-11,electricity,open,35.1
+C00635,W03,2026-06-11,noise,in_progress,32.2
+C00636,W03,2026-06-11,electricity,in_progress,25.7
+C00637,W03,2026-06-11,public safety,in_progress,37.3
+C00638,W03,2026-06-11,sanitation,in_progress,42.2
+C00639,W03,2026-06-11,roads,closed,29.4
+C00640,W03,2026-06-11,public safety,in_progress,37.0
+C00641,W03,2026-06-11,public safety,in_progress,30.6
+C00642,W03,2026-06-11,noise,in_progress,17.9
+C00643,W03,2026-06-11,roads,closed,29.5
+C00644,W03,2026-06-11,roads,in_progress,14.0
+C00645,W03,2026-06-11,electricity,open,41.8
+C00646,W03,2026-06-11,roads,open,41.5
+C00647,W03,2026-06-12,electricity,closed,31.9
+C00648,W03,2026-06-12,noise,in_progress,40.9
+C00649,W03,2026-06-12,electricity,open,18.3
+C00650,W03,2026-06-12,sanitation,in_progress,17.2
+C00651,W03,2026-06-12,water,closed,48.3
+C00652,W03,2026-06-12,water,in_progress,37.4
+C00653,W03,2026-06-12,noise,closed,30.1
+C00654,W03,2026-06-12,sanitation,in_progress,18.5
+C00655,W03,2026-06-12,roads,closed,38.6
+C00656,W03,2026-06-12,public safety,closed,50.1
+C00657,W03,2026-06-12,water,closed,68.2
+C00658,W03,2026-06-12,sanitation,open,23.2
+C00659,W03,2026-06-12,roads,in_progress,33.6
+C00660,W03,2026-06-13,electricity,in_progress,31.0
+C00661,W03,2026-06-13,sanitation,in_progress,46.6
+C00662,W03,2026-06-13,noise,open,68.1
+C00663,W03,2026-06-13,public safety,in_progress,30.3
+C00664,W03,2026-06-13,public safety,open,30.9
+C00665,W03,2026-06-13,electricity,closed,46.6
+C00666,W03,2026-06-13,public safety,closed,51.9
+C00667,W03,2026-06-13,noise,closed,62.0
+C00668,W03,2026-06-13,sanitation,open,42.2
+C00669,W03,2026-06-13,public safety,closed,34.1
+C00670,W03,2026-06-13,electricity,in_progress,44.6
+C00671,W03,2026-06-13,electricity,closed,63.8
+C00672,W03,2026-06-13,electricity,in_progress,40.6
+C00673,W03,2026-06-13,public safety,in_progress,9.8
+C00674,W03,2026-06-13,public safety,in_progress,37.7
+C00675,W03,2026-06-14,sanitation,open,40.2
+C00676,W03,2026-06-14,water,in_progress,25.6
+C00677,W03,2026-06-14,electricity,open,35.9
+C00678,W03,2026-06-14,noise,closed,17.4
+C00679,W03,2026-06-14,noise,in_progress,72.8
+C00680,W03,2026-06-14,roads,in_progress,28.4
+C00681,W03,2026-06-14,roads,in_progress,34.4
+C00682,W03,2026-06-14,sanitation,in_progress,27.7
+C00683,W03,2026-06-14,sanitation,in_progress,37.4
+C00684,W03,2026-06-14,water,closed,4.0
+C00685,W03,2026-06-14,roads,in_progress,52.7
+C00686,W03,2026-06-14,electricity,closed,25.9
+C00687,W03,2026-06-14,water,closed,56.9
+C00688,W03,2026-06-15,water,open,41.0
+C00689,W03,2026-06-15,sanitation,in_progress,4.0
+C00690,W03,2026-06-15,roads,closed,33.8
+C00691,W03,2026-06-15,noise,open,50.5
+C00692,W03,2026-06-15,public safety,closed,40.1
+C00693,W03,2026-06-15,water,in_progress,8.6
+C00694,W03,2026-06-15,water,open,28.8
+C00695,W03,2026-06-15,noise,closed,25.5
+C00696,W03,2026-06-15,sanitation,in_progress,45.6
+C00697,W03,2026-06-16,noise,closed,40.7
+C00698,W03,2026-06-16,noise,open,23.4
+C00699,W03,2026-06-16,electricity,in_progress,45.0
+C00700,W03,2026-06-16,electricity,closed,29.4
+C00701,W03,2026-06-16,sanitation,in_progress,30.3
+C00702,W03,2026-06-16,noise,in_progress,22.5
+C00703,W03,2026-06-16,roads,open,30.3
+C00704,W03,2026-06-16,electricity,closed,31.7
+C00705,W03,2026-06-16,sanitation,open,37.3
+C00706,W03,2026-06-16,public safety,in_progress,40.6
+C00707,W03,2026-06-16,roads,closed,19.0
+C00708,W03,2026-06-16,electricity,open,25.9
+C00709,W03,2026-06-16,roads,in_progress,52.0
+C00710,W03,2026-06-16,electricity,closed,45.3
+C00711,W03,2026-06-16,electricity,closed,19.3
+C00712,W03,2026-06-16,electricity,in_progress,32.0
+C00713,W03,2026-06-17,sanitation,in_progress,31.7
+C00714,W03,2026-06-17,water,closed,40.9
+C00715,W03,2026-06-17,noise,closed,48.7
+C00716,W03,2026-06-17,electricity,in_progress,20.8
+C00717,W03,2026-06-17,noise,closed,40.0
+C00718,W03,2026-06-17,electricity,open,11.3
+C00719,W03,2026-06-17,public safety,open,27.6
+C00720,W03,2026-06-17,public safety,closed,30.7
+C00721,W03,2026-06-17,electricity,in_progress,47.7
+C00722,W03,2026-06-17,sanitation,closed,51.9
+C00723,W03,2026-06-17,public safety,open,40.5
+C00724,W03,2026-06-17,water,open,49.1
+C00725,W03,2026-06-18,electricity,closed,39.9
+C00726,W03,2026-06-18,water,closed,31.9
+C00727,W03,2026-06-18,electricity,open,13.3
+C00728,W03,2026-06-18,electricity,in_progress,51.0
+C00729,W03,2026-06-18,water,in_progress,34.8
+C00730,W03,2026-06-18,roads,in_progress,45.9
+C00731,W03,2026-06-18,noise,closed,28.3
+C00732,W03,2026-06-18,public safety,closed,21.6
+C00733,W03,2026-06-18,electricity,in_progress,18.1
+C00734,W03,2026-06-18,roads,open,32.9
+C00735,W03,2026-06-18,noise,in_progress,46.6
+C00736,W03,2026-06-18,public safety,open,29.1
+C00737,W03,2026-06-18,water,in_progress,19.9
+C00738,W03,2026-06-19,public safety,in_progress,22.9
+C00739,W03,2026-06-19,noise,open,19.3
+C00740,W03,2026-06-19,water,in_progress,27.2
+C00741,W03,2026-06-19,roads,in_progress,68.7
+C00742,W03,2026-06-19,sanitation,in_progress,44.1
+C00743,W03,2026-06-19,water,closed,34.4
+C00744,W03,2026-06-19,roads,closed,51.0
+C00745,W03,2026-06-19,noise,closed,32.5
+C00746,W03,2026-06-19,electricity,closed,27.8
+C00747,W03,2026-06-20,public safety,closed,29.6
+C00748,W03,2026-06-20,roads,closed,35.7
+C00749,W03,2026-06-20,noise,closed,41.4
+C00750,W03,2026-06-20,water,open,31.8
+C00751,W03,2026-06-20,electricity,open,28.1
+C00752,W03,2026-06-20,water,closed,61.4
+C00753,W03,2026-06-20,water,closed,23.6
+C00754,W03,2026-06-20,roads,in_progress,26.3
+C00755,W03,2026-06-20,sanitation,closed,53.2
+C00756,W03,2026-06-20,electricity,open,13.1
+C00757,W03,2026-06-20,sanitation,open,30.1
+C00758,W03,2026-06-20,water,open,38.5
+C00759,W03,2026-06-20,water,in_progress,33.5
+C00760,W03,2026-06-21,noise,open,56.4
+C00761,W03,2026-06-21,sanitation,in_progress,28.9
+C00762,W03,2026-06-21,noise,in_progress,32.2
+C00763,W03,2026-06-21,water,closed,19.3
+C00764,W03,2026-06-21,roads,closed,30.6
+C00765,W03,2026-06-21,water,in_progress,37.4
+C00766,W03,2026-06-21,roads,closed,41.4
+C00767,W03,2026-06-21,water,closed,34.6
+C00768,W03,2026-06-21,public safety,in_progress,44.0
+C00769,W03,2026-06-21,noise,closed,30.8
+C00770,W03,2026-06-21,electricity,closed,26.8
+C00771,W03,2026-06-21,water,in_progress,29.1
+C00772,W03,2026-06-21,public safety,open,34.4
+C00773,W03,2026-06-21,roads,open,4.0
+C00774,W03,2026-06-21,sanitation,in_progress,39.6
+C00775,W03,2026-06-21,water,open,24.6
+C00776,W03,2026-06-22,noise,in_progress,19.1
+C00777,W03,2026-06-22,noise,closed,26.0
+C00778,W03,2026-06-22,noise,closed,36.8
+C00779,W03,2026-06-22,water,in_progress,55.7
+C00780,W03,2026-06-22,roads,in_progress,22.6
+C00781,W03,2026-06-22,public safety,in_progress,5.8
+C00782,W03,2026-06-22,public safety,open,13.6
+C00783,W03,2026-06-22,noise,closed,9.5
+C00784,W03,2026-06-22,roads,open,50.4
+C00785,W03,2026-06-22,water,closed,30.8
+C00786,W03,2026-06-22,electricity,in_progress,19.7
+C00787,W03,2026-06-22,water,closed,43.9
+C00788,W03,2026-06-22,public safety,open,36.6
+C00789,W03,2026-06-22,electricity,open,13.9
+C00790,W03,2026-06-22,electricity,in_progress,21.9
+C00791,W03,2026-06-23,electricity,open,51.3
+C00792,W03,2026-06-23,electricity,open,41.7
+C00793,W03,2026-06-23,electricity,closed,42.3
+C00794,W03,2026-06-23,electricity,in_progress,45.1
+C00795,W03,2026-06-23,sanitation,closed,40.1
+C00796,W03,2026-06-23,sanitation,closed,52.8
+C00797,W03,2026-06-23,water,open,18.9
+C00798,W03,2026-06-23,water,closed,39.8
+C00799,W03,2026-06-23,sanitation,closed,10.3
+C00800,W03,2026-06-23,public safety,open,40.9
+C00801,W03,2026-06-23,water,in_progress,44.4
+C00802,W03,2026-06-23,electricity,open,13.8
+C00803,W03,2026-06-23,sanitation,in_progress,32.2
+C00804,W03,2026-06-23,sanitation,open,39.2
+C00805,W03,2026-06-24,noise,in_progress,33.6
+C00806,W03,2026-06-24,roads,open,38.8
+C00807,W03,2026-06-24,public safety,in_progress,4.0
+C00808,W03,2026-06-24,noise,in_progress,5.4
+C00809,W03,2026-06-24,water,in_progress,44.9
+C00810,W03,2026-06-24,sanitation,closed,62.8
+C00811,W03,2026-06-24,roads,closed,28.6
+C00812,W03,2026-06-24,noise,open,42.6
+C00813,W03,2026-06-24,electricity,open,50.7
+C00814,W03,2026-06-24,public safety,open,47.0
+C00815,W03,2026-06-24,noise,in_progress,14.7
+C00816,W03,2026-06-24,public safety,closed,18.4
+C00817,W03,2026-06-24,roads,open,30.2
+C00818,W03,2026-06-24,water,in_progress,40.1
+C00819,W03,2026-06-24,public safety,open,42.5
+C00820,W03,2026-06-24,sanitation,closed,14.1
+C00821,W03,2026-06-24,sanitation,open,46.6
+C00822,W03,2026-06-25,sanitation,in_progress,41.2
+C00823,W03,2026-06-25,electricity,closed,33.7
+C00824,W03,2026-06-25,public safety,open,30.8
+C00825,W03,2026-06-25,water,in_progress,36.0
+C00826,W03,2026-06-25,sanitation,open,44.8
+C00827,W03,2026-06-25,electricity,in_progress,38.1
+C00828,W03,2026-06-25,electricity,in_progress,66.0
+C00829,W03,2026-06-25,electricity,closed,38.6
+C00830,W03,2026-06-25,roads,in_progress,9.4
+C00831,W03,2026-06-25,roads,closed,20.7
+C00832,W03,2026-06-25,noise,open,33.1
+C00833,W03,2026-06-25,electricity,closed,57.4
+C00834,W03,2026-06-25,public safety,closed,13.9
+C00835,W03,2026-06-25,water,closed,4.0
+C00836,W03,2026-06-25,public safety,closed,36.0
+C00837,W03,2026-06-26,public safety,in_progress,46.6
+C00838,W03,2026-06-26,water,open,32.2
+C00839,W03,2026-06-26,electricity,in_progress,43.5
+C00840,W03,2026-06-26,roads,open,28.1
+C00841,W03,2026-06-26,water,open,55.8
+C00842,W03,2026-06-26,electricity,in_progress,52.5
+C00843,W03,2026-06-26,roads,in_progress,31.4
+C00844,W03,2026-06-26,roads,in_progress,40.8
+C00845,W03,2026-06-26,water,in_progress,54.3
+C00846,W03,2026-06-26,sanitation,closed,33.6
+C00847,W03,2026-06-26,noise,in_progress,26.0
+C00848,W03,2026-06-26,public safety,closed,12.3
+C00849,W03,2026-06-26,roads,closed,17.8
+C00850,W03,2026-06-27,water,open,17.3
+C00851,W03,2026-06-27,noise,in_progress,37.4
+C00852,W03,2026-06-27,roads,closed,34.3
+C00853,W03,2026-06-27,sanitation,closed,51.0
+C00854,W03,2026-06-27,roads,closed,35.0
+C00855,W03,2026-06-27,electricity,closed,43.8
+C00856,W03,2026-06-27,electricity,in_progress,64.8
+C00857,W03,2026-06-27,noise,in_progress,15.2
+C00858,W03,2026-06-27,noise,in_progress,39.3
+C00859,W03,2026-06-27,noise,closed,46.6
+C00860,W03,2026-06-27,public safety,in_progress,24.5
+C00861,W03,2026-06-27,noise,open,25.0
+C00862,W03,2026-06-27,electricity,open,45.5
+C00863,W03,2026-06-27,public safety,open,52.7
+C00864,W03,2026-06-27,electricity,closed,36.8
+C00865,W03,2026-06-28,roads,in_progress,23.5
+C00866,W03,2026-06-28,roads,in_progress,25.5
+C00867,W03,2026-06-28,electricity,closed,30.5
+C00868,W03,2026-06-28,public safety,in_progress,33.8
+C00869,W03,2026-06-28,public safety,closed,61.0
+C00870,W03,2026-06-28,public safety,in_progress,12.9
+C00871,W03,2026-06-28,noise,open,40.5
+C00872,W03,2026-06-28,roads,closed,26.4
+C00873,W03,2026-06-28,electricity,closed,32.4
+C00874,W03,2026-06-28,sanitation,closed,61.5
+C00875,W03,2026-06-28,public safety,open,40.7
+C00876,W03,2026-06-28,sanitation,in_progress,47.8
+C00877,W03,2026-06-28,sanitation,closed,50.0
+C00878,W03,2026-06-28,roads,open,38.0
+C00879,W03,2026-06-28,sanitation,closed,50.2
+C00880,W03,2026-06-29,water,closed,10.2
+C00881,W03,2026-06-29,water,open,52.7
+C00882,W03,2026-06-29,sanitation,open,35.7
+C00883,W03,2026-06-29,electricity,closed,29.0
+C00884,W03,2026-06-29,sanitation,closed,73.1
+C00885,W03,2026-06-29,public safety,closed,4.9
+C00886,W03,2026-06-29,roads,open,49.0
+C00887,W03,2026-06-29,sanitation,closed,40.4
+C00888,W03,2026-06-29,electricity,in_progress,42.4
+C00889,W03,2026-06-29,noise,in_progress,36.6
+C00890,W03,2026-06-29,water,in_progress,29.5
+C00891,W03,2026-06-29,electricity,open,45.0
+C00892,W03,2026-06-30,public safety,open,19.3
+C00893,W03,2026-06-30,sanitation,open,12.2
+C00894,W03,2026-06-30,water,in_progress,23.6
+C00895,W03,2026-06-30,public safety,open,46.1
+C00896,W03,2026-06-30,public safety,open,58.5
+C00897,W03,2026-06-30,public safety,in_progress,48.4
+C00898,W03,2026-06-30,electricity,open,59.8
+C00899,W03,2026-06-30,roads,open,15.7
+C00900,W03,2026-06-30,public safety,closed,30.7
+C00901,W03,2026-06-30,sanitation,closed,35.7
+C00902,W03,2026-06-30,noise,closed,31.7
+C00903,W03,2026-06-30,noise,open,33.6
+C00904,W03,2026-06-30,roads,closed,51.0
+C00905,W03,2026-06-30,water,open,55.4
+C00906,W03,2026-06-30,noise,open,18.3
+C00907,W03,2026-07-01,water,closed,45.0
+C00908,W03,2026-07-01,public safety,open,27.4
+C00909,W03,2026-07-01,public safety,closed,55.4
+C00910,W03,2026-07-01,noise,open,46.0
+C00911,W03,2026-07-01,sanitation,in_progress,35.6
+C00912,W03,2026-07-01,electricity,closed,40.5
+C00913,W03,2026-07-01,electricity,in_progress,47.2
+C00914,W03,2026-07-01,public safety,in_progress,32.6
+C00915,W03,2026-07-01,water,in_progress,37.4
+C00916,W03,2026-07-01,water,in_progress,52.6
+C00917,W03,2026-07-01,roads,closed,23.3
+C00918,W03,2026-07-01,electricity,in_progress,28.0
+C00919,W03,2026-07-01,roads,closed,44.9
+C00920,W03,2026-07-01,water,closed,39.9
+C00921,W03,2026-07-01,public safety,open,34.2
+C00922,W03,2026-07-02,sanitation,open,47.0
+C00923,W03,2026-07-02,noise,in_progress,35.4
+C00924,W03,2026-07-02,sanitation,open,47.7
+C00925,W03,2026-07-02,electricity,closed,42.8
+C00926,W03,2026-07-02,electricity,in_progress,39.8
+C00927,W03,2026-07-02,electricity,open,38.7
+C00928,W03,2026-07-02,electricity,closed,41.0
+C00929,W03,2026-07-02,sanitation,in_progress,7.7
+C00930,W03,2026-07-02,water,in_progress,39.1
+C00931,W03,2026-07-02,electricity,open,12.9
+C00932,W03,2026-07-02,electricity,closed,41.6
+C00933,W03,2026-07-02,roads,in_progress,47.0
+C00934,W03,2026-07-02,noise,in_progress,29.9
+C00935,W03,2026-07-02,water,in_progress,35.2
+C00936,W03,2026-07-03,sanitation,in_progress,42.7
+C00937,W03,2026-07-03,noise,open,32.0
+C00938,W03,2026-07-03,electricity,open,18.9
+C00939,W03,2026-07-03,water,open,36.1
+C00940,W03,2026-07-03,water,in_progress,36.2
+C00941,W03,2026-07-03,electricity,in_progress,39.2
+C00942,W03,2026-07-03,noise,in_progress,23.2
+C00943,W03,2026-07-03,public safety,closed,43.1
+C00944,W03,2026-07-03,public safety,open,44.3
+C00945,W03,2026-07-03,water,in_progress,41.2
+C00946,W03,2026-07-03,noise,in_progress,47.7
+C00947,W03,2026-07-03,public safety,closed,10.4
+C00948,W03,2026-07-03,roads,in_progress,7.8
+C00949,W03,2026-07-03,water,in_progress,40.7
+C00950,W03,2026-07-04,sanitation,closed,49.9
+C00951,W03,2026-07-04,roads,closed,80.7
+C00952,W03,2026-07-04,electricity,open,49.9
+C00953,W03,2026-07-04,public safety,open,30.5
+C00954,W03,2026-07-04,water,in_progress,37.6
+C00955,W03,2026-07-04,water,closed,30.4
+C00956,W03,2026-07-04,water,open,28.0
+C00957,W03,2026-07-04,public safety,open,27.3
+C00958,W03,2026-07-04,public safety,in_progress,36.3
+C00959,W03,2026-07-04,electricity,in_progress,29.7
+C00960,W03,2026-07-04,electricity,in_progress,4.0
+C00961,W03,2026-07-04,public safety,in_progress,28.2
+C00962,W03,2026-07-04,electricity,open,38.3
+C00963,W03,2026-07-04,electricity,closed,22.2
+C00964,W03,2026-07-05,roads,closed,30.5
+C00965,W03,2026-07-05,public safety,in_progress,44.7
+C00966,W03,2026-07-05,electricity,closed,51.7
+C00967,W03,2026-07-05,public safety,closed,16.1
+C00968,W03,2026-07-05,water,open,48.8
+C00969,W03,2026-07-05,sanitation,open,34.1
+C00970,W03,2026-07-05,electricity,closed,51.7
+C00971,W03,2026-07-05,electricity,closed,21.5
+C00972,W03,2026-07-05,water,in_progress,28.1
+C00973,W03,2026-07-05,public safety,closed,32.1
+C00974,W03,2026-07-05,sanitation,in_progress,27.6
+C00975,W03,2026-07-05,sanitation,in_progress,4.1
+C00976,W03,2026-07-05,sanitation,closed,53.0
+C00977,W03,2026-07-05,roads,in_progress,29.1
+C00978,W03,2026-07-05,roads,closed,49.3
+C00979,W03,2026-07-05,water,in_progress,20.1
+C00980,W04,2026-06-08,public safety,in_progress,30.0
+C00981,W04,2026-06-08,public safety,open,45.7
+C00982,W04,2026-06-08,sanitation,in_progress,22.4
+C00983,W04,2026-06-08,roads,closed,18.1
+C00984,W04,2026-06-08,roads,closed,38.8
+C00985,W04,2026-06-08,electricity,in_progress,42.4
+C00986,W04,2026-06-08,water,open,40.8
+C00987,W04,2026-06-08,roads,closed,16.1
+C00988,W04,2026-06-08,public safety,in_progress,16.9
+C00989,W04,2026-06-08,roads,in_progress,49.0
+C00990,W04,2026-06-08,electricity,in_progress,18.3
+C00991,W04,2026-06-08,roads,in_progress,49.1
+C00992,W04,2026-06-08,public safety,open,12.8
+C00993,W04,2026-06-08,electricity,open,23.3
+C00994,W04,2026-06-08,noise,in_progress,37.2
+C00995,W04,2026-06-09,public safety,in_progress,15.3
+C00996,W04,2026-06-09,electricity,in_progress,31.5
+C00997,W04,2026-06-09,electricity,in_progress,23.9
+C00998,W04,2026-06-09,water,closed,28.3
+C00999,W04,2026-06-09,roads,closed,31.8
+C01000,W04,2026-06-09,electricity,closed,23.7
+C01001,W04,2026-06-09,sanitation,closed,39.7
+C01002,W04,2026-06-09,noise,open,40.2
+C01003,W04,2026-06-09,roads,in_progress,29.2
+C01004,W04,2026-06-09,water,closed,19.3
+C01005,W04,2026-06-09,roads,closed,28.3
+C01006,W04,2026-06-09,public safety,closed,41.0
+C01007,W04,2026-06-09,public safety,closed,42.8
+C01008,W04,2026-06-09,roads,in_progress,31.4
+C01009,W04,2026-06-09,noise,open,45.4
+C01010,W04,2026-06-09,electricity,open,59.8
+C01011,W04,2026-06-10,water,open,9.2
+C01012,W04,2026-06-10,roads,in_progress,51.2
+C01013,W04,2026-06-10,water,in_progress,31.3
+C01014,W04,2026-06-10,public safety,in_progress,11.9
+C01015,W04,2026-06-10,water,open,48.5
+C01016,W04,2026-06-10,sanitation,closed,58.2
+C01017,W04,2026-06-10,noise,open,39.6
+C01018,W04,2026-06-10,noise,open,26.7
+C01019,W04,2026-06-10,water,closed,33.0
+C01020,W04,2026-06-10,public safety,in_progress,28.5
+C01021,W04,2026-06-10,sanitation,in_progress,32.9
+C01022,W04,2026-06-10,electricity,in_progress,12.3
+C01023,W04,2026-06-10,public safety,in_progress,28.9
+C01024,W04,2026-06-10,electricity,open,41.5
+C01025,W04,2026-06-10,public safety,open,34.6
+C01026,W04,2026-06-10,noise,open,22.7
+C01027,W04,2026-06-10,sanitation,in_progress,39.0
+C01028,W04,2026-06-10,sanitation,open,40.7
+C01029,W04,2026-06-10,public safety,in_progress,57.2
+C01030,W04,2026-06-11,water,open,20.3
+C01031,W04,2026-06-11,electricity,open,40.6
+C01032,W04,2026-06-11,sanitation,closed,10.0
+C01033,W04,2026-06-11,noise,closed,31.6
+C01034,W04,2026-06-11,noise,closed,52.1
+C01035,W04,2026-06-11,noise,in_progress,4.0
+C01036,W04,2026-06-11,electricity,closed,19.8
+C01037,W04,2026-06-11,sanitation,open,58.9
+C01038,W04,2026-06-11,sanitation,in_progress,29.3
+C01039,W04,2026-06-11,public safety,open,32.8
+C01040,W04,2026-06-11,roads,closed,27.9
+C01041,W04,2026-06-11,noise,open,36.5
+C01042,W04,2026-06-11,water,open,14.0
+C01043,W04,2026-06-11,electricity,closed,33.3
+C01044,W04,2026-06-11,water,open,49.4
+C01045,W04,2026-06-11,public safety,open,15.9
+C01046,W04,2026-06-11,public safety,in_progress,48.4
+C01047,W04,2026-06-11,water,in_progress,34.5
+C01048,W04,2026-06-12,public safety,open,33.1
+C01049,W04,2026-06-12,public safety,closed,19.6
+C01050,W04,2026-06-12,noise,open,39.0
+C01051,W04,2026-06-12,water,open,21.5
+C01052,W04,2026-06-12,water,in_progress,29.9
+C01053,W04,2026-06-12,electricity,closed,45.3
+C01054,W04,2026-06-12,roads,closed,49.8
+C01055,W04,2026-06-12,public safety,open,15.3
+C01056,W04,2026-06-12,sanitation,open,16.3
+C01057,W04,2026-06-12,sanitation,open,16.0
+C01058,W04,2026-06-12,roads,in_progress,4.0
+C01059,W04,2026-06-12,water,open,46.7
+C01060,W04,2026-06-12,public safety,open,43.8
+C01061,W04,2026-06-12,noise,open,27.0
+C01062,W04,2026-06-12,public safety,in_progress,35.0
+C01063,W04,2026-06-12,public safety,open,48.5
+C01064,W04,2026-06-13,public safety,closed,41.3
+C01065,W04,2026-06-13,roads,in_progress,22.8
+C01066,W04,2026-06-13,sanitation,open,16.9
+C01067,W04,2026-06-13,water,open,41.7
+C01068,W04,2026-06-13,public safety,in_progress,42.4
+C01069,W04,2026-06-13,sanitation,open,26.3
+C01070,W04,2026-06-13,water,closed,10.7
+C01071,W04,2026-06-13,roads,in_progress,47.4
+C01072,W04,2026-06-13,public safety,open,40.9
+C01073,W04,2026-06-13,sanitation,in_progress,27.1
+C01074,W04,2026-06-13,water,open,43.7
+C01075,W04,2026-06-13,public safety,closed,45.7
+C01076,W04,2026-06-13,sanitation,closed,48.5
+C01077,W04,2026-06-13,public safety,open,14.2
+C01078,W04,2026-06-13,public safety,closed,43.2
+C01079,W04,2026-06-13,roads,in_progress,23.7
+C01080,W04,2026-06-13,roads,open,24.9
+C01081,W04,2026-06-13,sanitation,open,35.3
+C01082,W04,2026-06-13,water,in_progress,16.3
+C01083,W04,2026-06-13,water,in_progress,37.7
+C01084,W04,2026-06-14,public safety,open,35.2
+C01085,W04,2026-06-14,public safety,closed,54.0
+C01086,W04,2026-06-14,noise,closed,61.7
+C01087,W04,2026-06-14,noise,open,39.6
+C01088,W04,2026-06-14,electricity,closed,11.8
+C01089,W04,2026-06-14,noise,closed,33.6
+C01090,W04,2026-06-14,sanitation,open,28.2
+C01091,W04,2026-06-14,water,closed,35.2
+C01092,W04,2026-06-14,electricity,open,4.0
+C01093,W04,2026-06-14,noise,in_progress,28.2
+C01094,W04,2026-06-14,roads,in_progress,46.6
+C01095,W04,2026-06-14,noise,closed,21.1
+C01096,W04,2026-06-14,public safety,open,37.8
+C01097,W04,2026-06-14,sanitation,open,4.0
+C01098,W04,2026-06-14,electricity,open,44.7
+C01099,W04,2026-06-15,sanitation,in_progress,15.3
+C01100,W04,2026-06-15,electricity,in_progress,34.2
+C01101,W04,2026-06-15,water,closed,18.6
+C01102,W04,2026-06-15,electricity,closed,46.5
+C01103,W04,2026-06-15,roads,in_progress,39.9
+C01104,W04,2026-06-15,roads,open,37.8
+C01105,W04,2026-06-15,electricity,in_progress,19.6
+C01106,W04,2026-06-15,public safety,closed,47.6
+C01107,W04,2026-06-15,public safety,open,29.5
+C01108,W04,2026-06-15,roads,open,49.0
+C01109,W04,2026-06-15,roads,open,41.2
+C01110,W04,2026-06-15,electricity,closed,31.8
+C01111,W04,2026-06-15,sanitation,in_progress,24.7
+C01112,W04,2026-06-15,roads,open,17.3
+C01113,W04,2026-06-15,sanitation,closed,36.4
+C01114,W04,2026-06-15,water,in_progress,36.6
+C01115,W04,2026-06-15,electricity,closed,39.6
+C01116,W04,2026-06-15,roads,in_progress,13.1
+C01117,W04,2026-06-16,noise,closed,52.5
+C01118,W04,2026-06-16,sanitation,open,27.5
+C01119,W04,2026-06-16,electricity,open,47.8
+C01120,W04,2026-06-16,noise,closed,54.4
+C01121,W04,2026-06-16,water,in_progress,31.9
+C01122,W04,2026-06-16,electricity,in_progress,61.1
+C01123,W04,2026-06-16,roads,in_progress,44.5
+C01124,W04,2026-06-16,roads,in_progress,39.3
+C01125,W04,2026-06-16,public safety,closed,5.6
+C01126,W04,2026-06-16,sanitation,open,34.9
+C01127,W04,2026-06-16,sanitation,open,34.0
+C01128,W04,2026-06-16,sanitation,in_progress,14.3
+C01129,W04,2026-06-16,roads,open,58.7
+C01130,W04,2026-06-16,electricity,closed,34.1
+C01131,W04,2026-06-16,noise,open,20.4
+C01132,W04,2026-06-16,water,closed,23.9
+C01133,W04,2026-06-16,electricity,in_progress,58.7
+C01134,W04,2026-06-16,sanitation,closed,32.9
+C01135,W04,2026-06-16,roads,closed,30.9
+C01136,W04,2026-06-16,sanitation,in_progress,49.2
+C01137,W04,2026-06-16,noise,in_progress,41.6
+C01138,W04,2026-06-17,sanitation,in_progress,50.7
+C01139,W04,2026-06-17,roads,in_progress,24.0
+C01140,W04,2026-06-17,electricity,open,30.3
+C01141,W04,2026-06-17,water,in_progress,21.3
+C01142,W04,2026-06-17,roads,closed,26.1
+C01143,W04,2026-06-17,electricity,open,54.0
+C01144,W04,2026-06-17,sanitation,open,61.4
+C01145,W04,2026-06-17,electricity,in_progress,20.9
+C01146,W04,2026-06-17,sanitation,in_progress,18.8
+C01147,W04,2026-06-17,sanitation,closed,18.7
+C01148,W04,2026-06-17,noise,open,51.1
+C01149,W04,2026-06-17,roads,closed,49.5
+C01150,W04,2026-06-17,sanitation,open,33.5
+C01151,W04,2026-06-17,public safety,in_progress,61.3
+C01152,W04,2026-06-17,electricity,in_progress,52.4
+C01153,W04,2026-06-17,public safety,in_progress,12.5
+C01154,W04,2026-06-17,electricity,open,41.0
+C01155,W04,2026-06-18,water,open,34.3
+C01156,W04,2026-06-18,electricity,closed,54.1
+C01157,W04,2026-06-18,roads,open,42.9
+C01158,W04,2026-06-18,noise,in_progress,53.9
+C01159,W04,2026-06-18,water,closed,9.3
+C01160,W04,2026-06-18,public safety,in_progress,30.4
+C01161,W04,2026-06-18,sanitation,open,45.1
+C01162,W04,2026-06-18,roads,closed,40.1
+C01163,W04,2026-06-18,water,in_progress,39.2
+C01164,W04,2026-06-18,noise,in_progress,44.6
+C01165,W04,2026-06-18,roads,in_progress,44.1
+C01166,W04,2026-06-18,noise,in_progress,34.3
+C01167,W04,2026-06-18,roads,closed,42.0
+C01168,W04,2026-06-18,noise,closed,33.7
+C01169,W04,2026-06-18,noise,open,31.2
+C01170,W04,2026-06-18,sanitation,closed,35.1
+C01171,W04,2026-06-19,electricity,open,30.2
+C01172,W04,2026-06-19,roads,open,25.2
+C01173,W04,2026-06-19,water,in_progress,18.4
+C01174,W04,2026-06-19,sanitation,in_progress,28.9
+C01175,W04,2026-06-19,sanitation,open,38.6
+C01176,W04,2026-06-19,roads,open,38.5
+C01177,W04,2026-06-19,roads,in_progress,21.3
+C01178,W04,2026-06-19,public safety,open,49.2
+C01179,W04,2026-06-19,electricity,closed,33.6
+C01180,W04,2026-06-19,sanitation,open,60.6
+C01181,W04,2026-06-19,roads,closed,28.1
+C01182,W04,2026-06-19,noise,open,37.6
+C01183,W04,2026-06-19,sanitation,in_progress,65.2
+C01184,W04,2026-06-19,water,closed,44.9
+C01185,W04,2026-06-19,water,in_progress,55.9
+C01186,W04,2026-06-19,roads,in_progress,38.9
+C01187,W04,2026-06-19,roads,open,32.6
+C01188,W04,2026-06-19,roads,open,50.0
+C01189,W04,2026-06-19,electricity,closed,20.0
+C01190,W04,2026-06-19,water,in_progress,21.4
+C01191,W04,2026-06-19,electricity,in_progress,45.5
+C01192,W04,2026-06-20,roads,in_progress,44.1
+C01193,W04,2026-06-20,electricity,open,62.6
+C01194,W04,2026-06-20,public safety,closed,46.7
+C01195,W04,2026-06-20,public safety,in_progress,4.0
+C01196,W04,2026-06-20,water,closed,37.5
+C01197,W04,2026-06-20,electricity,closed,22.4
+C01198,W04,2026-06-20,noise,in_progress,34.6
+C01199,W04,2026-06-20,electricity,open,38.2
+C01200,W04,2026-06-20,sanitation,in_progress,75.4
+C01201,W04,2026-06-20,electricity,in_progress,50.6
+C01202,W04,2026-06-20,electricity,open,41.3
+C01203,W04,2026-06-20,public safety,open,34.0
+C01204,W04,2026-06-20,noise,closed,47.6
+C01205,W04,2026-06-20,sanitation,open,6.4
+C01206,W04,2026-06-20,electricity,in_progress,18.6
+C01207,W04,2026-06-20,roads,open,56.2
+C01208,W04,2026-06-20,roads,closed,25.5
+C01209,W04,2026-06-20,noise,closed,55.9
+C01210,W04,2026-06-20,sanitation,closed,24.6
+C01211,W04,2026-06-20,electricity,open,4.0
+C01212,W04,2026-06-21,water,closed,31.5
+C01213,W04,2026-06-21,noise,open,28.9
+C01214,W04,2026-06-21,roads,closed,35.4
+C01215,W04,2026-06-21,roads,open,34.5
+C01216,W04,2026-06-21,electricity,open,34.9
+C01217,W04,2026-06-21,roads,in_progress,28.5
+C01218,W04,2026-06-21,noise,open,4.3
+C01219,W04,2026-06-21,sanitation,open,8.3
+C01220,W04,2026-06-21,sanitation,closed,18.8
+C01221,W04,2026-06-21,noise,open,11.6
+C01222,W04,2026-06-21,water,closed,58.8
+C01223,W04,2026-06-21,sanitation,in_progress,32.6
+C01224,W04,2026-06-21,roads,closed,42.2
+C01225,W04,2026-06-21,water,closed,54.6
+C01226,W04,2026-06-21,roads,closed,30.0
+C01227,W04,2026-06-21,electricity,closed,49.8
+C01228,W04,2026-06-21,noise,open,22.7
+C01229,W04,2026-06-21,public safety,closed,40.4
+C01230,W04,2026-06-21,public safety,closed,22.5
+C01231,W04,2026-06-22,sanitation,closed,43.4
+C01232,W04,2026-06-22,electricity,in_progress,49.2
+C01233,W04,2026-06-22,electricity,open,15.6
+C01234,W04,2026-06-22,roads,closed,24.4
+C01235,W04,2026-06-22,electricity,open,58.2
+C01236,W04,2026-06-22,public safety,closed,48.0
+C01237,W04,2026-06-22,noise,closed,45.0
+C01238,W04,2026-06-22,sanitation,open,28.0
+C01239,W04,2026-06-22,public safety,open,45.1
+C01240,W04,2026-06-22,public safety,closed,16.3
+C01241,W04,2026-06-22,water,open,12.6
+C01242,W04,2026-06-22,noise,open,35.0
+C01243,W04,2026-06-22,noise,open,40.2
+C01244,W04,2026-06-22,public safety,open,49.4
+C01245,W04,2026-06-22,water,open,39.5
+C01246,W04,2026-06-22,water,in_progress,44.6
+C01247,W04,2026-06-22,water,open,26.2
+C01248,W04,2026-06-22,water,closed,22.6
+C01249,W04,2026-06-22,roads,in_progress,17.7
+C01250,W04,2026-06-22,sanitation,open,31.6
+C01251,W04,2026-06-23,sanitation,open,19.0
+C01252,W04,2026-06-23,roads,closed,59.6
+C01253,W04,2026-06-23,sanitation,closed,71.1
+C01254,W04,2026-06-23,noise,closed,21.2
+C01255,W04,2026-06-23,electricity,in_progress,30.8
+C01256,W04,2026-06-23,public safety,open,20.7
+C01257,W04,2026-06-23,electricity,in_progress,38.6
+C01258,W04,2026-06-23,roads,open,40.4
+C01259,W04,2026-06-23,water,closed,4.9
+C01260,W04,2026-06-23,electricity,in_progress,24.4
+C01261,W04,2026-06-23,public safety,in_progress,33.2
+C01262,W04,2026-06-23,water,closed,41.0
+C01263,W04,2026-06-23,electricity,in_progress,42.5
+C01264,W04,2026-06-23,water,open,45.9
+C01265,W04,2026-06-23,noise,closed,23.7
+C01266,W04,2026-06-23,sanitation,open,23.7
+C01267,W04,2026-06-23,roads,open,10.1
+C01268,W04,2026-06-23,water,open,5.6
+C01269,W04,2026-06-23,noise,in_progress,5.8
+C01270,W04,2026-06-23,noise,open,40.4
+C01271,W04,2026-06-23,public safety,closed,24.7
+C01272,W04,2026-06-23,water,in_progress,43.8
+C01273,W04,2026-06-23,roads,in_progress,49.5
+C01274,W04,2026-06-24,noise,open,44.4
+C01275,W04,2026-06-24,roads,closed,19.6
+C01276,W04,2026-06-24,public safety,open,46.0
+C01277,W04,2026-06-24,electricity,in_progress,41.6
+C01278,W04,2026-06-24,electricity,open,9.7
+C01279,W04,2026-06-24,electricity,in_progress,26.1
+C01280,W04,2026-06-24,electricity,closed,45.6
+C01281,W04,2026-06-24,roads,in_progress,23.2
+C01282,W04,2026-06-24,noise,open,13.3
+C01283,W04,2026-06-24,sanitation,closed,51.9
+C01284,W04,2026-06-24,electricity,closed,41.6
+C01285,W04,2026-06-24,electricity,open,15.0
+C01286,W04,2026-06-24,sanitation,in_progress,53.8
+C01287,W04,2026-06-24,roads,open,70.7
+C01288,W04,2026-06-24,roads,open,4.0
+C01289,W04,2026-06-24,water,open,54.3
+C01290,W04,2026-06-24,public safety,open,40.5
+C01291,W04,2026-06-24,public safety,open,25.7
+C01292,W04,2026-06-24,sanitation,in_progress,18.4
+C01293,W04,2026-06-24,noise,closed,28.8
+C01294,W04,2026-06-24,water,open,39.5
+C01295,W04,2026-06-24,electricity,in_progress,16.0
+C01296,W04,2026-06-25,electricity,closed,40.2
+C01297,W04,2026-06-25,electricity,open,51.0
+C01298,W04,2026-06-25,sanitation,in_progress,26.8
+C01299,W04,2026-06-25,electricity,in_progress,42.9
+C01300,W04,2026-06-25,public safety,in_progress,27.4
+C01301,W04,2026-06-25,electricity,closed,26.5
+C01302,W04,2026-06-25,water,open,36.5
+C01303,W04,2026-06-25,electricity,closed,29.0
+C01304,W04,2026-06-25,water,in_progress,22.1
+C01305,W04,2026-06-25,public safety,open,50.1
+C01306,W04,2026-06-25,noise,in_progress,39.8
+C01307,W04,2026-06-25,sanitation,in_progress,39.9
+C01308,W04,2026-06-25,noise,in_progress,24.2
+C01309,W04,2026-06-25,public safety,closed,58.0
+C01310,W04,2026-06-25,roads,in_progress,51.3
+C01311,W04,2026-06-25,public safety,in_progress,36.9
+C01312,W04,2026-06-25,public safety,in_progress,22.8
+C01313,W04,2026-06-25,electricity,closed,47.8
+C01314,W04,2026-06-25,water,closed,43.0
+C01315,W04,2026-06-25,water,closed,52.4
+C01316,W04,2026-06-25,electricity,open,15.8
+C01317,W04,2026-06-25,sanitation,in_progress,31.4
+C01318,W04,2026-06-25,electricity,closed,21.2
+C01319,W04,2026-06-26,roads,open,36.7
+C01320,W04,2026-06-26,roads,open,4.9
+C01321,W04,2026-06-26,public safety,open,43.5
+C01322,W04,2026-06-26,noise,in_progress,42.4
+C01323,W04,2026-06-26,public safety,open,20.1
+C01324,W04,2026-06-26,public safety,open,35.8
+C01325,W04,2026-06-26,water,open,51.2
+C01326,W04,2026-06-26,water,closed,22.8
+C01327,W04,2026-06-26,noise,closed,30.9
+C01328,W04,2026-06-26,public safety,open,32.0
+C01329,W04,2026-06-26,roads,closed,48.5
+C01330,W04,2026-06-26,roads,open,22.3
+C01331,W04,2026-06-26,noise,closed,18.2
+C01332,W04,2026-06-26,water,closed,59.2
+C01333,W04,2026-06-26,public safety,open,38.1
+C01334,W04,2026-06-26,water,open,23.6
+C01335,W04,2026-06-26,sanitation,open,19.8
+C01336,W04,2026-06-26,noise,closed,39.1
+C01337,W04,2026-06-26,public safety,closed,23.8
+C01338,W04,2026-06-26,noise,in_progress,56.7
+C01339,W04,2026-06-26,water,in_progress,18.3
+C01340,W04,2026-06-26,roads,in_progress,29.5
+C01341,W04,2026-06-26,electricity,in_progress,51.1
+C01342,W04,2026-06-27,public safety,in_progress,34.1
+C01343,W04,2026-06-27,electricity,closed,25.5
+C01344,W04,2026-06-27,public safety,open,28.7
+C01345,W04,2026-06-27,water,open,29.2
+C01346,W04,2026-06-27,noise,in_progress,44.6
+C01347,W04,2026-06-27,noise,closed,27.8
+C01348,W04,2026-06-27,noise,open,6.3
+C01349,W04,2026-06-27,roads,closed,37.9
+C01350,W04,2026-06-27,electricity,in_progress,5.1
+C01351,W04,2026-06-27,public safety,in_progress,25.6
+C01352,W04,2026-06-27,public safety,in_progress,14.7
+C01353,W04,2026-06-27,noise,in_progress,46.9
+C01354,W04,2026-06-27,public safety,open,27.1
+C01355,W04,2026-06-27,electricity,closed,60.7
+C01356,W04,2026-06-27,noise,closed,34.2
+C01357,W04,2026-06-27,public safety,open,27.2
+C01358,W04,2026-06-27,water,closed,16.6
+C01359,W04,2026-06-27,noise,closed,32.3
+C01360,W04,2026-06-27,public safety,closed,43.1
+C01361,W04,2026-06-27,roads,in_progress,41.0
+C01362,W04,2026-06-27,noise,closed,39.2
+C01363,W04,2026-06-27,electricity,open,63.4
+C01364,W04,2026-06-28,public safety,open,36.7
+C01365,W04,2026-06-28,noise,in_progress,44.8
+C01366,W04,2026-06-28,noise,in_progress,34.2
+C01367,W04,2026-06-28,sanitation,in_progress,46.7
+C01368,W04,2026-06-28,sanitation,closed,5.9
+C01369,W04,2026-06-28,sanitation,in_progress,18.1
+C01370,W04,2026-06-28,roads,closed,50.4
+C01371,W04,2026-06-28,electricity,in_progress,49.5
+C01372,W04,2026-06-28,water,open,40.5
+C01373,W04,2026-06-28,roads,in_progress,29.2
+C01374,W04,2026-06-28,water,closed,67.2
+C01375,W04,2026-06-28,roads,in_progress,9.4
+C01376,W04,2026-06-28,public safety,open,37.9
+C01377,W04,2026-06-28,public safety,open,19.1
+C01378,W04,2026-06-28,noise,closed,49.3
+C01379,W04,2026-06-28,roads,open,40.5
+C01380,W04,2026-06-28,electricity,open,11.3
+C01381,W04,2026-06-28,sanitation,open,36.6
+C01382,W04,2026-06-28,electricity,in_progress,25.5
+C01383,W04,2026-06-28,water,in_progress,24.4
+C01384,W04,2026-06-28,sanitation,open,12.8
+C01385,W04,2026-06-29,sanitation,in_progress,35.7
+C01386,W04,2026-06-29,sanitation,closed,17.8
+C01387,W04,2026-06-29,sanitation,closed,34.0
+C01388,W04,2026-06-29,noise,in_progress,25.0
+C01389,W04,2026-06-29,roads,open,21.1
+C01390,W04,2026-06-29,roads,open,47.5
+C01391,W04,2026-06-29,sanitation,in_progress,49.6
+C01392,W04,2026-06-29,electricity,closed,30.1
+C01393,W04,2026-06-29,electricity,in_progress,15.5
+C01394,W04,2026-06-29,roads,in_progress,43.6
+C01395,W04,2026-06-29,water,in_progress,35.0
+C01396,W04,2026-06-29,water,open,26.6
+C01397,W04,2026-06-29,roads,open,33.9
+C01398,W04,2026-06-29,public safety,open,27.7
+C01399,W04,2026-06-29,electricity,closed,41.5
+C01400,W04,2026-06-29,public safety,open,46.7
+C01401,W04,2026-06-29,water,closed,34.4
+C01402,W04,2026-06-29,sanitation,closed,52.3
+C01403,W04,2026-06-29,sanitation,closed,55.7
+C01404,W04,2026-06-29,sanitation,closed,51.7
+C01405,W04,2026-06-29,sanitation,in_progress,28.2
+C01406,W04,2026-06-29,noise,in_progress,37.5
+C01407,W04,2026-06-30,public safety,closed,25.9
+C01408,W04,2026-06-30,sanitation,in_progress,29.3
+C01409,W04,2026-06-30,electricity,in_progress,38.1
+C01410,W04,2026-06-30,electricity,closed,30.6
+C01411,W04,2026-06-30,sanitation,closed,21.1
+C01412,W04,2026-06-30,public safety,closed,40.1
+C01413,W04,2026-06-30,sanitation,in_progress,39.6
+C01414,W04,2026-06-30,roads,closed,38.4
+C01415,W04,2026-06-30,electricity,open,45.4
+C01416,W04,2026-06-30,noise,closed,28.0
+C01417,W04,2026-06-30,electricity,in_progress,39.4
+C01418,W04,2026-06-30,roads,closed,46.5
+C01419,W04,2026-06-30,sanitation,open,29.9
+C01420,W04,2026-06-30,public safety,open,57.2
+C01421,W04,2026-06-30,public safety,in_progress,20.3
+C01422,W04,2026-06-30,roads,open,36.0
+C01423,W04,2026-06-30,public safety,open,29.6
+C01424,W04,2026-06-30,noise,closed,39.9
+C01425,W04,2026-06-30,noise,in_progress,76.6
+C01426,W04,2026-06-30,water,open,42.0
+C01427,W04,2026-06-30,sanitation,in_progress,40.1
+C01428,W04,2026-06-30,noise,closed,26.2
+C01429,W04,2026-06-30,sanitation,open,56.2
+C01430,W04,2026-07-01,public safety,open,35.5
+C01431,W04,2026-07-01,noise,in_progress,62.5
+C01432,W04,2026-07-01,noise,closed,13.5
+C01433,W04,2026-07-01,sanitation,in_progress,38.5
+C01434,W04,2026-07-01,water,in_progress,26.8
+C01435,W04,2026-07-01,water,in_progress,46.0
+C01436,W04,2026-07-01,water,in_progress,16.6
+C01437,W04,2026-07-01,public safety,open,51.4
+C01438,W04,2026-07-01,sanitation,open,49.1
+C01439,W04,2026-07-01,sanitation,in_progress,48.6
+C01440,W04,2026-07-01,electricity,closed,26.5
+C01441,W04,2026-07-01,water,open,16.4
+C01442,W04,2026-07-01,electricity,open,19.3
+C01443,W04,2026-07-01,public safety,closed,42.3
+C01444,W04,2026-07-01,water,open,33.8
+C01445,W04,2026-07-01,water,in_progress,45.5
+C01446,W04,2026-07-01,noise,open,38.1
+C01447,W04,2026-07-01,public safety,closed,12.2
+C01448,W04,2026-07-01,public safety,closed,31.4
+C01449,W04,2026-07-01,roads,closed,46.8
+C01450,W04,2026-07-01,public safety,closed,22.9
+C01451,W04,2026-07-01,electricity,open,14.4
+C01452,W04,2026-07-01,water,in_progress,44.2
+C01453,W04,2026-07-01,public safety,closed,30.0
+C01454,W04,2026-07-01,electricity,closed,28.8
+C01455,W04,2026-07-02,roads,closed,41.8
+C01456,W04,2026-07-02,water,in_progress,38.8
+C01457,W04,2026-07-02,water,in_progress,31.0
+C01458,W04,2026-07-02,roads,in_progress,39.4
+C01459,W04,2026-07-02,roads,closed,34.2
+C01460,W04,2026-07-02,public safety,in_progress,26.6
+C01461,W04,2026-07-02,water,in_progress,40.9
+C01462,W04,2026-07-02,electricity,in_progress,49.0
+C01463,W04,2026-07-02,noise,open,43.6
+C01464,W04,2026-07-02,water,closed,31.3
+C01465,W04,2026-07-02,water,open,29.6
+C01466,W04,2026-07-02,electricity,closed,41.1
+C01467,W04,2026-07-02,electricity,closed,35.0
+C01468,W04,2026-07-02,public safety,in_progress,48.9
+C01469,W04,2026-07-02,public safety,closed,23.5
+C01470,W04,2026-07-02,water,in_progress,31.9
+C01471,W04,2026-07-02,roads,in_progress,38.5
+C01472,W04,2026-07-02,noise,closed,37.1
+C01473,W04,2026-07-02,public safety,closed,16.2
+C01474,W04,2026-07-02,noise,closed,28.9
+C01475,W04,2026-07-02,public safety,open,36.9
+C01476,W04,2026-07-02,sanitation,in_progress,22.8
+C01477,W04,2026-07-02,noise,closed,50.7
+C01478,W04,2026-07-02,electricity,in_progress,33.7
+C01479,W04,2026-07-02,roads,in_progress,30.9
+C01480,W04,2026-07-02,roads,closed,34.3
+C01481,W04,2026-07-02,noise,closed,20.7
+C01482,W04,2026-07-03,water,open,41.7
+C01483,W04,2026-07-03,water,open,33.6
+C01484,W04,2026-07-03,water,open,28.5
+C01485,W04,2026-07-03,public safety,closed,14.6
+C01486,W04,2026-07-03,water,in_progress,22.3
+C01487,W04,2026-07-03,public safety,closed,42.2
+C01488,W04,2026-07-03,water,open,33.0
+C01489,W04,2026-07-03,electricity,closed,66.2
+C01490,W04,2026-07-03,electricity,in_progress,44.8
+C01491,W04,2026-07-03,electricity,open,31.9
+C01492,W04,2026-07-03,roads,open,26.9
+C01493,W04,2026-07-03,water,closed,11.6
+C01494,W04,2026-07-03,electricity,in_progress,17.9
+C01495,W04,2026-07-03,water,closed,55.5
+C01496,W04,2026-07-03,noise,in_progress,23.0
+C01497,W04,2026-07-03,noise,in_progress,27.8
+C01498,W04,2026-07-03,water,closed,37.2
+C01499,W04,2026-07-03,public safety,closed,8.1
+C01500,W04,2026-07-03,electricity,in_progress,32.9
+C01501,W04,2026-07-03,public safety,closed,53.2
+C01502,W04,2026-07-03,roads,open,27.2
+C01503,W04,2026-07-03,electricity,closed,31.8
+C01504,W04,2026-07-03,public safety,open,47.5
+C01505,W04,2026-07-03,public safety,closed,43.7
+C01506,W04,2026-07-03,electricity,closed,33.6
+C01507,W04,2026-07-04,noise,closed,18.3
+C01508,W04,2026-07-04,water,closed,16.2
+C01509,W04,2026-07-04,water,closed,26.1
+C01510,W04,2026-07-04,public safety,closed,28.9
+C01511,W04,2026-07-04,sanitation,closed,61.5
+C01512,W04,2026-07-04,sanitation,open,31.6
+C01513,W04,2026-07-04,sanitation,open,38.1
+C01514,W04,2026-07-04,noise,open,56.1
+C01515,W04,2026-07-04,roads,open,32.8
+C01516,W04,2026-07-04,public safety,in_progress,40.0
+C01517,W04,2026-07-04,noise,in_progress,51.8
+C01518,W04,2026-07-04,sanitation,closed,50.5
+C01519,W04,2026-07-04,roads,closed,18.1
+C01520,W04,2026-07-04,public safety,closed,22.2
+C01521,W04,2026-07-04,public safety,in_progress,45.8
+C01522,W04,2026-07-04,public safety,closed,48.1
+C01523,W04,2026-07-04,water,closed,39.0
+C01524,W04,2026-07-04,noise,closed,56.8
+C01525,W04,2026-07-04,roads,closed,42.7
+C01526,W04,2026-07-04,water,open,53.6
+C01527,W04,2026-07-04,public safety,in_progress,23.5
+C01528,W04,2026-07-04,electricity,closed,34.3
+C01529,W04,2026-07-04,public safety,open,25.8
+C01530,W04,2026-07-05,public safety,open,43.4
+C01531,W04,2026-07-05,roads,open,34.3
+C01532,W04,2026-07-05,sanitation,in_progress,28.0
+C01533,W04,2026-07-05,noise,closed,34.3
+C01534,W04,2026-07-05,noise,open,43.3
+C01535,W04,2026-07-05,noise,in_progress,33.0
+C01536,W04,2026-07-05,roads,in_progress,27.1
+C01537,W04,2026-07-05,electricity,open,37.9
+C01538,W04,2026-07-05,public safety,in_progress,15.6
+C01539,W04,2026-07-05,water,closed,29.8
+C01540,W04,2026-07-05,public safety,in_progress,33.3
+C01541,W04,2026-07-05,electricity,open,51.4
+C01542,W04,2026-07-05,electricity,open,30.5
+C01543,W04,2026-07-05,water,closed,29.0
+C01544,W04,2026-07-05,roads,open,33.6
+C01545,W04,2026-07-05,public safety,in_progress,29.3
+C01546,W04,2026-07-05,electricity,closed,45.2
+C01547,W04,2026-07-05,water,closed,52.6
+C01548,W04,2026-07-05,sanitation,open,4.0
+C01549,W04,2026-07-05,public safety,in_progress,6.4
+C01550,W04,2026-07-05,electricity,closed,45.2
+C01551,W04,2026-07-05,roads,open,29.9
+C01552,W04,2026-07-05,sanitation,in_progress,23.8
+C01553,W04,2026-07-05,noise,closed,34.5
+C01554,W04,2026-07-05,electricity,in_progress,31.9
+C01555,W05,2026-06-08,water,open,33.5
+C01556,W05,2026-06-08,noise,closed,40.9
+C01557,W05,2026-06-08,sanitation,open,50.7
+C01558,W05,2026-06-08,electricity,closed,40.1
+C01559,W05,2026-06-08,public safety,closed,35.2
+C01560,W05,2026-06-08,roads,closed,29.2
+C01561,W05,2026-06-08,electricity,closed,38.0
+C01562,W05,2026-06-09,water,closed,19.1
+C01563,W05,2026-06-09,sanitation,closed,33.8
+C01564,W05,2026-06-09,public safety,in_progress,32.2
+C01565,W05,2026-06-09,sanitation,open,42.9
+C01566,W05,2026-06-09,noise,closed,38.9
+C01567,W05,2026-06-09,sanitation,closed,48.4
+C01568,W05,2026-06-09,water,in_progress,7.3
+C01569,W05,2026-06-09,water,closed,24.9
+C01570,W05,2026-06-09,water,closed,41.9
+C01571,W05,2026-06-09,sanitation,closed,57.3
+C01572,W05,2026-06-09,sanitation,closed,35.8
+C01573,W05,2026-06-09,electricity,open,33.3
+C01574,W05,2026-06-10,electricity,open,29.7
+C01575,W05,2026-06-10,electricity,open,55.6
+C01576,W05,2026-06-10,noise,in_progress,15.9
+C01577,W05,2026-06-10,sanitation,in_progress,52.6
+C01578,W05,2026-06-10,roads,closed,39.4
+C01579,W05,2026-06-10,electricity,in_progress,57.8
+C01580,W05,2026-06-10,public safety,open,26.3
+C01581,W05,2026-06-10,public safety,closed,62.9
+C01582,W05,2026-06-10,noise,open,18.2
+C01583,W05,2026-06-11,sanitation,open,53.9
+C01584,W05,2026-06-11,electricity,closed,35.6
+C01585,W05,2026-06-11,sanitation,in_progress,40.7
+C01586,W05,2026-06-11,public safety,in_progress,57.3
+C01587,W05,2026-06-11,roads,in_progress,57.7
+C01588,W05,2026-06-11,roads,open,19.7
+C01589,W05,2026-06-11,roads,open,27.1
+C01590,W05,2026-06-11,sanitation,open,27.8
+C01591,W05,2026-06-11,public safety,closed,51.4
+C01592,W05,2026-06-12,electricity,in_progress,31.6
+C01593,W05,2026-06-12,public safety,open,30.7
+C01594,W05,2026-06-12,noise,open,41.0
+C01595,W05,2026-06-12,noise,in_progress,52.5
+C01596,W05,2026-06-12,roads,closed,31.4
+C01597,W05,2026-06-12,electricity,open,29.7
+C01598,W05,2026-06-13,water,in_progress,27.8
+C01599,W05,2026-06-13,electricity,closed,28.6
+C01600,W05,2026-06-13,electricity,closed,52.4
+C01601,W05,2026-06-13,noise,in_progress,43.2
+C01602,W05,2026-06-13,noise,open,32.8
+C01603,W05,2026-06-13,roads,closed,34.0
+C01604,W05,2026-06-13,noise,open,20.0
+C01605,W05,2026-06-13,public safety,closed,27.1
+C01606,W05,2026-06-13,water,in_progress,49.0
+C01607,W05,2026-06-13,noise,in_progress,26.7
+C01608,W05,2026-06-13,electricity,open,32.2
+C01609,W05,2026-06-13,noise,open,42.2
+C01610,W05,2026-06-14,public safety,closed,39.9
+C01611,W05,2026-06-14,sanitation,closed,37.6
+C01612,W05,2026-06-14,public safety,open,42.1
+C01613,W05,2026-06-14,electricity,open,18.0
+C01614,W05,2026-06-14,sanitation,closed,33.0
+C01615,W05,2026-06-14,electricity,in_progress,64.6
+C01616,W05,2026-06-14,public safety,open,28.4
+C01617,W05,2026-06-14,electricity,closed,42.4
+C01618,W05,2026-06-14,noise,open,18.7
+C01619,W05,2026-06-15,water,in_progress,14.4
+C01620,W05,2026-06-15,electricity,closed,34.7
+C01621,W05,2026-06-15,roads,closed,40.2
+C01622,W05,2026-06-15,electricity,closed,41.4
+C01623,W05,2026-06-15,public safety,open,33.6
+C01624,W05,2026-06-15,noise,open,19.0
+C01625,W05,2026-06-15,roads,in_progress,36.3
+C01626,W05,2026-06-15,roads,open,45.9
+C01627,W05,2026-06-15,public safety,open,10.4
+C01628,W05,2026-06-15,water,in_progress,32.2
+C01629,W05,2026-06-15,water,open,54.6
+C01630,W05,2026-06-16,sanitation,closed,54.4
+C01631,W05,2026-06-16,noise,closed,31.1
+C01632,W05,2026-06-16,noise,closed,26.7
+C01633,W05,2026-06-16,public safety,in_progress,32.6
+C01634,W05,2026-06-16,noise,closed,19.8
+C01635,W05,2026-06-16,electricity,in_progress,13.2
+C01636,W05,2026-06-16,water,open,22.0
+C01637,W05,2026-06-16,noise,in_progress,33.7
+C01638,W05,2026-06-16,water,closed,63.9
+C01639,W05,2026-06-16,water,open,36.2
+C01640,W05,2026-06-16,roads,open,23.7
+C01641,W05,2026-06-17,roads,open,45.4
+C01642,W05,2026-06-17,sanitation,closed,50.9
+C01643,W05,2026-06-17,roads,in_progress,43.4
+C01644,W05,2026-06-17,water,closed,14.3
+C01645,W05,2026-06-17,water,in_progress,37.0
+C01646,W05,2026-06-17,water,open,43.1
+C01647,W05,2026-06-17,roads,open,48.0
+C01648,W05,2026-06-17,roads,closed,48.5
+C01649,W05,2026-06-17,electricity,open,41.1
+C01650,W05,2026-06-17,roads,in_progress,30.0
+C01651,W05,2026-06-18,water,closed,27.1
+C01652,W05,2026-06-18,electricity,closed,57.2
+C01653,W05,2026-06-18,public safety,in_progress,37.6
+C01654,W05,2026-06-18,sanitation,open,4.0
+C01655,W05,2026-06-18,water,open,48.8
+C01656,W05,2026-06-18,roads,in_progress,14.9
+C01657,W05,2026-06-18,roads,closed,20.3
+C01658,W05,2026-06-18,public safety,closed,33.0
+C01659,W05,2026-06-18,noise,in_progress,57.4
+C01660,W05,2026-06-18,electricity,closed,47.4
+C01661,W05,2026-06-18,roads,open,40.7
+C01662,W05,2026-06-18,sanitation,open,4.6
+C01663,W05,2026-06-18,public safety,in_progress,30.6
+C01664,W05,2026-06-19,roads,in_progress,18.1
+C01665,W05,2026-06-19,electricity,closed,58.8
+C01666,W05,2026-06-19,electricity,open,41.0
+C01667,W05,2026-06-19,sanitation,in_progress,18.7
+C01668,W05,2026-06-19,electricity,open,9.6
+C01669,W05,2026-06-19,public safety,closed,21.7
+C01670,W05,2026-06-19,sanitation,closed,41.1
+C01671,W05,2026-06-19,electricity,in_progress,38.2
+C01672,W05,2026-06-19,water,in_progress,60.0
+C01673,W05,2026-06-19,electricity,closed,57.3
+C01674,W05,2026-06-19,electricity,open,20.4
+C01675,W05,2026-06-19,water,open,34.3
+C01676,W05,2026-06-20,sanitation,in_progress,20.7
+C01677,W05,2026-06-20,noise,open,24.8
+C01678,W05,2026-06-20,sanitation,closed,34.9
+C01679,W05,2026-06-20,electricity,open,33.3
+C01680,W05,2026-06-20,electricity,open,28.3
+C01681,W05,2026-06-20,noise,in_progress,41.7
+C01682,W05,2026-06-20,noise,open,46.5
+C01683,W05,2026-06-20,noise,in_progress,51.8
+C01684,W05,2026-06-20,electricity,in_progress,17.3
+C01685,W05,2026-06-20,public safety,in_progress,27.4
+C01686,W05,2026-06-20,roads,in_progress,18.1
+C01687,W05,2026-06-20,roads,in_progress,29.3
+C01688,W05,2026-06-20,electricity,closed,4.0
+C01689,W05,2026-06-20,electricity,in_progress,39.3
+C01690,W05,2026-06-20,public safety,in_progress,32.5
+C01691,W05,2026-06-21,public safety,open,34.8
+C01692,W05,2026-06-21,public safety,open,19.8
+C01693,W05,2026-06-21,sanitation,open,10.4
+C01694,W05,2026-06-21,electricity,closed,33.7
+C01695,W05,2026-06-21,public safety,closed,32.8
+C01696,W05,2026-06-21,public safety,open,27.0
+C01697,W05,2026-06-21,sanitation,open,16.3
+C01698,W05,2026-06-22,sanitation,open,33.9
+C01699,W05,2026-06-22,electricity,open,48.4
+C01700,W05,2026-06-22,public safety,in_progress,47.8
+C01701,W05,2026-06-22,public safety,closed,29.0
+C01702,W05,2026-06-22,noise,closed,39.7
+C01703,W05,2026-06-22,roads,closed,33.9
+C01704,W05,2026-06-22,water,in_progress,62.2
+C01705,W05,2026-06-22,electricity,in_progress,36.8
+C01706,W05,2026-06-22,roads,open,38.5
+C01707,W05,2026-06-22,public safety,open,18.6
+C01708,W05,2026-06-22,electricity,open,28.9
+C01709,W05,2026-06-22,public safety,open,23.3
+C01710,W05,2026-06-23,noise,in_progress,34.1
+C01711,W05,2026-06-23,noise,closed,20.3
+C01712,W05,2026-06-23,electricity,open,46.4
+C01713,W05,2026-06-23,public safety,closed,40.5
+C01714,W05,2026-06-23,noise,closed,37.5
+C01715,W05,2026-06-23,electricity,closed,14.2
+C01716,W05,2026-06-23,noise,open,64.4
+C01717,W05,2026-06-23,electricity,open,21.3
+C01718,W05,2026-06-23,sanitation,in_progress,39.0
+C01719,W05,2026-06-23,roads,in_progress,17.1
+C01720,W05,2026-06-23,electricity,in_progress,34.3
+C01721,W05,2026-06-23,noise,open,46.5
+C01722,W05,2026-06-24,electricity,closed,35.0
+C01723,W05,2026-06-24,water,closed,50.1
+C01724,W05,2026-06-24,water,open,36.7
+C01725,W05,2026-06-24,water,closed,4.0
+C01726,W05,2026-06-24,water,closed,45.4
+C01727,W05,2026-06-24,noise,open,22.8
+C01728,W05,2026-06-25,roads,closed,51.6
+C01729,W05,2026-06-25,public safety,open,39.5
+C01730,W05,2026-06-25,noise,closed,21.3
+C01731,W05,2026-06-25,electricity,open,31.7
+C01732,W05,2026-06-25,noise,open,24.6
+C01733,W05,2026-06-25,water,closed,34.9
+C01734,W05,2026-06-25,electricity,open,22.2
+C01735,W05,2026-06-25,water,in_progress,17.0
+C01736,W05,2026-06-26,noise,open,55.1
+C01737,W05,2026-06-26,roads,in_progress,28.1
+C01738,W05,2026-06-26,public safety,open,36.0
+C01739,W05,2026-06-26,noise,open,45.4
+C01740,W05,2026-06-26,roads,open,48.6
+C01741,W05,2026-06-26,noise,open,12.1
+C01742,W05,2026-06-26,sanitation,open,53.4
+C01743,W05,2026-06-26,public safety,in_progress,24.9
+C01744,W05,2026-06-26,electricity,open,36.6
+C01745,W05,2026-06-26,sanitation,in_progress,17.6
+C01746,W05,2026-06-26,noise,closed,23.0
+C01747,W05,2026-06-26,electricity,in_progress,62.4
+C01748,W05,2026-06-26,water,open,66.0
+C01749,W05,2026-06-26,noise,in_progress,31.9
+C01750,W05,2026-06-26,roads,closed,46.8
+C01751,W05,2026-06-27,water,in_progress,38.3
+C01752,W05,2026-06-27,noise,in_progress,33.7
+C01753,W05,2026-06-27,public safety,open,28.2
+C01754,W05,2026-06-27,electricity,in_progress,36.9
+C01755,W05,2026-06-27,noise,closed,55.9
+C01756,W05,2026-06-27,water,closed,36.1
+C01757,W05,2026-06-27,sanitation,in_progress,17.0
+C01758,W05,2026-06-27,roads,closed,56.3
+C01759,W05,2026-06-27,noise,open,30.7
+C01760,W05,2026-06-27,noise,in_progress,70.1
+C01761,W05,2026-06-27,roads,in_progress,22.0
+C01762,W05,2026-06-27,noise,in_progress,41.7
+C01763,W05,2026-06-27,water,in_progress,17.6
+C01764,W05,2026-06-28,electricity,closed,35.9
+C01765,W05,2026-06-28,noise,open,41.4
+C01766,W05,2026-06-28,electricity,in_progress,40.7
+C01767,W05,2026-06-28,public safety,open,27.7
+C01768,W05,2026-06-28,water,open,42.3
+C01769,W05,2026-06-28,public safety,closed,49.8
+C01770,W05,2026-06-28,electricity,closed,28.5
+C01771,W05,2026-06-28,noise,closed,49.8
+C01772,W05,2026-06-28,electricity,open,17.8
+C01773,W05,2026-06-28,sanitation,open,47.8
+C01774,W05,2026-06-28,noise,in_progress,38.3
+C01775,W05,2026-06-28,public safety,in_progress,29.7
+C01776,W05,2026-06-29,electricity,in_progress,48.2
+C01777,W05,2026-06-29,noise,open,23.9
+C01778,W05,2026-06-29,public safety,closed,41.9
+C01779,W05,2026-06-29,roads,closed,17.0
+C01780,W05,2026-06-29,roads,in_progress,25.7
+C01781,W05,2026-06-29,noise,in_progress,27.5
+C01782,W05,2026-06-29,public safety,in_progress,20.7
+C01783,W05,2026-06-29,sanitation,in_progress,23.2
+C01784,W05,2026-06-29,roads,open,24.8
+C01785,W05,2026-06-29,public safety,in_progress,18.0
+C01786,W05,2026-06-29,water,open,44.1
+C01787,W05,2026-06-29,sanitation,open,28.3
+C01788,W05,2026-06-30,public safety,in_progress,30.3
+C01789,W05,2026-06-30,water,in_progress,16.5
+C01790,W05,2026-06-30,water,in_progress,34.8
+C01791,W05,2026-06-30,water,in_progress,18.0
+C01792,W05,2026-06-30,roads,open,39.4
+C01793,W05,2026-06-30,roads,closed,29.3
+C01794,W05,2026-06-30,noise,closed,33.3
+C01795,W05,2026-06-30,roads,in_progress,29.6
+C01796,W05,2026-06-30,sanitation,open,61.5
+C01797,W05,2026-06-30,electricity,open,46.2
+C01798,W05,2026-06-30,sanitation,in_progress,4.0
+C01799,W05,2026-06-30,sanitation,in_progress,28.0
+C01800,W05,2026-06-30,electricity,open,63.0
+C01801,W05,2026-07-01,water,in_progress,38.0
+C01802,W05,2026-07-01,water,closed,57.7
+C01803,W05,2026-07-01,roads,open,26.6
+C01804,W05,2026-07-01,sanitation,closed,33.6
+C01805,W05,2026-07-01,noise,in_progress,45.3
+C01806,W05,2026-07-01,electricity,in_progress,23.2
+C01807,W05,2026-07-01,electricity,in_progress,57.5
+C01808,W05,2026-07-01,electricity,open,60.6
+C01809,W05,2026-07-01,electricity,closed,12.6
+C01810,W05,2026-07-01,electricity,in_progress,41.3
+C01811,W05,2026-07-01,electricity,closed,27.3
+C01812,W05,2026-07-01,noise,in_progress,25.7
+C01813,W05,2026-07-01,electricity,open,40.1
+C01814,W05,2026-07-01,noise,in_progress,20.8
+C01815,W05,2026-07-02,sanitation,closed,46.9
+C01816,W05,2026-07-02,roads,in_progress,31.0
+C01817,W05,2026-07-02,public safety,in_progress,51.9
+C01818,W05,2026-07-02,water,in_progress,49.8
+C01819,W05,2026-07-02,noise,closed,35.9
+C01820,W05,2026-07-02,roads,open,26.4
+C01821,W05,2026-07-02,electricity,in_progress,32.3
+C01822,W05,2026-07-02,water,open,46.9
+C01823,W05,2026-07-02,water,in_progress,54.6
+C01824,W05,2026-07-02,roads,in_progress,52.2
+C01825,W05,2026-07-02,electricity,closed,44.4
+C01826,W05,2026-07-02,public safety,closed,32.2
+C01827,W05,2026-07-03,electricity,in_progress,11.6
+C01828,W05,2026-07-03,roads,open,49.3
+C01829,W05,2026-07-03,noise,open,22.3
+C01830,W05,2026-07-03,noise,closed,20.3
+C01831,W05,2026-07-03,electricity,in_progress,36.1
+C01832,W05,2026-07-03,sanitation,closed,37.6
+C01833,W05,2026-07-03,sanitation,open,46.2
+C01834,W05,2026-07-03,roads,closed,33.0
+C01835,W05,2026-07-03,water,closed,41.1
+C01836,W05,2026-07-03,sanitation,in_progress,35.3
+C01837,W05,2026-07-03,roads,in_progress,13.4
+C01838,W05,2026-07-03,water,in_progress,46.8
+C01839,W05,2026-07-03,water,closed,38.2
+C01840,W05,2026-07-03,roads,open,22.9
+C01841,W05,2026-07-03,noise,in_progress,49.2
+C01842,W05,2026-07-04,roads,in_progress,45.8
+C01843,W05,2026-07-04,sanitation,closed,11.0
+C01844,W05,2026-07-04,roads,in_progress,37.0
+C01845,W05,2026-07-04,public safety,open,20.0
+C01846,W05,2026-07-04,roads,in_progress,34.4
+C01847,W05,2026-07-04,public safety,open,28.8
+C01848,W05,2026-07-04,water,in_progress,29.9
+C01849,W05,2026-07-04,noise,open,24.0
+C01850,W05,2026-07-04,public safety,closed,66.8
+C01851,W05,2026-07-04,electricity,open,43.6
+C01852,W05,2026-07-04,noise,in_progress,29.0
+C01853,W05,2026-07-04,sanitation,closed,27.9
+C01854,W05,2026-07-04,roads,open,36.3
+C01855,W05,2026-07-05,sanitation,open,40.1
+C01856,W05,2026-07-05,water,open,17.2
+C01857,W05,2026-07-05,sanitation,open,16.3
+C01858,W05,2026-07-05,public safety,closed,24.5
+C01859,W05,2026-07-05,roads,in_progress,36.4
+C01860,W05,2026-07-05,water,open,24.5
+C01861,W05,2026-07-05,public safety,closed,15.5
+C01862,W05,2026-07-05,public safety,open,66.4
+C01863,W05,2026-07-05,sanitation,in_progress,21.6
+C01864,W05,2026-07-05,sanitation,open,17.8
+C01865,W05,2026-07-05,water,open,27.7
+C01866,W05,2026-07-05,public safety,in_progress,51.3
+C01867,W05,2026-07-05,water,closed,42.5
+C01868,W05,2026-07-05,noise,closed,55.0
+C01869,W05,2026-07-05,roads,in_progress,48.0
+C01870,W06,2026-06-08,water,closed,29.0
+C01871,W06,2026-06-08,roads,closed,55.8
+C01872,W06,2026-06-08,roads,closed,21.9
+C01873,W06,2026-06-08,noise,closed,53.6
+C01874,W06,2026-06-08,electricity,open,42.4
+C01875,W06,2026-06-08,noise,in_progress,38.4
+C01876,W06,2026-06-08,electricity,in_progress,11.8
+C01877,W06,2026-06-08,electricity,in_progress,41.9
+C01878,W06,2026-06-08,public safety,open,49.4
+C01879,W06,2026-06-08,noise,closed,21.9
+C01880,W06,2026-06-08,roads,in_progress,31.3
+C01881,W06,2026-06-08,electricity,in_progress,14.8
+C01882,W06,2026-06-08,roads,closed,25.3
+C01883,W06,2026-06-08,roads,closed,13.2
+C01884,W06,2026-06-09,noise,open,49.1
+C01885,W06,2026-06-09,sanitation,closed,32.7
+C01886,W06,2026-06-09,roads,open,31.5
+C01887,W06,2026-06-09,sanitation,open,42.1
+C01888,W06,2026-06-09,sanitation,closed,40.7
+C01889,W06,2026-06-09,public safety,in_progress,25.6
+C01890,W06,2026-06-09,public safety,closed,20.7
+C01891,W06,2026-06-09,noise,open,22.2
+C01892,W06,2026-06-09,sanitation,open,49.2
+C01893,W06,2026-06-09,roads,closed,5.6
+C01894,W06,2026-06-09,sanitation,in_progress,36.6
+C01895,W06,2026-06-09,public safety,open,20.2
+C01896,W06,2026-06-09,water,in_progress,52.7
+C01897,W06,2026-06-09,public safety,open,39.9
+C01898,W06,2026-06-09,sanitation,closed,25.2
+C01899,W06,2026-06-10,roads,closed,40.1
+C01900,W06,2026-06-10,sanitation,open,32.3
+C01901,W06,2026-06-10,roads,open,18.0
+C01902,W06,2026-06-10,electricity,closed,35.2
+C01903,W06,2026-06-10,roads,closed,54.6
+C01904,W06,2026-06-10,public safety,closed,29.3
+C01905,W06,2026-06-10,public safety,closed,38.4
+C01906,W06,2026-06-10,noise,closed,15.0
+C01907,W06,2026-06-10,sanitation,open,40.3
+C01908,W06,2026-06-10,roads,closed,24.6
+C01909,W06,2026-06-10,roads,closed,42.4
+C01910,W06,2026-06-10,electricity,in_progress,62.6
+C01911,W06,2026-06-10,electricity,in_progress,22.7
+C01912,W06,2026-06-10,noise,in_progress,36.3
+C01913,W06,2026-06-10,public safety,in_progress,20.2
+C01914,W06,2026-06-10,electricity,open,26.0
+C01915,W06,2026-06-10,electricity,closed,31.2
+C01916,W06,2026-06-10,noise,in_progress,49.8
+C01917,W06,2026-06-11,water,open,29.1
+C01918,W06,2026-06-11,electricity,open,4.0
+C01919,W06,2026-06-11,electricity,open,46.9
+C01920,W06,2026-06-11,noise,open,34.5
+C01921,W06,2026-06-11,roads,in_progress,60.8
+C01922,W06,2026-06-11,public safety,in_progress,38.5
+C01923,W06,2026-06-11,electricity,closed,5.0
+C01924,W06,2026-06-11,roads,open,23.9
+C01925,W06,2026-06-11,sanitation,in_progress,30.3
+C01926,W06,2026-06-11,noise,closed,41.0
+C01927,W06,2026-06-11,roads,open,34.5
+C01928,W06,2026-06-11,electricity,in_progress,46.8
+C01929,W06,2026-06-11,electricity,open,32.8
+C01930,W06,2026-06-11,water,open,12.7
+C01931,W06,2026-06-11,water,closed,27.4
+C01932,W06,2026-06-11,sanitation,closed,10.2
+C01933,W06,2026-06-12,electricity,in_progress,32.0
+C01934,W06,2026-06-12,sanitation,open,46.1
+C01935,W06,2026-06-12,water,in_progress,29.0
+C01936,W06,2026-06-12,sanitation,open,34.6
+C01937,W06,2026-06-12,sanitation,closed,7.8
+C01938,W06,2026-06-12,public safety,in_progress,51.1
+C01939,W06,2026-06-12,noise,closed,40.7
+C01940,W06,2026-06-12,electricity,open,24.9
+C01941,W06,2026-06-12,roads,open,54.2
+C01942,W06,2026-06-12,public safety,closed,72.3
+C01943,W06,2026-06-12,electricity,closed,34.4
+C01944,W06,2026-06-12,electricity,open,37.0
+C01945,W06,2026-06-12,water,open,46.4
+C01946,W06,2026-06-12,roads,in_progress,50.8
+C01947,W06,2026-06-12,sanitation,closed,44.0
+C01948,W06,2026-06-12,water,in_progress,49.2
+C01949,W06,2026-06-12,public safety,open,43.4
+C01950,W06,2026-06-13,roads,in_progress,19.0
+C01951,W06,2026-06-13,water,closed,18.8
+C01952,W06,2026-06-13,public safety,closed,27.2
+C01953,W06,2026-06-13,roads,open,56.8
+C01954,W06,2026-06-13,noise,closed,45.5
+C01955,W06,2026-06-13,electricity,open,46.0
+C01956,W06,2026-06-13,noise,in_progress,44.4
+C01957,W06,2026-06-13,roads,in_progress,23.6
+C01958,W06,2026-06-13,noise,open,51.9
+C01959,W06,2026-06-13,noise,closed,46.0
+C01960,W06,2026-06-13,electricity,open,12.3
+C01961,W06,2026-06-13,water,open,44.1
+C01962,W06,2026-06-13,public safety,in_progress,30.3
+C01963,W06,2026-06-13,roads,closed,39.1
+C01964,W06,2026-06-13,sanitation,open,29.5
+C01965,W06,2026-06-13,electricity,open,52.6
+C01966,W06,2026-06-13,sanitation,in_progress,16.0
+C01967,W06,2026-06-13,public safety,open,29.6
+C01968,W06,2026-06-14,noise,open,34.4
+C01969,W06,2026-06-14,electricity,closed,25.4
+C01970,W06,2026-06-14,noise,closed,12.5
+C01971,W06,2026-06-14,roads,closed,37.4
+C01972,W06,2026-06-14,public safety,closed,53.4
+C01973,W06,2026-06-14,public safety,closed,37.1
+C01974,W06,2026-06-14,sanitation,in_progress,40.5
+C01975,W06,2026-06-14,public safety,closed,45.0
+C01976,W06,2026-06-14,noise,open,4.0
+C01977,W06,2026-06-14,sanitation,in_progress,42.4
+C01978,W06,2026-06-14,public safety,in_progress,18.9
+C01979,W06,2026-06-14,noise,open,8.6
+C01980,W06,2026-06-14,sanitation,in_progress,48.6
+C01981,W06,2026-06-14,roads,in_progress,20.0
+C01982,W06,2026-06-14,electricity,closed,44.9
+C01983,W06,2026-06-14,electricity,closed,42.1
+C01984,W06,2026-06-14,sanitation,open,46.5
+C01985,W06,2026-06-14,electricity,closed,69.7
+C01986,W06,2026-06-14,sanitation,open,35.3
+C01987,W06,2026-06-14,noise,in_progress,52.2
+C01988,W06,2026-06-14,water,closed,42.1
+C01989,W06,2026-06-15,noise,in_progress,27.7
+C01990,W06,2026-06-15,electricity,in_progress,27.7
+C01991,W06,2026-06-15,sanitation,closed,34.3
+C01992,W06,2026-06-15,sanitation,closed,48.8
+C01993,W06,2026-06-15,noise,open,52.3
+C01994,W06,2026-06-15,public safety,open,59.3
+C01995,W06,2026-06-15,sanitation,closed,8.7
+C01996,W06,2026-06-15,electricity,closed,59.0
+C01997,W06,2026-06-15,public safety,open,19.1
+C01998,W06,2026-06-15,water,in_progress,44.1
+C01999,W06,2026-06-15,electricity,in_progress,27.9
+C02000,W06,2026-06-15,public safety,open,37.3
+C02001,W06,2026-06-15,electricity,closed,31.2
+C02002,W06,2026-06-15,roads,in_progress,26.4
+C02003,W06,2026-06-15,public safety,closed,59.7
+C02004,W06,2026-06-15,water,open,16.7
+C02005,W06,2026-06-15,public safety,closed,45.6
+C02006,W06,2026-06-15,electricity,closed,28.9
+C02007,W06,2026-06-15,public safety,open,45.8
+C02008,W06,2026-06-15,roads,closed,59.5
+C02009,W06,2026-06-16,water,in_progress,37.3
+C02010,W06,2026-06-16,noise,in_progress,34.3
+C02011,W06,2026-06-16,public safety,closed,9.0
+C02012,W06,2026-06-16,noise,open,36.2
+C02013,W06,2026-06-16,roads,open,28.5
+C02014,W06,2026-06-16,electricity,closed,33.1
+C02015,W06,2026-06-16,roads,closed,53.0
+C02016,W06,2026-06-16,roads,open,29.9
+C02017,W06,2026-06-16,public safety,in_progress,22.8
+C02018,W06,2026-06-16,roads,closed,43.9
+C02019,W06,2026-06-16,public safety,in_progress,22.0
+C02020,W06,2026-06-16,roads,in_progress,27.4
+C02021,W06,2026-06-16,roads,open,35.4
+C02022,W06,2026-06-16,sanitation,in_progress,35.2
+C02023,W06,2026-06-16,noise,in_progress,32.6
+C02024,W06,2026-06-16,roads,closed,30.5
+C02025,W06,2026-06-16,roads,open,26.7
+C02026,W06,2026-06-16,roads,in_progress,45.9
+C02027,W06,2026-06-16,noise,in_progress,23.0
+C02028,W06,2026-06-16,roads,in_progress,31.6
+C02029,W06,2026-06-16,public safety,in_progress,37.3
+C02030,W06,2026-06-17,public safety,closed,21.2
+C02031,W06,2026-06-17,electricity,closed,6.8
+C02032,W06,2026-06-17,sanitation,closed,30.5
+C02033,W06,2026-06-17,sanitation,in_progress,7.3
+C02034,W06,2026-06-17,roads,closed,42.7
+C02035,W06,2026-06-17,electricity,in_progress,38.9
+C02036,W06,2026-06-17,water,closed,34.6
+C02037,W06,2026-06-17,public safety,open,40.6
+C02038,W06,2026-06-17,noise,in_progress,49.0
+C02039,W06,2026-06-17,water,open,18.0
+C02040,W06,2026-06-17,sanitation,closed,44.0
+C02041,W06,2026-06-17,electricity,open,15.3
+C02042,W06,2026-06-17,sanitation,closed,39.6
+C02043,W06,2026-06-17,electricity,open,42.9
+C02044,W06,2026-06-17,public safety,closed,51.8
+C02045,W06,2026-06-17,roads,in_progress,21.9
+C02046,W06,2026-06-17,roads,in_progress,42.9
+C02047,W06,2026-06-17,electricity,closed,58.0
+C02048,W06,2026-06-17,sanitation,in_progress,17.4
+C02049,W06,2026-06-18,public safety,open,53.1
+C02050,W06,2026-06-18,public safety,closed,39.9
+C02051,W06,2026-06-18,water,closed,39.8
+C02052,W06,2026-06-18,noise,open,21.4
+C02053,W06,2026-06-18,electricity,closed,32.9
+C02054,W06,2026-06-18,roads,in_progress,31.0
+C02055,W06,2026-06-18,roads,in_progress,33.7
+C02056,W06,2026-06-18,electricity,closed,40.4
+C02057,W06,2026-06-18,roads,open,28.7
+C02058,W06,2026-06-18,public safety,open,24.5
+C02059,W06,2026-06-18,water,in_progress,40.8
+C02060,W06,2026-06-18,public safety,open,40.5
+C02061,W06,2026-06-18,roads,open,40.0
+C02062,W06,2026-06-18,electricity,in_progress,51.4
+C02063,W06,2026-06-18,water,closed,36.3
+C02064,W06,2026-06-18,sanitation,closed,42.6
+C02065,W06,2026-06-18,electricity,closed,28.1
+C02066,W06,2026-06-18,water,in_progress,30.2
+C02067,W06,2026-06-18,electricity,open,38.0
+C02068,W06,2026-06-19,electricity,closed,52.6
+C02069,W06,2026-06-19,electricity,open,42.6
+C02070,W06,2026-06-19,public safety,in_progress,37.4
+C02071,W06,2026-06-19,sanitation,open,47.6
+C02072,W06,2026-06-19,electricity,in_progress,18.5
+C02073,W06,2026-06-19,noise,open,48.9
+C02074,W06,2026-06-19,roads,open,39.4
+C02075,W06,2026-06-19,public safety,in_progress,18.6
+C02076,W06,2026-06-19,electricity,closed,21.2
+C02077,W06,2026-06-19,electricity,open,57.8
+C02078,W06,2026-06-19,noise,open,30.1
+C02079,W06,2026-06-19,sanitation,in_progress,21.8
+C02080,W06,2026-06-19,sanitation,in_progress,61.8
+C02081,W06,2026-06-19,electricity,open,33.0
+C02082,W06,2026-06-19,public safety,in_progress,42.3
+C02083,W06,2026-06-19,noise,closed,26.8
+C02084,W06,2026-06-19,roads,closed,40.0
+C02085,W06,2026-06-19,sanitation,open,4.0
+C02086,W06,2026-06-19,electricity,open,18.1
+C02087,W06,2026-06-19,water,closed,22.7
+C02088,W06,2026-06-20,public safety,in_progress,10.6
+C02089,W06,2026-06-20,noise,closed,47.0
+C02090,W06,2026-06-20,electricity,closed,30.5
+C02091,W06,2026-06-20,electricity,in_progress,40.9
+C02092,W06,2026-06-20,electricity,closed,24.0
+C02093,W06,2026-06-20,roads,closed,23.0
+C02094,W06,2026-06-20,roads,closed,32.7
+C02095,W06,2026-06-20,sanitation,open,43.9
+C02096,W06,2026-06-20,water,closed,41.6
+C02097,W06,2026-06-20,roads,closed,13.1
+C02098,W06,2026-06-20,water,in_progress,47.5
+C02099,W06,2026-06-20,public safety,open,38.7
+C02100,W06,2026-06-20,sanitation,closed,38.4
+C02101,W06,2026-06-20,sanitation,in_progress,45.9
+C02102,W06,2026-06-20,noise,closed,12.3
+C02103,W06,2026-06-20,sanitation,closed,27.6
+C02104,W06,2026-06-21,electricity,closed,47.2
+C02105,W06,2026-06-21,sanitation,open,44.1
+C02106,W06,2026-06-21,public safety,in_progress,59.9
+C02107,W06,2026-06-21,water,open,25.2
+C02108,W06,2026-06-21,public safety,in_progress,22.3
+C02109,W06,2026-06-21,electricity,in_progress,10.0
+C02110,W06,2026-06-21,public safety,open,41.0
+C02111,W06,2026-06-21,electricity,in_progress,15.6
+C02112,W06,2026-06-21,electricity,closed,26.6
+C02113,W06,2026-06-21,sanitation,open,23.9
+C02114,W06,2026-06-21,noise,open,29.1
+C02115,W06,2026-06-21,roads,in_progress,41.9
+C02116,W06,2026-06-21,water,closed,24.3
+C02117,W06,2026-06-21,electricity,open,22.5
+C02118,W06,2026-06-21,electricity,open,29.0
+C02119,W06,2026-06-21,noise,closed,48.8
+C02120,W06,2026-06-21,noise,in_progress,17.8
+C02121,W06,2026-06-21,sanitation,in_progress,44.7
+C02122,W06,2026-06-21,noise,open,25.6
+C02123,W06,2026-06-21,electricity,in_progress,41.2
+C02124,W06,2026-06-22,sanitation,open,48.0
+C02125,W06,2026-06-22,sanitation,in_progress,27.1
+C02126,W06,2026-06-22,electricity,open,46.7
+C02127,W06,2026-06-22,public safety,closed,64.5
+C02128,W06,2026-06-22,noise,in_progress,52.6
+C02129,W06,2026-06-22,electricity,closed,57.2
+C02130,W06,2026-06-22,roads,open,32.5
+C02131,W06,2026-06-22,public safety,closed,19.7
+C02132,W06,2026-06-22,sanitation,open,33.4
+C02133,W06,2026-06-22,electricity,open,38.9
+C02134,W06,2026-06-22,noise,in_progress,40.0
+C02135,W06,2026-06-22,public safety,closed,30.8
+C02136,W06,2026-06-22,noise,open,24.3
+C02137,W06,2026-06-22,roads,in_progress,29.3
+C02138,W06,2026-06-22,roads,open,31.1
+C02139,W06,2026-06-22,water,closed,51.8
+C02140,W06,2026-06-22,sanitation,in_progress,41.6
+C02141,W06,2026-06-22,sanitation,closed,44.0
+C02142,W06,2026-06-22,electricity,closed,49.0
+C02143,W06,2026-06-22,electricity,in_progress,45.5
+C02144,W06,2026-06-22,noise,open,58.7
+C02145,W06,2026-06-22,electricity,open,26.2
+C02146,W06,2026-06-22,roads,open,23.9
+C02147,W06,2026-06-22,electricity,in_progress,62.4
+C02148,W06,2026-06-23,public safety,open,36.1
+C02149,W06,2026-06-23,sanitation,in_progress,48.9
+C02150,W06,2026-06-23,roads,closed,39.9
+C02151,W06,2026-06-23,electricity,closed,20.3
+C02152,W06,2026-06-23,water,closed,19.4
+C02153,W06,2026-06-23,noise,in_progress,30.4
+C02154,W06,2026-06-23,public safety,closed,43.1
+C02155,W06,2026-06-23,sanitation,in_progress,29.4
+C02156,W06,2026-06-23,public safety,in_progress,32.4
+C02157,W06,2026-06-23,sanitation,in_progress,27.5
+C02158,W06,2026-06-23,water,in_progress,53.7
+C02159,W06,2026-06-23,roads,open,53.4
+C02160,W06,2026-06-23,noise,in_progress,58.4
+C02161,W06,2026-06-23,water,open,28.6
+C02162,W06,2026-06-23,noise,in_progress,15.3
+C02163,W06,2026-06-23,water,open,41.3
+C02164,W06,2026-06-23,water,in_progress,37.7
+C02165,W06,2026-06-23,roads,in_progress,37.1
+C02166,W06,2026-06-23,roads,closed,16.1
+C02167,W06,2026-06-23,sanitation,in_progress,45.3
+C02168,W06,2026-06-23,noise,closed,12.2
+C02169,W06,2026-06-23,public safety,open,39.5
+C02170,W06,2026-06-23,water,closed,18.3
+C02171,W06,2026-06-24,electricity,open,45.1
+C02172,W06,2026-06-24,water,in_progress,43.8
+C02173,W06,2026-06-24,public safety,closed,38.9
+C02174,W06,2026-06-24,water,in_progress,23.3
+C02175,W06,2026-06-24,public safety,open,29.7
+C02176,W06,2026-06-24,roads,closed,23.9
+C02177,W06,2026-06-24,public safety,closed,14.9
+C02178,W06,2026-06-24,water,open,21.9
+C02179,W06,2026-06-24,electricity,open,26.5
+C02180,W06,2026-06-24,water,open,29.9
+C02181,W06,2026-06-24,electricity,open,48.3
+C02182,W06,2026-06-24,public safety,closed,36.8
+C02183,W06,2026-06-24,water,closed,21.5
+C02184,W06,2026-06-24,public safety,open,56.7
+C02185,W06,2026-06-24,electricity,closed,48.9
+C02186,W06,2026-06-24,sanitation,open,26.8
+C02187,W06,2026-06-24,noise,in_progress,22.0
+C02188,W06,2026-06-24,electricity,closed,26.0
+C02189,W06,2026-06-24,noise,in_progress,38.1
+C02190,W06,2026-06-24,electricity,closed,23.7
+C02191,W06,2026-06-25,water,closed,47.8
+C02192,W06,2026-06-25,sanitation,closed,33.6
+C02193,W06,2026-06-25,sanitation,closed,49.2
+C02194,W06,2026-06-25,roads,in_progress,33.8
+C02195,W06,2026-06-25,sanitation,in_progress,64.8
+C02196,W06,2026-06-25,sanitation,closed,13.6
+C02197,W06,2026-06-25,electricity,in_progress,43.8
+C02198,W06,2026-06-25,sanitation,open,42.3
+C02199,W06,2026-06-25,water,closed,18.5
+C02200,W06,2026-06-25,public safety,in_progress,24.5
+C02201,W06,2026-06-25,water,in_progress,26.1
+C02202,W06,2026-06-25,roads,in_progress,38.8
+C02203,W06,2026-06-25,roads,open,9.7
+C02204,W06,2026-06-25,noise,in_progress,25.8
+C02205,W06,2026-06-25,roads,in_progress,55.8
+C02206,W06,2026-06-25,roads,open,34.7
+C02207,W06,2026-06-25,sanitation,closed,57.3
+C02208,W06,2026-06-25,water,closed,37.2
+C02209,W06,2026-06-25,water,open,52.3
+C02210,W06,2026-06-25,water,in_progress,45.2
+C02211,W06,2026-06-25,public safety,closed,52.7
+C02212,W06,2026-06-25,water,closed,26.7
+C02213,W06,2026-06-25,water,closed,40.9
+C02214,W06,2026-06-25,roads,open,22.5
+C02215,W06,2026-06-25,water,closed,51.4
+C02216,W06,2026-06-25,public safety,open,35.8
+C02217,W06,2026-06-25,public safety,closed,31.1
+C02218,W06,2026-06-25,electricity,in_progress,66.8
+C02219,W06,2026-06-26,water,closed,35.8
+C02220,W06,2026-06-26,noise,open,4.0
+C02221,W06,2026-06-26,sanitation,open,17.7
+C02222,W06,2026-06-26,public safety,closed,7.7
+C02223,W06,2026-06-26,noise,in_progress,30.4
+C02224,W06,2026-06-26,electricity,open,16.0
+C02225,W06,2026-06-26,roads,in_progress,32.2
+C02226,W06,2026-06-26,public safety,closed,24.3
+C02227,W06,2026-06-26,public safety,closed,17.2
+C02228,W06,2026-06-26,electricity,closed,33.2
+C02229,W06,2026-06-26,noise,closed,39.3
+C02230,W06,2026-06-26,sanitation,in_progress,5.8
+C02231,W06,2026-06-26,electricity,closed,43.7
+C02232,W06,2026-06-26,noise,in_progress,11.7
+C02233,W06,2026-06-26,noise,in_progress,65.8
+C02234,W06,2026-06-26,roads,open,28.6
+C02235,W06,2026-06-26,noise,closed,17.2
+C02236,W06,2026-06-26,electricity,in_progress,49.7
+C02237,W06,2026-06-26,roads,closed,41.0
+C02238,W06,2026-06-26,sanitation,closed,60.4
+C02239,W06,2026-06-26,electricity,open,33.5
+C02240,W06,2026-06-26,noise,in_progress,49.4
+C02241,W06,2026-06-26,noise,in_progress,43.2
+C02242,W06,2026-06-26,roads,closed,29.7
+C02243,W06,2026-06-27,sanitation,closed,41.6
+C02244,W06,2026-06-27,electricity,closed,40.6
+C02245,W06,2026-06-27,roads,closed,11.0
+C02246,W06,2026-06-27,noise,closed,43.4
+C02247,W06,2026-06-27,roads,in_progress,42.2
+C02248,W06,2026-06-27,sanitation,in_progress,50.5
+C02249,W06,2026-06-27,sanitation,open,13.5
+C02250,W06,2026-06-27,water,in_progress,20.3
+C02251,W06,2026-06-27,water,open,23.0
+C02252,W06,2026-06-27,roads,open,15.9
+C02253,W06,2026-06-27,electricity,closed,37.6
+C02254,W06,2026-06-27,noise,open,31.1
+C02255,W06,2026-06-27,sanitation,open,19.5
+C02256,W06,2026-06-27,water,closed,38.6
+C02257,W06,2026-06-27,electricity,open,19.1
+C02258,W06,2026-06-27,water,in_progress,50.0
+C02259,W06,2026-06-27,roads,closed,36.5
+C02260,W06,2026-06-27,water,in_progress,33.4
+C02261,W06,2026-06-27,public safety,in_progress,55.6
+C02262,W06,2026-06-27,sanitation,open,30.0
+C02263,W06,2026-06-27,electricity,closed,18.6
+C02264,W06,2026-06-27,electricity,closed,56.5
+C02265,W06,2026-06-27,noise,in_progress,31.8
+C02266,W06,2026-06-27,noise,closed,60.0
+C02267,W06,2026-06-27,electricity,in_progress,14.6
+C02268,W06,2026-06-27,roads,closed,40.1
+C02269,W06,2026-06-27,public safety,closed,37.2
+C02270,W06,2026-06-27,public safety,closed,18.2
+C02271,W06,2026-06-28,sanitation,closed,34.5
+C02272,W06,2026-06-28,sanitation,open,41.3
+C02273,W06,2026-06-28,sanitation,closed,35.5
+C02274,W06,2026-06-28,water,in_progress,37.2
+C02275,W06,2026-06-28,roads,open,46.2
+C02276,W06,2026-06-28,sanitation,closed,62.7
+C02277,W06,2026-06-28,public safety,open,53.1
+C02278,W06,2026-06-28,electricity,closed,60.4
+C02279,W06,2026-06-28,sanitation,closed,59.4
+C02280,W06,2026-06-28,roads,in_progress,18.3
+C02281,W06,2026-06-28,electricity,open,10.0
+C02282,W06,2026-06-28,sanitation,closed,39.7
+C02283,W06,2026-06-28,public safety,open,45.7
+C02284,W06,2026-06-28,public safety,in_progress,45.0
+C02285,W06,2026-06-28,water,closed,29.7
+C02286,W06,2026-06-28,public safety,in_progress,33.9
+C02287,W06,2026-06-28,noise,open,59.4
+C02288,W06,2026-06-28,water,in_progress,32.6
+C02289,W06,2026-06-28,noise,open,39.3
+C02290,W06,2026-06-28,water,open,4.0
+C02291,W06,2026-06-28,electricity,in_progress,36.7
+C02292,W06,2026-06-28,roads,closed,27.2
+C02293,W06,2026-06-28,water,open,35.4
+C02294,W06,2026-06-28,electricity,closed,46.9
+C02295,W06,2026-06-28,noise,open,44.4
+C02296,W06,2026-06-28,sanitation,open,55.4
+C02297,W06,2026-06-29,water,open,41.3
+C02298,W06,2026-06-29,public safety,open,30.2
+C02299,W06,2026-06-29,sanitation,closed,28.8
+C02300,W06,2026-06-29,noise,in_progress,40.1
+C02301,W06,2026-06-29,electricity,open,4.0
+C02302,W06,2026-06-29,water,in_progress,31.8
+C02303,W06,2026-06-29,water,in_progress,48.6
+C02304,W06,2026-06-29,sanitation,closed,14.7
+C02305,W06,2026-06-29,roads,open,19.0
+C02306,W06,2026-06-29,water,open,49.2
+C02307,W06,2026-06-29,electricity,closed,47.1
+C02308,W06,2026-06-29,public safety,in_progress,29.8
+C02309,W06,2026-06-29,water,open,11.2
+C02310,W06,2026-06-29,sanitation,in_progress,8.9
+C02311,W06,2026-06-29,electricity,in_progress,48.6
+C02312,W06,2026-06-29,noise,closed,42.5
+C02313,W06,2026-06-29,roads,open,4.0
+C02314,W06,2026-06-29,public safety,open,22.7
+C02315,W06,2026-06-29,noise,closed,29.9
+C02316,W06,2026-06-29,public safety,in_progress,39.2
+C02317,W06,2026-06-29,water,open,46.3
+C02318,W06,2026-06-29,roads,open,25.1
+C02319,W06,2026-06-29,sanitation,open,81.4
+C02320,W06,2026-06-29,roads,in_progress,42.5
+C02321,W06,2026-06-29,water,open,40.3
+C02322,W06,2026-06-29,water,closed,15.6
+C02323,W06,2026-06-30,sanitation,open,29.4
+C02324,W06,2026-06-30,noise,open,23.3
+C02325,W06,2026-06-30,water,open,54.1
+C02326,W06,2026-06-30,roads,closed,27.3
+C02327,W06,2026-06-30,public safety,closed,21.5
+C02328,W06,2026-06-30,roads,closed,7.0
+C02329,W06,2026-06-30,sanitation,closed,19.8
+C02330,W06,2026-06-30,roads,in_progress,26.0
+C02331,W06,2026-06-30,electricity,open,22.0
+C02332,W06,2026-06-30,roads,closed,33.6
+C02333,W06,2026-06-30,public safety,open,33.1
+C02334,W06,2026-06-30,noise,open,26.8
+C02335,W06,2026-06-30,electricity,open,37.3
+C02336,W06,2026-06-30,sanitation,open,9.9
+C02337,W06,2026-06-30,roads,open,35.5
+C02338,W06,2026-06-30,roads,in_progress,21.1
+C02339,W06,2026-06-30,public safety,closed,57.7
+C02340,W06,2026-06-30,water,in_progress,50.4
+C02341,W06,2026-06-30,electricity,open,49.6
+C02342,W06,2026-06-30,noise,open,36.7
+C02343,W06,2026-06-30,noise,open,16.3
+C02344,W06,2026-06-30,sanitation,in_progress,44.2
+C02345,W06,2026-06-30,public safety,in_progress,46.2
+C02346,W06,2026-06-30,electricity,open,5.4
+C02347,W06,2026-06-30,sanitation,open,47.0
+C02348,W06,2026-06-30,sanitation,closed,16.5
+C02349,W06,2026-06-30,sanitation,in_progress,19.2
+C02350,W06,2026-06-30,sanitation,open,66.9
+C02351,W06,2026-06-30,public safety,closed,36.5
+C02352,W06,2026-07-01,public safety,in_progress,28.6
+C02353,W06,2026-07-01,public safety,open,40.4
+C02354,W06,2026-07-01,electricity,in_progress,54.3
+C02355,W06,2026-07-01,water,open,52.8
+C02356,W06,2026-07-01,sanitation,closed,27.7
+C02357,W06,2026-07-01,roads,closed,4.0
+C02358,W06,2026-07-01,public safety,in_progress,35.0
+C02359,W06,2026-07-01,noise,in_progress,45.3
+C02360,W06,2026-07-01,sanitation,closed,35.3
+C02361,W06,2026-07-01,sanitation,closed,19.7
+C02362,W06,2026-07-01,electricity,closed,53.1
+C02363,W06,2026-07-01,roads,in_progress,37.6
+C02364,W06,2026-07-01,noise,open,14.6
+C02365,W06,2026-07-01,roads,open,41.1
+C02366,W06,2026-07-01,water,in_progress,14.6
+C02367,W06,2026-07-01,roads,open,33.0
+C02368,W06,2026-07-01,public safety,in_progress,31.4
+C02369,W06,2026-07-01,noise,open,23.4
+C02370,W06,2026-07-01,water,open,40.0
+C02371,W06,2026-07-01,sanitation,closed,51.4
+C02372,W06,2026-07-01,roads,open,40.6
+C02373,W06,2026-07-01,water,closed,57.2
+C02374,W06,2026-07-01,public safety,in_progress,54.8
+C02375,W06,2026-07-01,electricity,closed,30.7
+C02376,W06,2026-07-02,public safety,in_progress,35.8
+C02377,W06,2026-07-02,roads,open,41.7
+C02378,W06,2026-07-02,roads,closed,27.0
+C02379,W06,2026-07-02,roads,open,39.9
+C02380,W06,2026-07-02,water,closed,5.7
+C02381,W06,2026-07-02,roads,open,37.9
+C02382,W06,2026-07-02,electricity,in_progress,40.9
+C02383,W06,2026-07-02,water,closed,47.2
+C02384,W06,2026-07-02,roads,closed,28.0
+C02385,W06,2026-07-02,noise,open,43.6
+C02386,W06,2026-07-02,sanitation,closed,24.7
+C02387,W06,2026-07-02,sanitation,in_progress,30.2
+C02388,W06,2026-07-02,water,in_progress,41.1
+C02389,W06,2026-07-02,noise,closed,46.3
+C02390,W06,2026-07-02,roads,closed,64.1
+C02391,W06,2026-07-02,electricity,closed,26.1
+C02392,W06,2026-07-02,roads,open,20.5
+C02393,W06,2026-07-02,roads,closed,44.0
+C02394,W06,2026-07-02,water,in_progress,30.9
+C02395,W06,2026-07-02,public safety,open,57.3
+C02396,W06,2026-07-02,roads,in_progress,25.9
+C02397,W06,2026-07-02,electricity,open,39.0
+C02398,W06,2026-07-02,electricity,open,31.3
+C02399,W06,2026-07-02,water,closed,37.1
+C02400,W06,2026-07-02,electricity,open,22.5
+C02401,W06,2026-07-02,public safety,open,41.3
+C02402,W06,2026-07-02,water,in_progress,36.1
+C02403,W06,2026-07-03,sanitation,closed,31.1
+C02404,W06,2026-07-03,roads,in_progress,4.0
+C02405,W06,2026-07-03,noise,open,31.3
+C02406,W06,2026-07-03,water,closed,30.1
+C02407,W06,2026-07-03,noise,open,27.0
+C02408,W06,2026-07-03,public safety,closed,8.5
+C02409,W06,2026-07-03,sanitation,in_progress,27.5
+C02410,W06,2026-07-03,public safety,in_progress,36.7
+C02411,W06,2026-07-03,roads,in_progress,19.7
+C02412,W06,2026-07-03,sanitation,closed,19.4
+C02413,W06,2026-07-03,sanitation,in_progress,44.9
+C02414,W06,2026-07-03,sanitation,in_progress,27.2
+C02415,W06,2026-07-03,water,in_progress,28.8
+C02416,W06,2026-07-03,electricity,open,16.7
+C02417,W06,2026-07-03,public safety,open,25.8
+C02418,W06,2026-07-03,sanitation,closed,26.3
+C02419,W06,2026-07-03,public safety,in_progress,40.2
+C02420,W06,2026-07-03,noise,in_progress,30.6
+C02421,W06,2026-07-03,electricity,open,29.2
+C02422,W06,2026-07-03,electricity,closed,41.5
+C02423,W06,2026-07-03,sanitation,closed,32.6
+C02424,W06,2026-07-03,noise,open,25.8
+C02425,W06,2026-07-03,electricity,open,21.4
+C02426,W06,2026-07-03,electricity,closed,16.6
+C02427,W06,2026-07-03,roads,closed,35.8
+C02428,W06,2026-07-03,noise,closed,22.7
+C02429,W06,2026-07-03,public safety,in_progress,34.1
+C02430,W06,2026-07-03,noise,in_progress,40.0
+C02431,W06,2026-07-03,water,closed,27.9
+C02432,W06,2026-07-04,public safety,closed,27.5
+C02433,W06,2026-07-04,noise,in_progress,19.4
+C02434,W06,2026-07-04,electricity,in_progress,45.4
+C02435,W06,2026-07-04,sanitation,open,4.0
+C02436,W06,2026-07-04,water,open,61.2
+C02437,W06,2026-07-04,noise,open,49.4
+C02438,W06,2026-07-04,sanitation,open,31.5
+C02439,W06,2026-07-04,water,open,56.4
+C02440,W06,2026-07-04,roads,closed,37.9
+C02441,W06,2026-07-04,water,closed,34.1
+C02442,W06,2026-07-04,electricity,open,20.6
+C02443,W06,2026-07-04,public safety,closed,37.4
+C02444,W06,2026-07-04,sanitation,in_progress,36.1
+C02445,W06,2026-07-04,roads,closed,37.7
+C02446,W06,2026-07-04,public safety,in_progress,24.1
+C02447,W06,2026-07-04,public safety,in_progress,41.8
+C02448,W06,2026-07-04,water,closed,26.3
+C02449,W06,2026-07-04,electricity,in_progress,20.1
+C02450,W06,2026-07-04,water,in_progress,7.7
+C02451,W06,2026-07-04,noise,open,22.7
+C02452,W06,2026-07-04,noise,open,4.0
+C02453,W06,2026-07-04,sanitation,open,38.7
+C02454,W06,2026-07-04,noise,in_progress,26.9
+C02455,W06,2026-07-04,roads,closed,37.3
+C02456,W06,2026-07-04,electricity,in_progress,38.6
+C02457,W06,2026-07-04,public safety,closed,42.9
+C02458,W06,2026-07-04,public safety,open,38.7
+C02459,W06,2026-07-05,noise,closed,42.6
+C02460,W06,2026-07-05,roads,open,42.8
+C02461,W06,2026-07-05,electricity,closed,46.9
+C02462,W06,2026-07-05,noise,open,37.6
+C02463,W06,2026-07-05,noise,in_progress,26.9
+C02464,W06,2026-07-05,noise,open,32.9
+C02465,W06,2026-07-05,sanitation,in_progress,56.7
+C02466,W06,2026-07-05,water,in_progress,24.9
+C02467,W06,2026-07-05,roads,open,52.3
+C02468,W06,2026-07-05,electricity,in_progress,31.7
+C02469,W06,2026-07-05,public safety,closed,26.6
+C02470,W06,2026-07-05,electricity,closed,63.6
+C02471,W06,2026-07-05,roads,closed,30.7
+C02472,W06,2026-07-05,noise,closed,4.0
+C02473,W06,2026-07-05,sanitation,closed,31.0
+C02474,W06,2026-07-05,public safety,closed,35.5
+C02475,W06,2026-07-05,sanitation,in_progress,54.2
+C02476,W06,2026-07-05,roads,in_progress,38.0
+C02477,W06,2026-07-05,noise,open,26.2
+C02478,W06,2026-07-05,roads,closed,52.0
+C02479,W06,2026-07-05,electricity,open,39.7
+C02480,W06,2026-07-05,roads,open,11.6
+C02481,W06,2026-07-05,sanitation,closed,47.3
+C02482,W06,2026-07-05,sanitation,closed,17.9
+C02483,W06,2026-07-05,water,open,16.0
+C02484,W06,2026-07-05,electricity,open,36.1
+C02485,W06,2026-07-05,public safety,in_progress,17.2
+C02486,W06,2026-07-05,water,in_progress,48.3
+C02487,W07,2026-06-08,noise,in_progress,36.4
+C02488,W07,2026-06-08,noise,in_progress,39.2
+C02489,W07,2026-06-08,public safety,in_progress,30.7
+C02490,W07,2026-06-08,public safety,in_progress,38.8
+C02491,W07,2026-06-08,public safety,in_progress,24.1
+C02492,W07,2026-06-09,electricity,closed,20.7
+C02493,W07,2026-06-09,sanitation,open,39.2
+C02494,W07,2026-06-09,electricity,in_progress,50.3
+C02495,W07,2026-06-09,sanitation,closed,35.2
+C02496,W07,2026-06-09,water,closed,29.0
+C02497,W07,2026-06-10,electricity,in_progress,27.6
+C02498,W07,2026-06-10,public safety,closed,35.3
+C02499,W07,2026-06-10,roads,in_progress,27.4
+C02500,W07,2026-06-10,noise,closed,9.0
+C02501,W07,2026-06-10,noise,closed,36.5
+C02502,W07,2026-06-10,noise,in_progress,20.4
+C02503,W07,2026-06-10,sanitation,open,29.3
+C02504,W07,2026-06-10,roads,in_progress,28.8
+C02505,W07,2026-06-11,public safety,in_progress,49.7
+C02506,W07,2026-06-11,noise,in_progress,49.6
+C02507,W07,2026-06-11,roads,in_progress,51.8
+C02508,W07,2026-06-11,sanitation,open,23.9
+C02509,W07,2026-06-11,noise,in_progress,40.2
+C02510,W07,2026-06-11,public safety,in_progress,34.8
+C02511,W07,2026-06-11,electricity,in_progress,9.2
+C02512,W07,2026-06-11,public safety,closed,23.7
+C02513,W07,2026-06-11,water,closed,40.6
+C02514,W07,2026-06-12,public safety,closed,45.8
+C02515,W07,2026-06-12,electricity,open,36.2
+C02516,W07,2026-06-12,roads,in_progress,14.1
+C02517,W07,2026-06-12,noise,open,40.2
+C02518,W07,2026-06-13,public safety,in_progress,39.3
+C02519,W07,2026-06-13,sanitation,in_progress,29.8
+C02520,W07,2026-06-13,sanitation,closed,54.3
+C02521,W07,2026-06-13,roads,closed,37.5
+C02522,W07,2026-06-13,roads,closed,40.7
+C02523,W07,2026-06-13,noise,in_progress,44.9
+C02524,W07,2026-06-13,noise,in_progress,16.2
+C02525,W07,2026-06-13,public safety,closed,32.6
+C02526,W07,2026-06-14,electricity,in_progress,36.0
+C02527,W07,2026-06-14,electricity,in_progress,33.0
+C02528,W07,2026-06-14,noise,in_progress,8.2
+C02529,W07,2026-06-14,roads,open,51.6
+C02530,W07,2026-06-14,roads,open,8.6
+C02531,W07,2026-06-15,electricity,closed,22.2
+C02532,W07,2026-06-15,electricity,closed,4.0
+C02533,W07,2026-06-15,electricity,closed,35.3
+C02534,W07,2026-06-15,water,open,28.1
+C02535,W07,2026-06-15,sanitation,open,49.2
+C02536,W07,2026-06-15,noise,closed,27.6
+C02537,W07,2026-06-16,electricity,closed,54.6
+C02538,W07,2026-06-16,noise,open,34.2
+C02539,W07,2026-06-16,sanitation,open,31.7
+C02540,W07,2026-06-17,public safety,open,50.6
+C02541,W07,2026-06-17,noise,open,44.8
+C02542,W07,2026-06-17,water,closed,73.2
+C02543,W07,2026-06-17,sanitation,open,51.0
+C02544,W07,2026-06-17,water,open,36.9
+C02545,W07,2026-06-17,roads,open,55.1
+C02546,W07,2026-06-17,electricity,open,39.2
+C02547,W07,2026-06-17,water,open,38.5
+C02548,W07,2026-06-18,noise,closed,41.3
+C02549,W07,2026-06-18,sanitation,closed,35.4
+C02550,W07,2026-06-18,roads,closed,42.3
+C02551,W07,2026-06-18,noise,open,29.8
+C02552,W07,2026-06-18,sanitation,open,53.9
+C02553,W07,2026-06-18,electricity,in_progress,7.5
+C02554,W07,2026-06-19,public safety,closed,57.0
+C02555,W07,2026-06-19,roads,closed,29.2
+C02556,W07,2026-06-19,electricity,open,32.3
+C02557,W07,2026-06-19,electricity,open,27.3
+C02558,W07,2026-06-20,roads,closed,57.5
+C02559,W07,2026-06-21,roads,closed,44.4
+C02560,W07,2026-06-21,public safety,closed,22.2
+C02561,W07,2026-06-21,roads,in_progress,31.9
+C02562,W07,2026-06-21,noise,in_progress,29.1
+C02563,W07,2026-06-21,water,open,20.7
+C02564,W07,2026-06-21,noise,open,33.7
+C02565,W07,2026-06-22,water,in_progress,38.6
+C02566,W07,2026-06-22,public safety,in_progress,31.2
+C02567,W07,2026-06-22,noise,in_progress,33.6
+C02568,W07,2026-06-22,sanitation,in_progress,31.0
+C02569,W07,2026-06-23,noise,closed,50.0
+C02570,W07,2026-06-23,electricity,in_progress,32.7
+C02571,W07,2026-06-23,noise,in_progress,37.0
+C02572,W07,2026-06-23,water,closed,39.9
+C02573,W07,2026-06-23,noise,open,55.9
+C02574,W07,2026-06-23,public safety,open,36.7
+C02575,W07,2026-06-23,water,in_progress,14.2
+C02576,W07,2026-06-23,sanitation,open,32.0
+C02577,W07,2026-06-23,water,in_progress,21.9
+C02578,W07,2026-06-24,public safety,open,70.0
+C02579,W07,2026-06-25,noise,open,4.0
+C02580,W07,2026-06-25,sanitation,open,11.0
+C02581,W07,2026-06-25,water,closed,11.2
+C02582,W07,2026-06-25,electricity,closed,35.1
+C02583,W07,2026-06-25,noise,closed,47.3
+C02584,W07,2026-06-25,public safety,closed,30.4
+C02585,W07,2026-06-25,water,in_progress,27.1
+C02586,W07,2026-06-25,water,open,34.4
+C02587,W07,2026-06-25,sanitation,in_progress,24.9
+C02588,W07,2026-06-26,roads,open,38.7
+C02589,W07,2026-06-26,sanitation,in_progress,37.7
+C02590,W07,2026-06-26,public safety,open,48.5
+C02591,W07,2026-06-26,public safety,in_progress,32.6
+C02592,W07,2026-06-26,roads,in_progress,30.5
+C02593,W07,2026-06-26,sanitation,closed,30.6
+C02594,W07,2026-06-26,electricity,in_progress,37.5
+C02595,W07,2026-06-27,public safety,in_progress,24.1
+C02596,W07,2026-06-27,noise,closed,35.7
+C02597,W07,2026-06-27,electricity,open,38.4
+C02598,W07,2026-06-27,water,open,34.0
+C02599,W07,2026-06-27,water,in_progress,29.6
+C02600,W07,2026-06-28,water,open,52.5
+C02601,W07,2026-06-28,noise,closed,38.7
+C02602,W07,2026-06-28,roads,in_progress,24.0
+C02603,W07,2026-06-28,water,in_progress,40.1
+C02604,W07,2026-06-28,sanitation,closed,25.7
+C02605,W07,2026-06-28,public safety,closed,16.7
+C02606,W07,2026-06-28,electricity,in_progress,7.8
+C02607,W07,2026-06-28,electricity,open,39.1
+C02608,W07,2026-06-28,water,in_progress,4.0
+C02609,W07,2026-06-29,electricity,closed,11.8
+C02610,W07,2026-06-29,noise,open,65.9
+C02611,W07,2026-06-29,sanitation,closed,60.6
+C02612,W07,2026-06-29,noise,closed,42.5
+C02613,W07,2026-06-29,electricity,open,36.9
+C02614,W07,2026-06-29,water,open,15.5
+C02615,W07,2026-06-29,water,in_progress,49.4
+C02616,W07,2026-06-30,sanitation,closed,35.4
+C02617,W07,2026-06-30,noise,closed,45.2
+C02618,W07,2026-06-30,sanitation,closed,45.9
+C02619,W07,2026-06-30,noise,open,39.8
+C02620,W07,2026-06-30,sanitation,closed,27.8
+C02621,W07,2026-06-30,water,closed,48.8
+C02622,W07,2026-06-30,electricity,in_progress,32.7
+C02623,W07,2026-07-01,electricity,open,48.6
+C02624,W07,2026-07-01,water,in_progress,33.8
+C02625,W07,2026-07-01,electricity,open,37.3
+C02626,W07,2026-07-01,public safety,open,29.0
+C02627,W07,2026-07-01,noise,in_progress,11.2
+C02628,W07,2026-07-01,noise,open,34.6
+C02629,W07,2026-07-01,electricity,in_progress,25.2
+C02630,W07,2026-07-01,water,closed,46.3
+C02631,W07,2026-07-01,sanitation,closed,37.5
+C02632,W07,2026-07-01,noise,closed,45.7
+C02633,W07,2026-07-02,public safety,open,40.8
+C02634,W07,2026-07-02,public safety,closed,45.5
+C02635,W07,2026-07-02,sanitation,closed,42.1
+C02636,W07,2026-07-02,electricity,in_progress,23.4
+C02637,W07,2026-07-02,sanitation,closed,40.7
+C02638,W07,2026-07-02,noise,closed,40.0
+C02639,W07,2026-07-03,electricity,in_progress,39.4
+C02640,W07,2026-07-03,electricity,closed,48.5
+C02641,W07,2026-07-03,water,closed,35.7
+C02642,W07,2026-07-03,sanitation,closed,26.2
+C02643,W07,2026-07-03,public safety,closed,46.9
+C02644,W07,2026-07-04,roads,closed,57.4
+C02645,W07,2026-07-04,water,in_progress,29.6
+C02646,W07,2026-07-04,public safety,closed,44.9
+C02647,W07,2026-07-04,water,closed,9.5
+C02648,W07,2026-07-04,public safety,closed,43.7
+C02649,W07,2026-07-05,water,open,36.4
+C02650,W07,2026-07-05,noise,in_progress,58.1
+C02651,W07,2026-07-05,water,in_progress,54.7
+C02652,W07,2026-07-05,public safety,open,11.3
+C02653,W07,2026-07-05,water,in_progress,44.0
+C02654,W07,2026-07-05,noise,closed,16.9
+C02655,W07,2026-07-05,electricity,open,29.3
+C02656,W07,2026-07-05,roads,open,38.8
+C02657,W08,2026-06-08,water,in_progress,61.2
+C02658,W08,2026-06-08,electricity,in_progress,8.2
+C02659,W08,2026-06-08,roads,open,49.3
+C02660,W08,2026-06-08,noise,open,59.3
+C02661,W08,2026-06-08,noise,closed,39.5
+C02662,W08,2026-06-08,electricity,open,32.5
+C02663,W08,2026-06-08,public safety,in_progress,31.8
+C02664,W08,2026-06-08,sanitation,open,38.7
+C02665,W08,2026-06-08,electricity,in_progress,30.5
+C02666,W08,2026-06-08,sanitation,in_progress,51.7
+C02667,W08,2026-06-08,sanitation,in_progress,22.4
+C02668,W08,2026-06-08,public safety,open,36.6
+C02669,W08,2026-06-09,electricity,open,8.9
+C02670,W08,2026-06-09,electricity,in_progress,31.4
+C02671,W08,2026-06-09,water,open,35.5
+C02672,W08,2026-06-09,noise,in_progress,42.1
+C02673,W08,2026-06-09,electricity,closed,17.1
+C02674,W08,2026-06-09,roads,in_progress,49.8
+C02675,W08,2026-06-09,roads,open,42.6
+C02676,W08,2026-06-09,noise,in_progress,41.0
+C02677,W08,2026-06-09,water,in_progress,38.1
+C02678,W08,2026-06-09,electricity,in_progress,31.4
+C02679,W08,2026-06-09,public safety,open,29.0
+C02680,W08,2026-06-09,public safety,open,48.4
+C02681,W08,2026-06-09,noise,open,20.5
+C02682,W08,2026-06-09,noise,open,51.8
+C02683,W08,2026-06-10,sanitation,closed,10.9
+C02684,W08,2026-06-10,public safety,open,26.0
+C02685,W08,2026-06-10,roads,in_progress,12.0
+C02686,W08,2026-06-10,electricity,in_progress,22.2
+C02687,W08,2026-06-10,noise,closed,67.9
+C02688,W08,2026-06-10,sanitation,closed,53.5
+C02689,W08,2026-06-10,water,open,14.5
+C02690,W08,2026-06-10,water,in_progress,24.7
+C02691,W08,2026-06-10,roads,in_progress,66.2
+C02692,W08,2026-06-11,water,closed,63.5
+C02693,W08,2026-06-11,noise,closed,31.9
+C02694,W08,2026-06-11,sanitation,in_progress,37.0
+C02695,W08,2026-06-11,water,closed,12.1
+C02696,W08,2026-06-11,public safety,in_progress,49.0
+C02697,W08,2026-06-11,sanitation,open,29.7
+C02698,W08,2026-06-11,noise,in_progress,19.2
+C02699,W08,2026-06-11,electricity,closed,43.9
+C02700,W08,2026-06-11,water,closed,13.9
+C02701,W08,2026-06-11,sanitation,open,29.4
+C02702,W08,2026-06-11,water,closed,28.1
+C02703,W08,2026-06-11,roads,open,19.0
+C02704,W08,2026-06-11,noise,closed,46.5
+C02705,W08,2026-06-12,electricity,closed,39.1
+C02706,W08,2026-06-12,public safety,open,47.2
+C02707,W08,2026-06-12,noise,in_progress,17.5
+C02708,W08,2026-06-12,water,closed,40.8
+C02709,W08,2026-06-12,electricity,in_progress,41.4
+C02710,W08,2026-06-12,noise,open,46.6
+C02711,W08,2026-06-12,water,in_progress,41.8
+C02712,W08,2026-06-12,electricity,open,38.0
+C02713,W08,2026-06-12,electricity,closed,35.4
+C02714,W08,2026-06-12,electricity,closed,35.8
+C02715,W08,2026-06-12,water,open,41.0
+C02716,W08,2026-06-12,noise,closed,37.7
+C02717,W08,2026-06-12,electricity,in_progress,31.4
+C02718,W08,2026-06-13,noise,open,30.3
+C02719,W08,2026-06-13,electricity,open,52.0
+C02720,W08,2026-06-13,water,closed,36.5
+C02721,W08,2026-06-13,water,open,36.5
+C02722,W08,2026-06-13,noise,in_progress,44.3
+C02723,W08,2026-06-13,public safety,in_progress,24.0
+C02724,W08,2026-06-13,roads,closed,45.0
+C02725,W08,2026-06-13,roads,in_progress,33.7
+C02726,W08,2026-06-13,roads,in_progress,26.0
+C02727,W08,2026-06-13,roads,open,32.3
+C02728,W08,2026-06-13,electricity,in_progress,45.6
+C02729,W08,2026-06-14,public safety,closed,27.6
+C02730,W08,2026-06-14,water,open,42.5
+C02731,W08,2026-06-14,noise,closed,35.5
+C02732,W08,2026-06-14,water,closed,38.2
+C02733,W08,2026-06-14,water,closed,48.4
+C02734,W08,2026-06-14,electricity,in_progress,51.0
+C02735,W08,2026-06-14,sanitation,in_progress,42.9
+C02736,W08,2026-06-14,roads,in_progress,74.7
+C02737,W08,2026-06-14,public safety,closed,9.2
+C02738,W08,2026-06-14,public safety,closed,35.5
+C02739,W08,2026-06-14,electricity,closed,33.6
+C02740,W08,2026-06-14,water,in_progress,55.7
+C02741,W08,2026-06-14,roads,closed,32.1
+C02742,W08,2026-06-14,sanitation,closed,38.7
+C02743,W08,2026-06-15,water,in_progress,40.4
+C02744,W08,2026-06-15,noise,closed,29.8
+C02745,W08,2026-06-15,electricity,in_progress,39.4
+C02746,W08,2026-06-15,sanitation,open,40.4
+C02747,W08,2026-06-15,water,in_progress,34.6
+C02748,W08,2026-06-15,noise,in_progress,4.0
+C02749,W08,2026-06-15,electricity,in_progress,20.1
+C02750,W08,2026-06-15,roads,in_progress,33.4
+C02751,W08,2026-06-15,public safety,in_progress,35.7
+C02752,W08,2026-06-15,public safety,closed,27.0
+C02753,W08,2026-06-15,water,open,36.8
+C02754,W08,2026-06-15,roads,open,39.3
+C02755,W08,2026-06-15,water,in_progress,43.1
+C02756,W08,2026-06-15,sanitation,in_progress,48.4
+C02757,W08,2026-06-16,public safety,closed,38.3
+C02758,W08,2026-06-16,water,in_progress,8.0
+C02759,W08,2026-06-16,roads,open,36.2
+C02760,W08,2026-06-16,noise,open,38.3
+C02761,W08,2026-06-16,roads,closed,46.0
+C02762,W08,2026-06-16,electricity,in_progress,16.0
+C02763,W08,2026-06-16,roads,closed,27.0
+C02764,W08,2026-06-16,sanitation,closed,35.9
+C02765,W08,2026-06-16,sanitation,open,26.2
+C02766,W08,2026-06-16,water,closed,45.4
+C02767,W08,2026-06-16,noise,closed,42.0
+C02768,W08,2026-06-16,public safety,open,20.3
+C02769,W08,2026-06-16,sanitation,in_progress,46.5
+C02770,W08,2026-06-16,roads,open,58.0
+C02771,W08,2026-06-16,public safety,in_progress,47.9
+C02772,W08,2026-06-17,electricity,closed,44.9
+C02773,W08,2026-06-17,sanitation,in_progress,55.1
+C02774,W08,2026-06-17,water,in_progress,31.1
+C02775,W08,2026-06-17,public safety,closed,55.8
+C02776,W08,2026-06-17,roads,open,21.2
+C02777,W08,2026-06-17,sanitation,closed,29.9
+C02778,W08,2026-06-17,public safety,open,59.5
+C02779,W08,2026-06-18,sanitation,in_progress,29.4
+C02780,W08,2026-06-18,noise,open,36.5
+C02781,W08,2026-06-18,water,open,59.0
+C02782,W08,2026-06-18,sanitation,open,47.7
+C02783,W08,2026-06-18,noise,closed,55.8
+C02784,W08,2026-06-18,public safety,open,46.8
+C02785,W08,2026-06-18,water,closed,46.2
+C02786,W08,2026-06-18,noise,closed,24.5
+C02787,W08,2026-06-18,sanitation,in_progress,27.0
+C02788,W08,2026-06-18,electricity,open,5.9
+C02789,W08,2026-06-19,water,in_progress,21.5
+C02790,W08,2026-06-19,water,in_progress,29.3
+C02791,W08,2026-06-19,electricity,open,21.5
+C02792,W08,2026-06-19,sanitation,closed,40.9
+C02793,W08,2026-06-19,noise,in_progress,26.0
+C02794,W08,2026-06-19,public safety,open,16.9
+C02795,W08,2026-06-19,water,closed,23.3
+C02796,W08,2026-06-19,noise,in_progress,22.6
+C02797,W08,2026-06-19,water,open,48.3
+C02798,W08,2026-06-19,roads,open,26.2
+C02799,W08,2026-06-19,public safety,in_progress,44.3
+C02800,W08,2026-06-19,noise,closed,20.7
+C02801,W08,2026-06-19,sanitation,closed,38.8
+C02802,W08,2026-06-20,sanitation,closed,29.4
+C02803,W08,2026-06-20,public safety,closed,37.8
+C02804,W08,2026-06-20,electricity,in_progress,23.6
+C02805,W08,2026-06-20,electricity,open,49.6
+C02806,W08,2026-06-20,sanitation,closed,30.4
+C02807,W08,2026-06-20,roads,in_progress,27.5
+C02808,W08,2026-06-20,sanitation,open,16.1
+C02809,W08,2026-06-20,noise,closed,46.0
+C02810,W08,2026-06-20,public safety,in_progress,35.7
+C02811,W08,2026-06-20,noise,in_progress,19.7
+C02812,W08,2026-06-20,roads,open,44.2
+C02813,W08,2026-06-20,electricity,in_progress,56.3
+C02814,W08,2026-06-20,public safety,open,32.6
+C02815,W08,2026-06-21,water,open,55.4
+C02816,W08,2026-06-21,water,closed,36.7
+C02817,W08,2026-06-21,water,closed,53.6
+C02818,W08,2026-06-21,water,in_progress,30.9
+C02819,W08,2026-06-21,electricity,closed,21.6
+C02820,W08,2026-06-21,public safety,closed,51.1
+C02821,W08,2026-06-21,water,in_progress,41.4
+C02822,W08,2026-06-21,roads,open,38.9
+C02823,W08,2026-06-21,sanitation,closed,62.2
+C02824,W08,2026-06-21,roads,in_progress,29.9
+C02825,W08,2026-06-21,public safety,open,26.2
+C02826,W08,2026-06-21,public safety,closed,22.9
+C02827,W08,2026-06-21,roads,open,30.1
+C02828,W08,2026-06-22,water,in_progress,43.4
+C02829,W08,2026-06-22,roads,closed,36.2
+C02830,W08,2026-06-22,public safety,in_progress,50.4
+C02831,W08,2026-06-22,water,closed,31.4
+C02832,W08,2026-06-22,roads,open,27.7
+C02833,W08,2026-06-22,water,open,60.3
+C02834,W08,2026-06-22,noise,open,56.7
+C02835,W08,2026-06-22,water,in_progress,51.3
+C02836,W08,2026-06-22,water,closed,15.0
+C02837,W08,2026-06-22,noise,open,24.2
+C02838,W08,2026-06-22,water,in_progress,16.3
+C02839,W08,2026-06-22,electricity,closed,36.6
+C02840,W08,2026-06-22,water,open,31.2
+C02841,W08,2026-06-22,water,closed,18.3
+C02842,W08,2026-06-22,noise,closed,62.3
+C02843,W08,2026-06-22,water,in_progress,46.5
+C02844,W08,2026-06-23,public safety,in_progress,48.1
+C02845,W08,2026-06-23,water,closed,27.4
+C02846,W08,2026-06-23,public safety,open,38.2
+C02847,W08,2026-06-23,water,in_progress,19.6
+C02848,W08,2026-06-23,electricity,closed,41.3
+C02849,W08,2026-06-23,noise,closed,48.4
+C02850,W08,2026-06-23,water,open,17.3
+C02851,W08,2026-06-23,noise,closed,26.5
+C02852,W08,2026-06-23,public safety,closed,4.0
+C02853,W08,2026-06-23,public safety,in_progress,42.2
+C02854,W08,2026-06-23,roads,closed,10.9
+C02855,W08,2026-06-23,roads,in_progress,32.8
+C02856,W08,2026-06-23,water,open,29.5
+C02857,W08,2026-06-23,roads,open,44.0
+C02858,W08,2026-06-23,water,in_progress,48.6
+C02859,W08,2026-06-23,noise,open,36.1
+C02860,W08,2026-06-24,sanitation,in_progress,44.6
+C02861,W08,2026-06-24,roads,open,26.0
+C02862,W08,2026-06-24,electricity,open,39.4
+C02863,W08,2026-06-24,sanitation,closed,23.1
+C02864,W08,2026-06-24,roads,open,20.0
+C02865,W08,2026-06-24,noise,in_progress,28.9
+C02866,W08,2026-06-24,sanitation,closed,34.1
+C02867,W08,2026-06-24,public safety,closed,43.0
+C02868,W08,2026-06-24,electricity,closed,38.6
+C02869,W08,2026-06-24,water,in_progress,37.7
+C02870,W08,2026-06-24,sanitation,open,38.8
+C02871,W08,2026-06-24,sanitation,closed,16.2
+C02872,W08,2026-06-24,sanitation,closed,50.6
+C02873,W08,2026-06-24,roads,in_progress,47.1
+C02874,W08,2026-06-25,water,closed,44.7
+C02875,W08,2026-06-25,water,closed,40.6
+C02876,W08,2026-06-25,noise,in_progress,29.1
+C02877,W08,2026-06-25,roads,open,43.7
+C02878,W08,2026-06-25,water,open,22.7
+C02879,W08,2026-06-25,roads,in_progress,26.0
+C02880,W08,2026-06-25,sanitation,in_progress,48.9
+C02881,W08,2026-06-25,noise,closed,35.4
+C02882,W08,2026-06-25,public safety,open,21.8
+C02883,W08,2026-06-25,roads,closed,26.1
+C02884,W08,2026-06-25,water,in_progress,39.8
+C02885,W08,2026-06-25,water,in_progress,51.1
+C02886,W08,2026-06-25,public safety,in_progress,30.0
+C02887,W08,2026-06-25,sanitation,in_progress,36.2
+C02888,W08,2026-06-25,electricity,open,36.6
+C02889,W08,2026-06-26,roads,in_progress,41.2
+C02890,W08,2026-06-26,sanitation,in_progress,36.2
+C02891,W08,2026-06-26,public safety,open,14.5
+C02892,W08,2026-06-26,electricity,open,73.8
+C02893,W08,2026-06-26,public safety,closed,29.5
+C02894,W08,2026-06-26,noise,in_progress,17.7
+C02895,W08,2026-06-26,electricity,in_progress,47.2
+C02896,W08,2026-06-26,public safety,closed,30.0
+C02897,W08,2026-06-26,noise,closed,46.8
+C02898,W08,2026-06-26,electricity,open,30.3
+C02899,W08,2026-06-26,roads,closed,20.5
+C02900,W08,2026-06-26,electricity,closed,22.5
+C02901,W08,2026-06-26,public safety,in_progress,17.3
+C02902,W08,2026-06-26,roads,in_progress,50.0
+C02903,W08,2026-06-26,water,closed,43.8
+C02904,W08,2026-06-27,electricity,closed,6.7
+C02905,W08,2026-06-27,noise,open,49.8
+C02906,W08,2026-06-27,electricity,in_progress,44.8
+C02907,W08,2026-06-27,public safety,open,64.1
+C02908,W08,2026-06-27,electricity,closed,39.3
+C02909,W08,2026-06-27,noise,open,40.9
+C02910,W08,2026-06-27,water,closed,24.6
+C02911,W08,2026-06-27,sanitation,closed,47.6
+C02912,W08,2026-06-27,public safety,closed,40.0
+C02913,W08,2026-06-27,noise,open,54.4
+C02914,W08,2026-06-27,sanitation,in_progress,41.0
+C02915,W08,2026-06-27,noise,closed,33.7
+C02916,W08,2026-06-27,roads,closed,19.7
+C02917,W08,2026-06-28,public safety,closed,33.8
+C02918,W08,2026-06-28,electricity,closed,36.2
+C02919,W08,2026-06-28,public safety,closed,46.7
+C02920,W08,2026-06-28,electricity,closed,43.7
+C02921,W08,2026-06-28,public safety,open,45.5
+C02922,W08,2026-06-28,sanitation,in_progress,25.9
+C02923,W08,2026-06-28,noise,in_progress,34.1
+C02924,W08,2026-06-28,sanitation,open,28.7
+C02925,W08,2026-06-28,sanitation,open,9.5
+C02926,W08,2026-06-28,sanitation,in_progress,47.2
+C02927,W08,2026-06-28,water,open,24.7
+C02928,W08,2026-06-28,noise,closed,16.6
+C02929,W08,2026-06-28,electricity,in_progress,31.9
+C02930,W08,2026-06-28,noise,closed,20.3
+C02931,W08,2026-06-28,water,closed,35.1
+C02932,W08,2026-06-28,water,closed,60.7
+C02933,W08,2026-06-28,roads,closed,30.6
+C02934,W08,2026-06-29,roads,closed,50.8
+C02935,W08,2026-06-29,electricity,closed,42.1
+C02936,W08,2026-06-29,water,open,41.5
+C02937,W08,2026-06-29,public safety,open,47.6
+C02938,W08,2026-06-29,sanitation,closed,30.4
+C02939,W08,2026-06-29,water,open,48.2
+C02940,W08,2026-06-29,sanitation,closed,47.6
+C02941,W08,2026-06-29,roads,open,5.3
+C02942,W08,2026-06-29,noise,in_progress,66.1
+C02943,W08,2026-06-29,water,open,37.0
+C02944,W08,2026-06-29,electricity,in_progress,27.5
+C02945,W08,2026-06-29,sanitation,in_progress,42.5
+C02946,W08,2026-06-29,public safety,in_progress,28.7
+C02947,W08,2026-06-29,sanitation,open,30.0
+C02948,W08,2026-06-29,sanitation,in_progress,33.5
+C02949,W08,2026-06-29,water,closed,29.4
+C02950,W08,2026-06-29,noise,in_progress,49.3
+C02951,W08,2026-06-30,electricity,open,38.5
+C02952,W08,2026-06-30,roads,closed,19.5
+C02953,W08,2026-06-30,public safety,in_progress,17.1
+C02954,W08,2026-06-30,roads,closed,23.6
+C02955,W08,2026-06-30,public safety,closed,57.4
+C02956,W08,2026-06-30,water,in_progress,36.5
+C02957,W08,2026-06-30,electricity,open,49.0
+C02958,W08,2026-06-30,public safety,in_progress,33.2
+C02959,W08,2026-06-30,roads,closed,14.9
+C02960,W08,2026-06-30,sanitation,closed,18.5
+C02961,W08,2026-06-30,noise,closed,17.5
+C02962,W08,2026-07-01,sanitation,open,19.1
+C02963,W08,2026-07-01,electricity,closed,30.9
+C02964,W08,2026-07-01,electricity,closed,32.9
+C02965,W08,2026-07-01,roads,in_progress,32.3
+C02966,W08,2026-07-01,public safety,closed,35.0
+C02967,W08,2026-07-01,roads,open,33.5
+C02968,W08,2026-07-01,public safety,closed,44.4
+C02969,W08,2026-07-01,water,open,41.7
+C02970,W08,2026-07-01,water,closed,17.1
+C02971,W08,2026-07-01,sanitation,in_progress,37.0
+C02972,W08,2026-07-01,water,open,32.7
+C02973,W08,2026-07-01,water,open,42.8
+C02974,W08,2026-07-02,noise,open,39.8
+C02975,W08,2026-07-02,roads,in_progress,39.2
+C02976,W08,2026-07-02,roads,open,34.8
+C02977,W08,2026-07-02,noise,in_progress,41.1
+C02978,W08,2026-07-02,public safety,open,68.3
+C02979,W08,2026-07-02,roads,open,47.9
+C02980,W08,2026-07-02,public safety,open,33.1
+C02981,W08,2026-07-02,roads,in_progress,41.1
+C02982,W08,2026-07-02,noise,in_progress,16.4
+C02983,W08,2026-07-02,sanitation,open,53.5
+C02984,W08,2026-07-02,roads,open,35.2
+C02985,W08,2026-07-02,water,closed,16.4
+C02986,W08,2026-07-02,electricity,in_progress,45.5
+C02987,W08,2026-07-03,noise,in_progress,30.1
+C02988,W08,2026-07-03,sanitation,in_progress,33.3
+C02989,W08,2026-07-03,public safety,open,37.3
+C02990,W08,2026-07-03,electricity,closed,33.6
+C02991,W08,2026-07-03,public safety,open,35.4
+C02992,W08,2026-07-03,roads,in_progress,52.8
+C02993,W08,2026-07-03,electricity,in_progress,9.5
+C02994,W08,2026-07-03,electricity,open,44.0
+C02995,W08,2026-07-03,roads,in_progress,26.8
+C02996,W08,2026-07-03,roads,closed,32.9
+C02997,W08,2026-07-03,water,closed,34.4
+C02998,W08,2026-07-03,water,closed,35.2
+C02999,W08,2026-07-03,noise,closed,35.5
+C03000,W08,2026-07-03,water,in_progress,34.9
+C03001,W08,2026-07-04,water,in_progress,19.6
+C03002,W08,2026-07-04,public safety,open,20.6
+C03003,W08,2026-07-04,sanitation,open,26.5
+C03004,W08,2026-07-04,public safety,closed,24.1
+C03005,W08,2026-07-04,water,closed,30.4
+C03006,W08,2026-07-04,sanitation,open,27.0
+C03007,W08,2026-07-04,water,open,4.0
+C03008,W08,2026-07-04,electricity,closed,46.8
+C03009,W08,2026-07-04,public safety,in_progress,31.8
+C03010,W08,2026-07-04,public safety,in_progress,56.8
+C03011,W08,2026-07-04,noise,open,32.2
+C03012,W08,2026-07-05,roads,in_progress,24.5
+C03013,W08,2026-07-05,electricity,in_progress,56.4
+C03014,W08,2026-07-05,public safety,open,37.1
+C03015,W08,2026-07-05,electricity,in_progress,36.9
+C03016,W08,2026-07-05,roads,in_progress,35.1
+C03017,W08,2026-07-05,electricity,closed,28.1
+C03018,W08,2026-07-05,electricity,open,12.3
+C03019,W08,2026-07-05,public safety,closed,38.1
+C03020,W08,2026-07-05,public safety,in_progress,36.6
+C03021,W08,2026-07-05,public safety,open,19.5
+C03022,W08,2026-07-05,electricity,in_progress,55.4
+C03023,W08,2026-07-05,water,open,48.6
+C03024,W08,2026-07-05,sanitation,open,13.3
+C03025,W08,2026-07-05,water,in_progress,49.0

@@ -1,0 +1,9 @@
+ward_id,ward_name,population,vulnerable_population_percentage,average_income_band,service_coverage_score,latitude,longitude
+W01,Riverside Central,82000,18,Middle,76,1.3001,103.8519
+W02,Northgate Estates,64000,22,Lower-Middle,69,1.3584,103.8292
+W03,Harborview Industrial,51000,14,Mixed,61,1.2738,103.8097
+W04,Eastwood Health Belt,73000,29,Lower-Middle,58,1.3297,103.9245
+W05,Westlink Transit Hub,91000,16,Middle,72,1.3402,103.7068
+W06,Lakeside Community,56000,25,Lower,54,1.3465,103.7221
+W07,Innovation Quarter,47000,10,Upper-Middle,84,1.2934,103.7849
+W08,South Market District,68000,21,Mixed,66,1.2823,103.8426
