@@ -1,6 +1,6 @@
 # CivicIQ — AI Decision Intelligence for NCR Disaster & Community Resilience
 
-CivicIQ is a hackathon-ready decision intelligence prototype for disaster response, civic operations, and community resilience across India’s National Capital Region. It helps authorities detect, understand, prioritize, and respond to risks across Delhi, Gurugram, Noida, Ghaziabad, Faridabad, and Meerut using AI, geospatial dashboards, realistic telemetry, and explainable recommendations.
+CivicIQ is a decision intelligence prototype for disaster response, civic operations, and community resilience across India’s National Capital Region. It helps authorities detect, understand, prioritize, and respond to risks across Delhi, Gurugram, Noida, Ghaziabad, Faridabad, and Meerut using AI, geospatial dashboards, realistic telemetry, and explainable recommendations.
 
 ## 30-Second Pitch
 
@@ -41,28 +41,11 @@ NCR authorities face fragmented signals during crises: weather alerts, civic com
 4. **Ghaziabad Utility and Water Stress**: water shortage complaints, power outage reports, rising temperature. Water stress risk: High.
 5. **Meerut Storm and Public Safety Alert**: thunderstorm warning, road blockage, emergency call load. Public safety risk: High.
 
-## Product Screenshots
-
-If screenshots are not present yet, capture them before submission:
-
-```bash
-cd backend && . .venv/bin/activate && uvicorn main:app --reload
-cd frontend && npm start
-```
-
-Open each route in the browser, capture the visible page, and save images under `docs/screenshots/`.
-
 ### Dashboard
 
 ![Dashboard](docs/screenshots/dashboard.png)
 
 NCR-wide disaster and civic risk overview with live-style KPIs.
-
-### Demo Mode
-
-![Demo Mode](docs/screenshots/demo.png)
-
-Guided crisis simulation for a 3-5 minute judge walkthrough.
 
 ### NCR Risk Map
 
@@ -81,21 +64,6 @@ Operational workflow for assigning, acknowledging, and resolving alerts.
 ![Operations Center](docs/screenshots/operations.png)
 
 Provider health, ingestion jobs, and system readiness indicators.
-
-## Demo Video / Walkthrough
-
-Demo video: [docs/demo/civiciq-ncr-demo.mp4](docs/demo/civiciq-ncr-demo.mp4)
-
-To re-record the video:
-
-1. Start backend and frontend.
-2. Open `/dashboard`.
-3. Open `/demo` and click **Run NCR Crisis Demo**.
-4. Visit `/map`, `/alerts`, `/assistant`, `/exports`, and `/operations`.
-5. Record a 3-5 minute screen capture.
-6. Save it to `docs/demo/civiciq-ncr-demo.mp4`.
-
-Suggested recording flow: dashboard overview -> demo activation -> map incidents -> alert workflow -> AI assistant -> export brief -> operations center.
 
 ## Tech Stack
 
@@ -294,167 +262,8 @@ For a production authority-grade deployment, prefer a persistent backend host su
 - Traffic: TomTom, Mapbox, then Google Maps adapters when keys are configured; fallback mock traffic runs locally.
 - Geospatial: OpenStreetMap tiles in frontend; official GeoJSON can be placed in `backend/app/geojson/official`, otherwise CivicIQ uses simplified NCR demo boundaries and exposes source metadata.
 - Bhuvan: abstraction is included for future official geospatial integration.
-
-## Running Jobs
-
-Manual:
-
-```bash
-TOKEN=$(curl -s -X POST http://127.0.0.1:8000/api/auth/login \
-  -H 'Content-Type: application/json' \
-  -d '{"email":"admin@civiciq.demo","password":"Admin@123"}' | python -c "import sys,json; print(json.load(sys.stdin)['access_token'])")
-
-curl -X POST http://127.0.0.1:8000/api/jobs/run/news -H "Authorization: Bearer $TOKEN"
-curl -X POST http://127.0.0.1:8000/api/jobs/run/weather
-curl -X POST http://127.0.0.1:8000/api/jobs/run/traffic
-curl -X POST http://127.0.0.1:8000/api/jobs/run/risk
-curl -X POST http://127.0.0.1:8000/api/jobs/run/alerts
-```
-
-## How To Run Demo Mode
-
-1. Start backend and frontend.
-2. Open `/demo`.
-3. Click **Run NCR Crisis Demo**.
-4. Show the KPI jump, scenario risk chart, five NCR scenarios, and AI explainability panel.
-5. Open `/map` to show incident geography.
-6. Open `/operations` to show provider/job health and audit events.
-7. Open `/exports` to download a local-demo incident brief.
-
-## 3-5 Minute Judge Demo Script
-
-**Opening pitch:** CivicIQ is an AI decision intelligence layer for NCR authorities. It unifies civic telemetry, disaster risk, maps, alerts, and explainable GenAI recommendations into one command center.
-
-**Problem:** During floods, heatwaves, AQI events, industrial fires, and storms, officials must combine fragmented signals fast. CivicIQ demonstrates how AI can prioritize what matters and explain why.
-
-**Walkthrough:**
-1. Open `/dashboard` for the NCR overview.
-2. Open `/demo` and click **Run NCR Crisis Demo**.
-3. Highlight Gurugram flood risk: rainfall, waterlogging complaints, traffic delay, utility disruption.
-4. Open the AI explainability panel and show evidence, confidence, department, impact, and limitation note.
-5. Open `/map` for disaster-prone areas and incident markers.
-6. Open `/alerts` to show command-center workflow and PDF brief export.
-7. Open `/operations` to show provider health, job health, queue depth, dead-letter simulation, and audit logs.
-
-**AI/ML value:** The assistant produces structured, explainable recommendations from weather, traffic, civic, incident, utility, and scenario evidence. It is not random text; each recommendation cites seeded evidence and confidence.
-
-**Social impact:** Faster prioritization can reduce exposure during floods, heatwaves, AQI events, industrial incidents, water stress, and storms for over 7.5 crore NCR residents.
-
-**Closing:** CivicIQ is a local, stable prototype today, with a clear path to Google Cloud production services tomorrow.
-
-## Explainability and Responsible AI
-
-Each demo recommendation includes:
-
-- Why the recommendation was generated
-- Evidence records and source types
-- Data freshness
-- Confidence score
-- Risk contribution
-- Suggested department
-- Expected impact
-- Limitation note
-
+  
 CivicIQ is decision support only. It does not issue official emergency orders; critical decisions should be verified by authorized control rooms.
-
-## Production Data Architecture Path
-
-- SQLite demo store -> Cloud SQL or AlloyDB for operational data
-- Local JSON/CSV seed data -> BigQuery for historical risk observations
-- Local exports -> Cloud Storage signed URLs
-- Simulated refresh jobs -> Pub/Sub topics, Cloud Functions workers, Cloud Scheduler
-- Local audit logs -> Cloud Logging, Cloud Monitoring, Error Reporting, uptime checks
-
-## Exporting Incident Briefs
-
-- `/alerts`: exports protected PDF incident briefs for operational alerts.
-- `/exports`: exposes local-demo markdown briefs with simulated signed URL metadata.
-- Production path: store exports in Cloud Storage and return signed URLs with expiry and audit logging.
-
-Scheduled local jobs:
-
-```bash
-ENABLE_SCHEDULER=true uvicorn main:app --reload
-```
-
-## Testing
-
-```bash
-cd backend
-. .venv/bin/activate
-pytest -q
-
-cd ../frontend
-npm run build
-```
-
-## Docker Compose
-
-```bash
-docker compose up --build
-```
-
-## Cloud Run Deployment
-
-Set your project:
-
-```bash
-export PROJECT_ID=your-gcp-project
-export REGION=asia-south1
-./deploy-cloud-run.sh
-```
-
-You can also deploy services separately:
-
-```bash
-./scripts/deploy-backend-cloud-run.sh
-./scripts/deploy-frontend-cloud-run.sh
-./scripts/deploy-all-cloud-run.sh
-```
-
-This deploys:
-
-- Backend Cloud Run service: `civiciq-api`
-- Frontend Cloud Run service: `civiciq-web`
-
-Build files:
-
-- `cloudbuild.backend.yaml`
-- `cloudbuild.frontend.yaml`
-- `backend/Dockerfile`
-- `frontend/Dockerfile`
-
-## Live Demo URLs
-
-Local demo works without cloud deployment.
-
-- Frontend: Not deployed yet
-- Backend Health: Not deployed yet
-- Region: `asia-south1` recommended
-- Demo credentials: listed above
-
-## Google Cloud Architecture Mapping
-
-- Cloud Run: FastAPI and Next.js services
-- Vertex AI Gemini: decision assistant, incident summaries, and future RAG orchestration
-- BigQuery: analytical civic and disaster data warehouse
-- Cloud Storage: uploaded datasets, GeoJSON, incident exports
-- Pub/Sub: real-time weather/news/traffic/incident ingestion
-- Cloud Functions: event-driven ingestion and alert generation
-- Vertex AI / Gemini: AI assistant and incident brief generation
-- Vertex AI Search or vector database: production RAG retrieval
-- AlloyDB / Cloud SQL: production operational database
-- Looker: executive dashboards and reporting
-- Agent Development Kit: future multi-step response workflows
-
-## Responsible AI and Limitations
-
-- CivicIQ is decision support only and does not issue official emergency orders.
-- Provider data may be incomplete, delayed, rate-limited, or unavailable.
-- Fallback mode uses synthetic/mock-live observations for demo reliability.
-- Simplified NCR GeoJSON polygons are placeholders; production should use official NCR/Bhuvan/Survey of India/state GIS layers.
-- Vulnerable population data is used only for service prioritization.
-- Critical alerts should be verified by district control rooms and official authorities.
 
 ## Known Limitations
 
@@ -469,14 +278,3 @@ Local demo works without cloud deployment.
 - Move local normalized observation tables to Cloud SQL/AlloyDB plus BigQuery history.
 - Move local SQLite to Cloud SQL or AlloyDB.
 - Add signed URLs for PDF exports and long-running incident archive packages.
-
-## Final Submission Checklist
-
-- Backend tests pass.
-- Frontend production build passes.
-- `/dashboard`, `/demo`, `/map`, `/alerts`, `/assistant`, `/exports`, and `/operations` reviewed.
-- Demo credentials verified.
-- Crisis summary card copy/download verified.
-- Incident brief export verified.
-- README screenshots/video placeholders documented.
-- Known limitations and production roadmap are explicit.
