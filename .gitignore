@@ -10,4 +10,5 @@ build/
 .env
 *.db
 backend/app/data/demo_runtime.json
+docs/demo/frames/
 .DS_Store

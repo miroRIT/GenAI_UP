@@ -84,9 +84,9 @@ Provider health, ingestion jobs, and system readiness indicators.
 
 ## Demo Video / Walkthrough
 
-Recommended video path: `docs/demo/civiciq-ncr-demo.mp4`.
+Demo video: [docs/demo/civiciq-ncr-demo.mp4](docs/demo/civiciq-ncr-demo.mp4)
 
-If the video is not recorded yet:
+To re-record the video:
 
 1. Start backend and frontend.
 2. Open `/dashboard`.
